@@ -8,74 +8,101 @@
 </head>
 <body>
 
-    <div class="logo-area">
-        <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlccmefMCWHyGsAki3P4Q_hIkncrb46kJFkAUvAv4wdpoR6Z8grAfCxJTBR4cFhpjrQdSFBxb_S3fehhw5jQQLG1xHBWFojdGU7mov5n-Hn3t9Bvh-JSakZUomV1sGR7ukekJSce7RtSNM=s1360-w1360-h1020-rw" alt="Rescue 2 Home Logo">
-    </div>
+    <!-- Top Navigation Bar (Like Reference Layouts) -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlccmefMCWHyGsAki3P4Q_hIkncrb46kJFkAUvAv4wdpoR6Z8grAfCxJTBR4cFhpjrQdSFBxb_S3fehhw5jQQLG1xHBWFojdGU7mov5n-Hn3t9Bvh-JSakZUomV1sGR7ukekJSce7RtSNM=s1360-w1360-h1020-rw" alt="Rescue 2 Home Logo">
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="booking-page.html">Booking Page</a>
+                <a href="services.html">Services</a>
+                <a href="reviewssupporters.html">Reviews / Supporters</a>
+            </nav>
+        </div>
+    </header>
 
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="booking-page.html">Booking Page</a>
-        <a href="services.html">Services</a>
-        <a href="reviewssupporters.html">Reviews / Supporters</a>
-    </nav>
-
-    <section class="hero" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn2O0P4PMnwBIDl7ZwK0aNxXW9bnuHBjavBvLHooLEtt5jK4CFokKSF_Z-0f5cMKs--pk9o2R7i1xFW7F0s1gaxMwuO76cu57h3feUxgiS4uywOYO-BN9_OWJyu5F24F6e2IIGbk9jackVB=s1360-w1360-h1020-rw');">
-        <div class="container">
-            <h2>Welcome to Rescue 2 Home</h2>
-            <p class="hero-subtitle">Helping rescue pets settle safely and happily into their permanent homes with tailored, professional guidance.</p>
-            <div class="cta-buttons">
-                <a href="booking-page.html" class="btn-primary">Book a Consultation</a>
+    <!-- High-Impact Hero Banner -->
+    <section class="hero-banner" style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn2O0P4PMnwBIDl7ZwK0aNxXW9bnuHBjavBvLHooLEtt5jK4CFokKSF_Z-0f5cMKs--pk9o2R7i1xFW7F0s1gaxMwuO76cu57h3feUxgiS4uywOYO-BN9_OWJyu5F24F6e2IIGbk9jackVB=s1360-w1360-h1020-rw');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Caring For Your Rescue Pets</h1>
+            <p class="hero-subtitle">Helping rescue animals settle safely and happily into their permanent homes with expert guidance across Somerset.</p>
+            <div class="hero-buttons">
+                <a href="booking-page.html" class="btn-gold">Book Now</a>
+                <a href="#contact" class="btn-dark">Contact Me</a>
             </div>
         </div>
     </section>
 
-    <section class="section-block">
+    <!-- About Me Section -->
+    <section class="content-section">
         <div class="container">
-            <h3>About Me</h3>
-            <div class="about-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-card">
                 <p>Dedicated to animal welfare and expert behavioral support, Rescue 2 Home is built on a passion for ensuring every rescue animal transitions smoothly into family life. With professional training, hands-on experience, and a deep commitment to animal wellbeing, we provide the reassurance and practical tools both pets and owners need to thrive.</p>
             </div>
         </div>
     </section>
 
-    <section class="section-block alt-bg">
+    <!-- Community & Socials Section -->
+    <section class="content-section alt-bg">
         <div class="container">
-            <h3>Community & Socials</h3>
-            <div class="social-grid">
-                <a href="https://www.facebook.com/Rescue2Home/" target="_blank" class="social-card">
-                    <h4>Facebook Business Page</h4>
-                    <p>Follow our main updates, announcements, and tips.</p>
+            <h2 class="section-title">Community & Socials</h2>
+            <p class="section-desc">Connect with our active community networks online:</p>
+            <div class="grid-2">
+                <a href="https://www.facebook.com/Rescue2Home/" target="_blank" class="info-card">
+                    <h3>Facebook Business Page</h3>
+                    <p>Follow our main updates, announcements, and professional tips.</p>
                 </a>
-                <a href="https://www.facebook.com/groups/375603393122288" target="_blank" class="social-card">
-                    <h4>Community Support Group</h4>
-                    <p>Join our active Facebook group for peer support and advice.</p>
+                <a href="https://www.facebook.com/groups/375603393122288" target="_blank" class="info-card">
+                    <h3>Community Support Group</h3>
+                    <p>Join our dedicated Facebook group for peer support and advice.</p>
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="section-block" id="contact">
+    <!-- Contact Section (No Forms, Details Only) -->
+    <section class="content-section" id="contact">
         <div class="container">
-            <h3>Contact Us</h3>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h4>Location</h4>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-desc">Get in touch directly through any of the channels below:</p>
+            <div class="grid-3">
+                <div class="info-card">
+                    <h3>Location</h3>
                     <p>Based in Somerset, England</p>
                 </div>
-                <div class="contact-card">
-                    <h4>Email</h4>
+                <div class="info-card">
+                    <h3>Email</h3>
                     <p>rescue2homeanimalssupport@gmail.com</p>
                 </div>
-                <div class="contact-card">
-                    <h4>Accreditations</h4>
+                <div class="info-card">
+                    <h3>Accreditations</h3>
                     <p>Dog First Aid Trained & Enhanced DBS Checked</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Rescue 2 Home Animal Support. All rights reserved.</p>
+    <!-- Professional Footer -->
+    <footer class="site-footer">
+        <div class="container footer-flex">
+            <div>
+                <h4>Rescue 2 Home Animal Support</h4>
+                <p>Professional pet transition and support services in Somerset.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="booking-page.html">Booking</a>
+                <a href="reviewssupporters.html">Reviews</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rescue 2 Home Animal Support. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
