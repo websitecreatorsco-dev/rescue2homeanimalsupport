@@ -1379,7 +1379,7 @@ p {
         linear-gradient(
             145deg,
             var(--blue),
-            #D3D3D3
+            #236e99
         );
 
     color: white;
@@ -1392,8 +1392,7 @@ p {
 .service-featured p,
 .service-featured li {
 
-    color:
-        rgba(255,255,255,.82);
+    color: #ffffff;
 
 }
 
@@ -1402,6 +1401,13 @@ p {
 .service-featured .price {
 
     color: white;
+
+}
+
+
+.service-featured ul li::marker {
+
+    color: #bfe5f7;
 
 }
 
