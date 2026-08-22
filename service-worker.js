@@ -1,13 +1,13 @@
 /* =========================================================
    RESCUE 2 HOME ANIMAL SUPPORT
    PWA SERVICE WORKER
-   NO OFFLINE UI
 ========================================================= */
 
-const CACHE_NAME = "rescue2home-v2";
+const CACHE_NAME =
+    "rescue2home-animal-support-v2";
 
 
-const ASSETS = [
+const FILES_TO_CACHE = [
 
     "./",
 
@@ -28,6 +28,7 @@ const ASSETS = [
 ];
 
 
+
 /* =========================================================
    INSTALL
 ========================================================= */
@@ -43,7 +44,7 @@ self.addEventListener(
                 .then(cache => {
 
                     return cache.addAll(
-                        ASSETS
+                        FILES_TO_CACHE
                     );
 
                 })
@@ -54,6 +55,7 @@ self.addEventListener(
 
     }
 );
+
 
 
 /* =========================================================
@@ -74,12 +76,14 @@ self.addEventListener(
 
                         cacheNames
                             .filter(
-                                name =>
-                                    name !== CACHE_NAME
+                                cacheName =>
+                                    cacheName !== CACHE_NAME
                             )
                             .map(
-                                name =>
-                                    caches.delete(name)
+                                cacheName =>
+                                    caches.delete(
+                                        cacheName
+                                    )
                             )
 
                     );
@@ -94,8 +98,10 @@ self.addEventListener(
 );
 
 
+
 /* =========================================================
    FETCH
+   Network first, cached fallback
 ========================================================= */
 
 self.addEventListener(
@@ -110,47 +116,6 @@ self.addEventListener(
 
         }
 
-
-        /*
-         * Navigation requests:
-         * Try the live website first.
-         * If unavailable, use the cached page.
-         */
-
-        if (
-            event.request.mode === "navigate"
-        ) {
-
-            event.respondWith(
-
-                fetch(event.request)
-
-                    .then(response => {
-
-                        return response;
-
-                    })
-
-                    .catch(() => {
-
-                        return caches.match(
-                            "./index.html"
-                        );
-
-                    })
-
-            );
-
-            return;
-
-        }
-
-
-        /*
-         * Images, CSS, JS and other assets:
-         * Try network first.
-         * Fall back to cache.
-         */
 
         event.respondWith(
 
@@ -185,13 +150,47 @@ self.addEventListener(
 
                 .catch(() => {
 
-                    return caches.match(
-                        event.request
-                    );
+                    return caches
+                        .match(event.request)
+                        .then(cached => {
+
+                            if (cached) {
+
+                                return cached;
+
+                            }
+
+                            return caches.match(
+                                "./index.html"
+                            );
+
+                        });
 
                 })
 
         );
+
+    }
+);
+
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+self.addEventListener(
+    "message",
+    event => {
+
+        if (
+            event.data &&
+            event.data.type === "SKIP_WAITING"
+        ) {
+
+            self.skipWaiting();
+
+        }
 
     }
 );
