@@ -459,7 +459,7 @@ p {
 
 .header-inner {
 
-    min-height: 86px;
+    min-height: 70px;
 
     display: flex;
 
@@ -478,14 +478,14 @@ p {
 
     align-items: center;
 
-    min-width: 150px;
+    min-width: 110px;
 
 }
 
 
 .brand-logo {
 
-    width: 155px;
+    width: 110px;
 
     height: auto;
 
@@ -2891,14 +2891,14 @@ button:focus-visible {
 
     .header-inner {
 
-        min-height: 72px;
+        min-height: 64px;
 
     }
 
 
     .brand-logo {
 
-        width: 130px;
+        width: 90px;
 
     }
 
