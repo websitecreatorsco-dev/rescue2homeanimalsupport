@@ -1013,13 +1013,12 @@
 
                 </p>
 
-                <button type="button"
-                        class="service-link modal-button-trigger"
-                        data-modal="dropInModal">
+                <a href="#contact"
+                   class="service-link">
 
                     Enquire About Drop-Ins →
 
-                </button>
+                </a>
 
             </article>
 
@@ -1722,12 +1721,13 @@
 </footer>
 
 
+
 <!-- =========================================================
-     DROP-IN SERVICE MODAL
+     AUTO-LOAD WELCOME MODAL
 ========================================================= -->
 
 <div class="legal-modal"
-     id="dropInModal"
+     id="welcomeModal"
      aria-hidden="true">
 
     <div class="legal-modal-backdrop"
@@ -1736,11 +1736,11 @@
     <div class="legal-modal-window"
          role="dialog"
          aria-modal="true"
-         aria-labelledby="dropInTitle">
+         aria-labelledby="welcomeTitle">
 
         <button class="legal-close"
                 data-close-modal
-                aria-label="Close modal">
+                aria-label="Close welcome popup">
 
             ×
 
@@ -1749,61 +1749,32 @@
         <div class="legal-content">
 
             <span class="eyebrow">
-                NEW SERVICE
+                WELCOME
             </span>
 
-            <h2 id="dropInTitle">
-                Comfort & Care Drop-Ins
+            <h2 id="welcomeTitle">
+                Welcome to Rescue 2 Home
             </h2>
 
-            <div class="price modal-price">
-                £25 <small>per hour</small>
-            </div>
+            <p>
+
+                Thank you for visiting Rescue 2 Home Animal Support. We provide friendly,
+                practical assistance for pet adoption, fostering, and everyday companion care across Somerset.
+
+            </p>
 
             <p>
-                Sometimes your pets just need some company, love, and a little extra attention while you're out. Our custom drop-in sessions are designed to give them exactly what they need, right in the comfort of their own home.
+
+                Explore our services or get in touch directly if you need support or have any questions!
+
             </p>
-
-            <p>
-                Whether your pet is a playful pup, a senior cat, or a small furry friend, we tailor the time entirely to your instructions.
-            </p>
-
-            <h3>What’s included:</h3>
-            
-            <ul class="modal-list">
-                <li><strong>Feeding & Fresh Water:</strong> Keeping them on their usual routine.</li>
-                <li><strong>Playtime & Enrichment:</strong> Brain games, favourite toys, and keeping boredom at bay.</li>
-                <li><strong>Cuddles & Company:</strong> Plenty of affection, belly rubs, and reassurance.</li>
-                <li><strong>Home Comforts:</strong> Anything else you need to keep them happy (apart from outdoor dog walking).</li>
-            </ul>
-
-            <p>
-                Our standard sessions are one hour, which gives us plenty of time to bond and settle your pet. Need us to stay longer? No problem at all—we can easily extend the session to suit your schedule for an additional cost.
-            </p>
-
-            <p class="service-note">
-                Please note: While we don't offer dog walking ourselves, we work closely with some fantastic local dog walkers and are more than happy to give you some trusted recommendations!
-            </p>
-
-            <div class="contact-actions modal-actions">
-                <a href="https://wa.me/447933325465?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20the%20Comfort%20%26%20Care%20Drop-Ins."
-                   class="button button-whatsapp"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Message Us on WhatsApp →
-                </a>
-
-                <a href="mailto:rescue2homeanimalsupport@gmail.com?subject=Comfort%20%26%20Care%20Drop-Ins%20Enquiry"
-                   class="button button-primary">
-                    Send an Email →
-                </a>
-            </div>
 
         </div>
 
     </div>
 
 </div>
+
 
 
 <!-- =========================================================
@@ -2782,7 +2753,7 @@ window.addEventListener(
 
 
 /* =========================================================
-   LEGAL & SERVICE MODALS
+   LEGAL & WELCOME MODALS
 ========================================================= */
 
 const modalTriggers =
@@ -2826,6 +2797,15 @@ function closeModal(modal) {
     );
 
 }
+
+
+// Open welcome popup automatically on page load
+window.addEventListener("DOMContentLoaded", () => {
+    const welcomeModal = document.getElementById("welcomeModal");
+    if (welcomeModal) {
+        openModal(welcomeModal);
+    }
+});
 
 
 modalTriggers.forEach(button => {
