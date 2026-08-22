@@ -1,13 +1,14 @@
 {
   "name": "Rescue 2 Home Animal Support",
   "short_name": "Rescue 2 Home",
-  "description": "Dedicated Adoption & Foster Support, pet settling-in support and Comfort & Care Drop-Ins across Somerset.",
-  "start_url": "./index.html",
+  "description": "Independent animal support helping people and pets across Somerset.",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#ffffff",
-  "theme_color": "#1769aa",
+  "theme_color": "#174f78",
+  "lang": "en-GB",
   "icons": [
     {
       "src": "./r2hasmainlogo.png",
