@@ -1,20 +1,12 @@
 /* =========================================================
    RESCUE 2 HOME ANIMAL SUPPORT
-   SERVICE WORKER
-
-   Purpose:
-   - Cache the website after first visit
-   - Allow the existing website to continue working offline
-   - Do NOT redirect users to an offline page
-   - Update cached files when a new version is published
+   PWA SERVICE WORKER
 ========================================================= */
 
-
-const CACHE_NAME =
-    "rescue2home-v1.0.0";
+const CACHE_NAME = "rescue2home-v1.0.0";
 
 
-const CORE_FILES = [
+const FILES_TO_CACHE = [
 
     "./",
 
@@ -42,26 +34,23 @@ const CORE_FILES = [
 
 self.addEventListener(
     "install",
-    function(event) {
+    event => {
 
         event.waitUntil(
 
             caches
                 .open(CACHE_NAME)
-                .then(function(cache) {
+                .then(cache => {
 
                     return cache.addAll(
-                        CORE_FILES
+                        FILES_TO_CACHE
                     );
-
-                })
-                .then(function() {
-
-                    return self.skipWaiting();
 
                 })
 
         );
+
+        self.skipWaiting();
 
     }
 );
@@ -74,45 +63,33 @@ self.addEventListener(
 
 self.addEventListener(
     "activate",
-    function(event) {
+    event => {
 
         event.waitUntil(
 
             caches
                 .keys()
-                .then(function(cacheNames) {
+                .then(cacheNames => {
 
                     return Promise.all(
 
                         cacheNames
-                            .filter(function(name) {
-
-                                return (
-                                    name.startsWith(
-                                        "rescue2home-"
-                                    ) &&
-                                    name !== CACHE_NAME
-                                );
-
-                            })
-                            .map(function(name) {
-
-                                return caches.delete(
-                                    name
-                                );
-
-                            })
+                            .filter(
+                                cacheName =>
+                                    cacheName !== CACHE_NAME
+                            )
+                            .map(
+                                cacheName =>
+                                    caches.delete(cacheName)
+                            )
 
                     );
 
                 })
-                .then(function() {
-
-                    return self.clients.claim();
-
-                })
 
         );
+
+        self.clients.claim();
 
     }
 );
@@ -125,12 +102,7 @@ self.addEventListener(
 
 self.addEventListener(
     "fetch",
-    function(event) {
-
-
-        /*
-           Only handle GET requests.
-        */
+    event => {
 
         if (
             event.request.method !== "GET"
@@ -141,174 +113,65 @@ self.addEventListener(
         }
 
 
-        /*
-           Ignore external requests.
+        event.respondWith(
 
-           This prevents the service worker from trying
-           to cache Facebook, WhatsApp or other websites.
-        */
+            fetch(event.request)
 
-        const requestUrl =
-            new URL(event.request.url);
+                .then(response => {
 
-
-        if (
-            requestUrl.origin !==
-            self.location.origin
-        ) {
-
-            return;
-
-        }
-
-
-        /*
-           For navigation requests:
-
-           Try the internet first.
-
-           If there is no internet, use the
-           cached version of index.html.
-
-           This means the website itself remains visible
-           rather than showing an "Offline" page.
-        */
-
-        if (
-            event.request.mode ===
-            "navigate"
-        ) {
-
-            event.respondWith(
-
-                fetch(event.request)
-                    .then(function(response) {
-
-                        /*
-                           Save the newest page.
-                        */
+                    if (
+                        response &&
+                        response.status === 200
+                    ) {
 
                         const responseClone =
                             response.clone();
 
                         caches
                             .open(CACHE_NAME)
-                            .then(function(cache) {
+                            .then(cache => {
 
                                 cache.put(
-                                    "./index.html",
+                                    event.request,
                                     responseClone
                                 );
 
                             });
 
-                        return response;
-
-                    })
-                    .catch(function() {
-
-                        return caches.match(
-                            "./index.html"
-                        );
-
-                    })
-
-            );
-
-            return;
-
-        }
-
-
-        /*
-           For CSS, images, manifest and other
-           local assets:
-
-           Cache first.
-
-           If not cached, go to the network and
-           store the result for next time.
-        */
-
-        event.respondWith(
-
-            caches
-                .match(event.request)
-                .then(function(cachedResponse) {
-
-                    if (cachedResponse) {
-
-                        return cachedResponse;
-
                     }
 
+                    return response;
 
-                    return fetch(event.request)
-                        .then(function(response) {
+                })
 
+                .catch(() => {
 
-                            /*
-                               Only cache successful
-                               responses.
-                            */
+                    return caches
+                        .match(event.request)
+                        .then(cachedResponse => {
 
-                            if (
-                                !response ||
-                                response.status !== 200 ||
-                                response.type === "opaque"
-                            ) {
+                            if (cachedResponse) {
 
-                                return response;
+                                return cachedResponse;
 
                             }
 
 
-                            const responseClone =
-                                response.clone();
+                            if (
+                                event.request.mode === "navigate"
+                            ) {
 
+                                return caches.match(
+                                    "./index.html"
+                                );
 
-                            caches
-                                .open(CACHE_NAME)
-                                .then(function(cache) {
-
-                                    cache.put(
-                                        event.request,
-                                        responseClone
-                                    );
-
-                                });
-
-
-                            return response;
+                            }
 
                         });
 
                 })
 
         );
-
-    }
-);
-
-
-
-/* =========================================================
-   MESSAGE HANDLING
-========================================================= */
-
-self.addEventListener(
-    "message",
-    function(event) {
-
-        if (
-            event.data &&
-            event.data.type ===
-            "SKIP_WAITING"
-        ) {
-
-            self.skipWaiting();
-
-        }
 
     }
 );
