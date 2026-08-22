@@ -3164,36 +3164,95 @@ button:focus-visible {
     }
 
 
+    /* COMPACT POPUPS FOR MOBILE */
     .legal-modal {
 
-        padding: 10px;
+        padding: 12px;
 
     }
 
 
     .legal-modal-window {
 
-        max-height:
-            calc(100vh - 20px);
+        width: 86%;
 
-        border-radius:
-            20px;
+        max-height: 65vh;
+
+        border-radius: 14px;
 
     }
 
 
     .legal-content {
 
-        padding:
-            45px 22px 40px;
+        padding: 24px 16px 20px;
+
+    }
+
+
+    .legal-content h2 {
+
+        font-size: 1.2rem;
+
+        margin-bottom: 4px;
+
+    }
+
+    .legal-content h3 {
+
+        margin-top: 16px;
+
+        margin-bottom: 6px;
+
+        font-size: 0.92rem;
+
+    }
+
+    .legal-content p,
+    .modal-list li {
+
+        font-size: 0.8rem;
+
+        line-height: 1.45;
+
+    }
+
+    .legal-updated {
+
+        margin-bottom: 16px;
+
+        font-size: 0.7rem;
+
+    }
+
+    .modal-actions {
+
+        margin-top: 16px;
+
+    }
+
+    .modal-actions .button {
+
+        padding: 8px 14px;
+
+        min-height: 38px;
+
+        font-size: 0.8rem;
 
     }
 
 
     .legal-close {
 
-        margin:
-            12px 12px -54px 0;
+        width: 32px;
+
+        height: 32px;
+
+        font-size: 1.1rem;
+
+        top: 10px;
+
+        margin: 8px 8px -40px 0;
 
     }
 
