@@ -459,7 +459,7 @@ p {
 
 .header-inner {
 
-    min-height: 86px;
+    min-height: 70px;
 
     display: flex;
 
@@ -467,7 +467,7 @@ p {
 
     justify-content: space-between;
 
-    gap: 30px;
+    position: relative;
 
 }
 
@@ -478,14 +478,14 @@ p {
 
     align-items: center;
 
-    min-width: 150px;
+    z-index: 2;
 
 }
 
 
 .brand-logo {
 
-    width: 155px;
+    width: 115px;
 
     height: auto;
 
@@ -500,18 +500,24 @@ p {
 
     align-items: center;
 
-    gap: 16px;
+    gap: 8px;
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
 
 }
 
 
 .desktop-navigation a {
 
-    padding: 10px 14px;
+    padding: 8px 12px;
 
     border-radius: 9px;
 
-    font-size: .88rem;
+    font-size: .84rem;
 
     font-weight: 700;
 
@@ -540,19 +546,45 @@ p {
 }
 
 
-.desktop-navigation .nav-cta {
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    z-index: 2;
+
+}
+
+
+.nav-cta {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
 
     color: white;
 
     background:
         var(--blue);
 
-    padding-inline: 20px;
+    padding: 8px 18px;
+
+    border-radius: 9px;
+
+    font-size: .84rem;
+
+    font-weight: 700;
+
+    transition:
+        background .2s ease;
 
 }
 
 
-.desktop-navigation .nav-cta:hover {
+.nav-cta:hover {
 
     color: white;
 
@@ -2534,7 +2566,8 @@ button:focus-visible {
 
 @media (max-width: 1000px) {
 
-    .desktop-navigation {
+    .desktop-navigation,
+    .nav-cta {
 
         display: none;
 
@@ -2725,14 +2758,14 @@ button:focus-visible {
 
     .header-inner {
 
-        min-height: 72px;
+        min-height: 70px;
 
     }
 
 
     .brand-logo {
 
-        width: 130px;
+        width: 95px;
 
     }
 
