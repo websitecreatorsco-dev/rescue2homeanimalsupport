@@ -1,240 +1,314 @@
 /* =========================================================
    RESCUE 2 HOME ANIMAL SUPPORT
-   Progressive Web App Service Worker
+   SERVICE WORKER
+
+   Purpose:
+   - Cache the website after first visit
+   - Allow the existing website to continue working offline
+   - Do NOT redirect users to an offline page
+   - Update cached files when a new version is published
 ========================================================= */
 
 
-const CACHE_NAME = "rescue2home-v2";
+const CACHE_NAME =
+    "rescue2home-v1.0.0";
 
-
-/*
-    Files required for the basic website.
-
-    These are cached so the site can still open when
-    there is genuinely no internet connection.
-*/
 
 const CORE_FILES = [
+
     "./",
+
     "./index.html",
+
     "./style.css",
-    "./manifest.json"
+
+    "./manifest.json",
+
+    "./r2hasmainlogo.png",
+
+    "./roundr2haslogohome.png",
+
+    "./rescue2homebanner.png",
+
+    "./radiusmap.png"
+
 ];
+
 
 
 /* =========================================================
    INSTALL
 ========================================================= */
 
-self.addEventListener("install", function (event) {
+self.addEventListener(
+    "install",
+    function(event) {
 
-    event.waitUntil(
+        event.waitUntil(
 
-        caches.open(CACHE_NAME)
+            caches
+                .open(CACHE_NAME)
+                .then(function(cache) {
 
-            .then(function (cache) {
+                    return cache.addAll(
+                        CORE_FILES
+                    );
 
-                return cache.addAll(CORE_FILES);
+                })
+                .then(function() {
 
-            })
+                    return self.skipWaiting();
 
-            .catch(function (error) {
+                })
 
-                console.error(
-                    "Rescue 2 Home: Cache installation failed",
-                    error
-                );
+        );
 
-            })
+    }
+);
 
-    );
-
-
-    /*
-        Activate the new service worker immediately.
-    */
-
-    self.skipWaiting();
-
-});
 
 
 /* =========================================================
    ACTIVATE
 ========================================================= */
 
-self.addEventListener("activate", function (event) {
+self.addEventListener(
+    "activate",
+    function(event) {
 
-    event.waitUntil(
+        event.waitUntil(
 
-        caches.keys()
+            caches
+                .keys()
+                .then(function(cacheNames) {
 
-            .then(function (cacheNames) {
+                    return Promise.all(
 
-                return Promise.all(
+                        cacheNames
+                            .filter(function(name) {
 
-                    cacheNames
+                                return (
+                                    name.startsWith(
+                                        "rescue2home-"
+                                    ) &&
+                                    name !== CACHE_NAME
+                                );
 
-                        .filter(function (cacheName) {
+                            })
+                            .map(function(name) {
 
-                            return (
-                                cacheName !== CACHE_NAME
-                            );
+                                return caches.delete(
+                                    name
+                                );
 
-                        })
+                            })
 
-                        .map(function (cacheName) {
+                    );
 
-                            return caches.delete(
-                                cacheName
-                            );
+                })
+                .then(function() {
 
-                        })
+                    return self.clients.claim();
 
-                );
+                })
 
-            })
+        );
 
-    );
+    }
+);
 
-
-    /*
-        Take control of open pages immediately.
-    */
-
-    self.clients.claim();
-
-});
 
 
 /* =========================================================
    FETCH
 ========================================================= */
 
-self.addEventListener("fetch", function (event) {
+self.addEventListener(
+    "fetch",
+    function(event) {
 
 
-    /*
-        Only deal with GET requests.
+        /*
+           Only handle GET requests.
+        */
 
-        POST requests, forms, booking systems etc.
-        are left completely alone.
-    */
+        if (
+            event.request.method !== "GET"
+        ) {
 
-    if (event.request.method !== "GET") {
+            return;
 
-        return;
-
-    }
-
-
-    event.respondWith(
-
-        fetch(event.request)
-
-            .then(function (response) {
+        }
 
 
-                /*
-                    If the internet is available,
-                    return the real live response.
+        /*
+           Ignore external requests.
 
-                    At the same time save a copy for
-                    possible future offline use.
-                */
+           This prevents the service worker from trying
+           to cache Facebook, WhatsApp or other websites.
+        */
 
-                if (
-                    response &&
-                    response.status === 200 &&
-                    response.type !== "opaque"
-                ) {
-
-                    const responseClone =
-                        response.clone();
+        const requestUrl =
+            new URL(event.request.url);
 
 
-                    caches.open(CACHE_NAME)
+        if (
+            requestUrl.origin !==
+            self.location.origin
+        ) {
 
-                        .then(function (cache) {
+            return;
 
-                            cache.put(
-                                event.request,
-                                responseClone
-                            );
+        }
+
+
+        /*
+           For navigation requests:
+
+           Try the internet first.
+
+           If there is no internet, use the
+           cached version of index.html.
+
+           This means the website itself remains visible
+           rather than showing an "Offline" page.
+        */
+
+        if (
+            event.request.mode ===
+            "navigate"
+        ) {
+
+            event.respondWith(
+
+                fetch(event.request)
+                    .then(function(response) {
+
+                        /*
+                           Save the newest page.
+                        */
+
+                        const responseClone =
+                            response.clone();
+
+                        caches
+                            .open(CACHE_NAME)
+                            .then(function(cache) {
+
+                                cache.put(
+                                    "./index.html",
+                                    responseClone
+                                );
+
+                            });
+
+                        return response;
+
+                    })
+                    .catch(function() {
+
+                        return caches.match(
+                            "./index.html"
+                        );
+
+                    })
+
+            );
+
+            return;
+
+        }
+
+
+        /*
+           For CSS, images, manifest and other
+           local assets:
+
+           Cache first.
+
+           If not cached, go to the network and
+           store the result for next time.
+        */
+
+        event.respondWith(
+
+            caches
+                .match(event.request)
+                .then(function(cachedResponse) {
+
+                    if (cachedResponse) {
+
+                        return cachedResponse;
+
+                    }
+
+
+                    return fetch(event.request)
+                        .then(function(response) {
+
+
+                            /*
+                               Only cache successful
+                               responses.
+                            */
+
+                            if (
+                                !response ||
+                                response.status !== 200 ||
+                                response.type === "opaque"
+                            ) {
+
+                                return response;
+
+                            }
+
+
+                            const responseClone =
+                                response.clone();
+
+
+                            caches
+                                .open(CACHE_NAME)
+                                .then(function(cache) {
+
+                                    cache.put(
+                                        event.request,
+                                        responseClone
+                                    );
+
+                                });
+
+
+                            return response;
 
                         });
 
-                }
+                })
+
+        );
+
+    }
+);
 
 
-                return response;
 
-            })
+/* =========================================================
+   MESSAGE HANDLING
+========================================================= */
 
+self.addEventListener(
+    "message",
+    function(event) {
 
-            .catch(function () {
+        if (
+            event.data &&
+            event.data.type ===
+            "SKIP_WAITING"
+        ) {
 
+            self.skipWaiting();
 
-                /*
-                    The network request failed.
+        }
 
-                    Now try the cached version.
-                */
-
-                return caches.match(
-                    event.request
-                )
-
-                    .then(function (cachedResponse) {
-
-
-                        if (cachedResponse) {
-
-                            return cachedResponse;
-
-                        }
-
-
-                        /*
-                            If someone is trying to
-                            navigate to the website while
-                            genuinely offline, load the
-                            cached homepage instead.
-                        */
-
-                        if (
-                            event.request.mode ===
-                            "navigate"
-                        ) {
-
-                            return caches.match(
-                                "./index.html"
-                            );
-
-                        }
-
-
-                        /*
-                            Nothing is cached for this
-                            particular request.
-
-                            Return a simple empty response
-                            rather than replacing the site
-                            with an offline page.
-                        */
-
-                        return new Response(
-                            "",
-                            {
-                                status: 503,
-                                statusText: "Offline"
-                            }
-                        );
-
-                    });
-
-            })
-
-    );
-
-});
+    }
+);
