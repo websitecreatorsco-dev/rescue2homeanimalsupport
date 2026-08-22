@@ -1651,6 +1651,13 @@ p {
         color .2s ease;
 }
 
+button.service-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
 .service-link:hover {
     gap: 11px;
     color: var(--blue-dark);
@@ -1713,6 +1720,27 @@ p {
 .services-note strong {
     color: var(--blue-dark);
     white-space: nowrap;
+}
+
+/* Modal Custom Styles */
+.modal-price {
+    margin-bottom: 20px;
+}
+
+.modal-list {
+    margin: 15px 0 25px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.modal-list li {
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.modal-actions {
+    margin-top: 30px;
 }
 
 /* Responsive Services */
@@ -2486,7 +2514,7 @@ p {
 
 
 /* =========================================================
-   LEGAL MODALS
+   LEGAL & SERVICE MODALS
 ========================================================= */
 
 .legal-modal {
