@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rescue 2 Home Animal Support</title>
-    
-    <!-- Critical Asset Preloading -->
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=60" as="image">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +15,7 @@
                 <span class="app-notice-icon">🐾</span>
                 <div class="app-notice-text">
                     <strong>Download Our Mobile App</strong>
+                    <span>Book services, track updates, and contact us directly from your phone.</span>
                 </div>
                 <button class="app-install-button">Install App</button>
                 <button class="app-notice-close" onclick="closeAppNotice()">&times;</button>
@@ -31,7 +27,12 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-inner">
-                <span>Emergency Contact: <a href="tel:+1234567890">+1 (234) 567-890</a></span>
+                <div class="top-bar-left">
+                    <span>Professional Animal Support & Care</span>
+                </div>
+                <div class="top-bar-contact">
+                    <span>Emergency Contact: <a href="tel:+1234567890">+1 (234) 567-890</a></span>
+                </div>
             </div>
         </div>
     </div>
@@ -41,39 +42,69 @@
         <div class="container">
             <div class="header-inner">
                 <a href="#" class="brand">
-                    <img src="https://via.placeholder.com/80x40?text=LOGO" alt="Rescue 2 Home Logo" class="brand-logo" width="80" height="40">
+                    <img src="https://via.placeholder.com/80x40?text=LOGO" alt="Rescue 2 Home Logo" class="brand-logo">
                 </a>
                 
                 <nav class="desktop-navigation">
                     <a href="#about" class="active">About</a>
                     <a href="#services">Services</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#standards">Standards</a>
                     <a href="#contact" class="nav-cta">Contact Us</a>
                 </nav>
 
                 <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
-                    <span></span><span></span><span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
         </div>
+
+        <!-- MOBILE NAVIGATION -->
+        <nav class="mobile-navigation" id="mobileNav">
+            <a href="#about" onclick="toggleMenu()">About</a>
+            <a href="#services" onclick="toggleMenu()">Services</a>
+            <a href="#experience" onclick="toggleMenu()">Experience</a>
+            <a href="#standards" onclick="toggleMenu()">Standards</a>
+            <a href="#contact" class="mobile-nav-cta" onclick="toggleMenu()">Contact Us</a>
+        </nav>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-background">
-            <!-- Priority image: fetchpriority="high" and no lazy loading -->
-            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=60" 
-                 alt="Animal care background" 
-                 fetchpriority="high" 
-                 width="800" 
-                 height="500">
+            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1600&q=80" alt="Animal care background">
         </div>
         <div class="hero-blue-overlay"></div>
         <div class="container hero-inner">
             <div class="hero-content">
                 <span class="eyebrow hero-eyebrow">Dedicated Care & Rescue</span>
                 <h1>Compassionate Support <span>For Every Animal</span></h1>
+                <p class="hero-lead">Providing safe, reliable, and professional home support and rescue services tailored to meet your pets' needs.</p>
+                
                 <div class="hero-actions">
-                    <a href="#services" class="button button-white">Our Services</a>
+                    <a href="#services" class="button button-white">Our Services <span>&rarr;</span></a>
+                    <a href="#contact" class="button button-glass">Get in Touch</a>
+                </div>
+
+                <div class="hero-points">
+                    <span>✓ Certified Specialists</span>
+                    <span>✓ 24/7 Availability</span>
+                    <span>✓ Local Coverage</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPORTANT NOTICE -->
+    <section class="important-notice">
+        <div class="container">
+            <div class="notice-box">
+                <div class="notice-icon">!</div>
+                <div>
+                    <strong>Important Service Update</strong>
+                    <p>Our response team is operating at full capacity. For urgent intake or rescue assistance, please call our emergency line directly.</p>
                 </div>
             </div>
         </div>
@@ -84,29 +115,295 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image-wrap">
-                    <!-- Offscreen image: native lazy loading enabled -->
-                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=500&q=60" 
-                         alt="About Rescue 2 Home" 
-                         class="about-image" 
-                         loading="lazy" 
-                         width="500" 
-                         height="330">
+                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80" alt="About Rescue 2 Home" class="about-image">
                 </div>
                 <div class="about-content">
-                    <h2>Dedicated to Animal Welfare</h2>
-                    <p>At Rescue 2 Home, we provide safe environments and attentive care for animals in need.</p>
+                    <span class="eyebrow">Who We Are</span>
+                    <h2>Dedicated to Animal Welfare and Home Support</h2>
+                    <p>At Rescue 2 Home, we believe every animal deserves a safe environment, attentive care, and proper support. Our trained staff handles every situation with empathy and expertise.</p>
+                    
+                    <div class="about-highlights">
+                        <div>
+                            <strong>10+ Years</strong>
+                            <span>Field Experience</span>
+                        </div>
+                        <div>
+                            <strong>1,200+</strong>
+                            <span>Animals Helped</span>
+                        </div>
+                        <div>
+                            <strong>100%</strong>
+                            <span>Dedication</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- JAVASCRIPT -->
+    <!-- SERVICES SECTION -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-heading centered">
+                <span class="eyebrow">Our Services</span>
+                <h2>Comprehensive Animal Care Options</h2>
+                <p>Choose from our specialized packages designed for home support, temporary care, and rescue transportation.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-top">
+                        <div class="service-icon">🏠</div>
+                        <span class="service-tag">BASIC CARE</span>
+                    </div>
+                    <h3>Home Sitting & Feed</h3>
+                    <div class="price">$35 <small>/ visit</small></div>
+                    <p>In-home check-ins to ensure your pets are fed, comfortable, and given attention while you are away.</p>
+                    <ul>
+                        <li>Feeding & fresh water replacement</li>
+                        <li>Basic wellness check</li>
+                        <li>Medication administration</li>
+                    </ul>
+                    <button class="service-link" onclick="openModal('serviceModal')">Learn More &rarr;</button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card service-new">
+                    <div class="service-top">
+                        <div class="service-icon">🚑</div>
+                        <span class="service-tag">TRANSPORT</span>
+                    </div>
+                    <h3>Emergency Pet Transport</h3>
+                    <div class="price">$60 <small>/ trip</small></div>
+                    <p>Safe, rapid transport for veterinary visits or emergency admissions with trained handlers.</p>
+                    <ul>
+                        <li>Secured transport vehicles</li>
+                        <li>Stretcher & crate equipment</li>
+                        <li>Direct vet coordination</li>
+                    </ul>
+                    <button class="service-link" onclick="openModal('serviceModal')">Learn More &rarr;</button>
+                </div>
+
+                <!-- Featured Service -->
+                <div class="service-card service-featured">
+                    <div class="service-top">
+                        <div class="service-icon">🛡️</div>
+                        <span class="service-tag">COMPLETE</span>
+                    </div>
+                    <h3>Full Support & Rescue Plan</h3>
+                    <div class="price">$150 <small>/ month</small></div>
+                    <p>Priority access to all rescue services, ongoing home checks, health tracking, and priority emergency dispatch.</p>
+                    <ul>
+                        <li>24/7 Priority Emergency Support</li>
+                        <li>Unlimited routine transport visits</li>
+                        <li>Full home & pet safety audit</li>
+                    </ul>
+                    <button class="service-link" onclick="openModal('serviceModal')">View Package Details &rarr;</button>
+                </div>
+            </div>
+
+            <div class="services-note">
+                <strong>Need custom support?</strong> Contact our team to create a personalized care schedule tailored to your animals.
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="experience-grid">
+                <div class="experience-content">
+                    <span class="eyebrow">Why Choose Us</span>
+                    <h2>Experienced Handlers You Can Trust</h2>
+                    <p>We maintain high safety protocols and medical support readiness for domesticated pets and specialized animal situations.</p>
+                </div>
+                <div class="experience-panel">
+                    <div class="experience-card">
+                        <span>🩺</span>
+                        <strong>First Aid Certified</strong>
+                        <p>Staff trained in pet CPR and emergency triage protocol.</p>
+                    </div>
+                    <div class="experience-card">
+                        <span>🚐</span>
+                        <strong>Equipped Vehicles</strong>
+                        <p>Climate-controlled transport ready at short notice.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-main">
+                    <span class="eyebrow">Contact Us</span>
+                    <h2>We’re Here When You Need Us</h2>
+                    <p>Reach out for routine inquiries, service scheduling, or immediate rescue support.</p>
+                    
+                    <div class="contact-actions">
+                        <a href="tel:+1234567890" class="button button-primary">Call Now</a>
+                        <a href="https://wa.me/1234567890" class="button button-whatsapp">WhatsApp Support</a>
+                    </div>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-card">
+                        <span>📍</span>
+                        <div>
+                            <small>Location</small>
+                            <strong>123 Rescue Way, Care City</strong>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <span>✉️</span>
+                        <div>
+                            <small>Email Us</small>
+                            <strong>support@rescue2home.org</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://via.placeholder.com/120x55?text=LOGO" alt="Logo" class="footer-logo">
+                    <p>Providing professional animal care and emergency rescue support since 2016.</p>
+                    <p class="footer-disclaimer">Licensed & Insured Animal Support Operations.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#experience">Experience</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <button onclick="openModal('privacyModal')">Privacy Policy</button>
+                    <button onclick="openModal('termsModal')">Terms of Service</button>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <a href="tel:+1234567890">Phone</a>
+                    <a href="mailto:support@rescue2home.org">Email</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rescue 2 Home. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP / MODAL CONTAINERS -->
+
+    <!-- SERVICE DETAIL MODAL -->
+    <div class="legal-modal" id="serviceModal" aria-hidden="true">
+        <div class="legal-modal-backdrop" onclick="closeModal('serviceModal')"></div>
+        <div class="legal-modal-window">
+            <button class="legal-close" onclick="closeModal('serviceModal')">&times;</button>
+            <div class="legal-content">
+                <h2>Service Overview</h2>
+                <div class="legal-updated">Last Updated: August 2026</div>
+                <p>Our comprehensive care packages are designed to provide total peace of mind. Every visit includes basic health screenings, food/water replenishment, and updates sent straight to your mobile device.</p>
+                
+                <h3>What is Included:</h3>
+                <ul class="modal-list">
+                    <li>Detailed digital check-in log</li>
+                    <li>Photo and video updates</li>
+                    <li>Medication administration if required</li>
+                </ul>
+
+                <div class="modal-actions">
+                    <a href="#contact" class="button button-primary" onclick="closeModal('serviceModal')">Book This Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRIVACY POLICY MODAL -->
+    <div class="legal-modal" id="privacyModal" aria-hidden="true">
+        <div class="legal-modal-backdrop" onclick="closeModal('privacyModal')"></div>
+        <div class="legal-modal-window">
+            <button class="legal-close" onclick="closeModal('privacyModal')">&times;</button>
+            <div class="legal-content">
+                <h2>Privacy Policy</h2>
+                <div class="legal-updated">Effective Date: January 1, 2026</div>
+                
+                <h3>1. Information We Collect</h3>
+                <p>We collect personal information such as contact details and pet care specifications strictly to provide emergency and home animal support services.</p>
+
+                <h3>2. How We Use Information</h3>
+                <p>Your data is exclusively used for scheduling, contact, and maintaining medical/health records for your pets under our care.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TERMS OF SERVICE MODAL -->
+    <div class="legal-modal" id="termsModal" aria-hidden="true">
+        <div class="legal-modal-backdrop" onclick="closeModal('termsModal')"></div>
+        <div class="legal-modal-window">
+            <button class="legal-close" onclick="closeModal('termsModal')">&times;</button>
+            <div class="legal-content">
+                <h2>Terms of Service</h2>
+                <div class="legal-updated">Effective Date: January 1, 2026</div>
+                
+                <h3>1. Service Agreement</h3>
+                <p>By booking services with Rescue 2 Home, owners authorize our staff to provide essential care and enter designated premises during agreed scheduling windows.</p>
+
+                <h3>2. Emergency Care Authorization</h3>
+                <p>In the event of a medical emergency, our team is authorized to transport the animal to an accredited veterinary hospital if the owner cannot be immediately reached.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MODALS & MENU -->
     <script>
-        document.getElementById('hamburgerBtn').addEventListener('click', function() {
-            this.classList.toggle('active');
-        });
+        // Toggle mobile navigation
+        const hamburgerBtn = id('hamburgerBtn');
+        const mobileNav = id('mobileNav');
+
+        hamburgerBtn.addEventListener('click', toggleMenu);
+
+        function toggleMenu() {
+            hamburgerBtn.classList.toggle('active');
+            mobileNav.classList.toggle('open');
+            document.body.classList.toggle('menu-open');
+        }
+
+        // Modal triggers
+        function openModal(modalId) {
+            const modal = id(modalId);
+            if (modal) {
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('modal-open');
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = id(modalId);
+            if (modal) {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('modal-open');
+            }
+        }
+
+        // Close app notice bar
         function closeAppNotice() {
-            document.getElementById('appNotice').style.display = 'none';
+            id('appNotice').style.display = 'none';
+        }
+
+        function id(elementId) {
+            return document.getElementById(elementId);
         }
     </script>
 </body>
