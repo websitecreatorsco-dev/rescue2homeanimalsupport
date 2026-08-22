@@ -1,6 +1,20 @@
+/* =========================================================
+   RESCUE 2 HOME ANIMAL SUPPORT
+   Progressive Web App Service Worker
+========================================================= */
+
+
 const CACHE_NAME = "rescue2home-v2";
 
-const FILES_TO_CACHE = [
+
+/*
+    Files required for the basic website.
+
+    These are cached so the site can still open when
+    there is genuinely no internet connection.
+*/
+
+const CORE_FILES = [
     "./",
     "./index.html",
     "./style.css",
@@ -12,41 +26,70 @@ const FILES_TO_CACHE = [
    INSTALL
 ========================================================= */
 
-self.addEventListener("install", event => {
+self.addEventListener("install", function (event) {
 
     event.waitUntil(
 
         caches.open(CACHE_NAME)
-            .then(cache => {
 
-                return cache.addAll(FILES_TO_CACHE);
+            .then(function (cache) {
+
+                return cache.addAll(CORE_FILES);
+
+            })
+
+            .catch(function (error) {
+
+                console.error(
+                    "Rescue 2 Home: Cache installation failed",
+                    error
+                );
 
             })
 
     );
+
+
+    /*
+        Activate the new service worker immediately.
+    */
 
     self.skipWaiting();
 
 });
 
 
-
 /* =========================================================
    ACTIVATE
 ========================================================= */
 
-self.addEventListener("activate", event => {
+self.addEventListener("activate", function (event) {
 
     event.waitUntil(
 
         caches.keys()
-            .then(cacheNames => {
+
+            .then(function (cacheNames) {
 
                 return Promise.all(
 
                     cacheNames
-                        .filter(name => name !== CACHE_NAME)
-                        .map(name => caches.delete(name))
+
+                        .filter(function (cacheName) {
+
+                            return (
+                                cacheName !== CACHE_NAME
+                            );
+
+                        })
+
+                        .map(function (cacheName) {
+
+                            return caches.delete(
+                                cacheName
+                            );
+
+                        })
 
                 );
 
@@ -54,70 +97,96 @@ self.addEventListener("activate", event => {
 
     );
 
+
+    /*
+        Take control of open pages immediately.
+    */
+
     self.clients.claim();
 
 });
-
 
 
 /* =========================================================
    FETCH
 ========================================================= */
 
-self.addEventListener("fetch", event => {
-
-    const request = event.request;
+self.addEventListener("fetch", function (event) {
 
 
     /*
-       Only handle normal GET requests.
+        Only deal with GET requests.
+
+        POST requests, forms, booking systems etc.
+        are left completely alone.
     */
 
-    if (request.method !== "GET") {
+    if (event.request.method !== "GET") {
+
         return;
+
     }
 
 
     event.respondWith(
 
-        fetch(request)
+        fetch(event.request)
 
-            .then(response => {
+            .then(function (response) {
+
 
                 /*
-                   Save a fresh copy of the file.
+                    If the internet is available,
+                    return the real live response.
+
+                    At the same time save a copy for
+                    possible future offline use.
                 */
 
-                const responseClone =
-                    response.clone();
+                if (
+                    response &&
+                    response.status === 200 &&
+                    response.type !== "opaque"
+                ) {
+
+                    const responseClone =
+                        response.clone();
 
 
-                caches.open(CACHE_NAME)
-                    .then(cache => {
+                    caches.open(CACHE_NAME)
 
-                        cache.put(
-                            request,
-                            responseClone
-                        );
+                        .then(function (cache) {
 
-                    });
+                            cache.put(
+                                event.request,
+                                responseClone
+                            );
+
+                        });
+
+                }
 
 
                 return response;
 
             })
 
-            .catch(() => {
+
+            .catch(function () {
+
 
                 /*
-                   Internet unavailable.
+                    The network request failed.
 
-                   Return the cached version instead
-                   of showing an offline page.
+                    Now try the cached version.
                 */
 
-                return caches.match(request)
-                    .then(cachedResponse => {
+                return caches.match(
+                    event.request
+                )
+
+                    .then(function (cachedResponse) {
+
 
                         if (cachedResponse) {
 
@@ -127,13 +196,15 @@ self.addEventListener("fetch", event => {
 
 
                         /*
-                           If the browser requested a page
-                           that isn't cached, fall back to
-                           the cached homepage.
+                            If someone is trying to
+                            navigate to the website while
+                            genuinely offline, load the
+                            cached homepage instead.
                         */
 
                         if (
-                            request.mode === "navigate"
+                            event.request.mode ===
+                            "navigate"
                         ) {
 
                             return caches.match(
@@ -141,6 +212,24 @@ self.addEventListener("fetch", event => {
                             );
 
                         }
+
+
+                        /*
+                            Nothing is cached for this
+                            particular request.
+
+                            Return a simple empty response
+                            rather than replacing the site
+                            with an offline page.
+                        */
+
+                        return new Response(
+                            "",
+                            {
+                                status: 503,
+                                statusText: "Offline"
+                            }
+                        );
 
                     });
 
