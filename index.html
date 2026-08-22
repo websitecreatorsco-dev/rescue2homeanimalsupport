@@ -790,8 +790,6 @@
         <div class="services-grid">
 
 
-            <!-- PACKAGE -->
-
             <article class="service-card service-featured">
 
                 <div class="service-top">
@@ -842,8 +840,6 @@
 
 
 
-            <!-- READINESS -->
-
             <article class="service-card">
 
                 <span class="service-icon">
@@ -883,8 +879,6 @@
             </article>
 
 
-
-            <!-- SETTLING -->
 
             <article class="service-card">
 
@@ -928,8 +922,6 @@
 
 
 
-            <!-- COMPANION -->
-
             <article class="service-card">
 
                 <span class="service-icon">
@@ -970,8 +962,6 @@
             </article>
 
 
-
-            <!-- COMFORT -->
 
             <article class="service-card service-new">
 
@@ -1221,9 +1211,11 @@
 
                 <p>
 
-                    If you are located outside this area, I
-                    cannot visit in person but would be happy
-                    to connect via video call where appropriate.
+                    If you are located outside this area, I may
+                    not be able to visit in person but would be
+                    happy to connect via video call where
+                    appropriate. Alternatively, we could discuss
+                    additional costs.
 
                 </p>
 
@@ -1681,8 +1673,8 @@
                     Booking & Cancellation
                 </button>
 
-                <button data-modal="complaintsModal">
-                    Complaints & Feedback
+                <button data-modal="feedbackModal">
+                    Feedback
                 </button>
 
             </div>
@@ -2482,11 +2474,11 @@
 
 
 <!-- =========================================================
-     LEGAL MODAL - COMPLAINTS
+     LEGAL MODAL - FEEDBACK
 ========================================================= -->
 
 <div class="legal-modal"
-     id="complaintsModal"
+     id="feedbackModal"
      aria-hidden="true">
 
     <div class="legal-modal-backdrop"
@@ -2495,11 +2487,11 @@
     <div class="legal-modal-window"
          role="dialog"
          aria-modal="true"
-         aria-labelledby="complaintsTitle">
+         aria-labelledby="feedbackTitle">
 
         <button class="legal-close"
                 data-close-modal
-                aria-label="Close complaints information">
+                aria-label="Close feedback information">
 
             ×
 
@@ -2508,34 +2500,40 @@
         <div class="legal-content">
 
             <span class="eyebrow">
-                CUSTOMER CARE
+                CUSTOMER FEEDBACK
             </span>
 
-            <h2 id="complaintsTitle">
-                Complaints & Feedback
+            <h2 id="feedbackTitle">
+                Feedback
             </h2>
-
 
             <p>
 
-                We want every client and animal to receive a
-                professional, respectful and reliable service.
+                We really value feedback from our clients.
+                It helps us understand what we are doing well
+                and where we may be able to improve our service.
 
             </p>
 
             <p>
 
-                If you have a concern about a service, appointment
-                or communication, please contact us as soon as
-                possible so we have the opportunity to understand
-                what happened and try to resolve the matter.
+                If you have any feedback about your experience
+                with Rescue 2 Home Animal Support, we would be
+                very happy to hear from you.
 
             </p>
 
 
             <h3>
-                How to Contact Us
+                How to Give Feedback
             </h3>
+
+            <p>
+
+                You can contact us directly by email, phone,
+                text or WhatsApp.
+
+            </p>
 
             <p>
 
@@ -2557,24 +2555,31 @@
 
             </p>
 
+            <p>
+
+                WhatsApp:
+
+                <a href="https://wa.me/447933325465"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Message us on WhatsApp
+
+                </a>
+
+            </p>
+
 
             <h3>
-                What Happens Next?
+                Thank You
             </h3>
 
             <p>
 
-                We will listen to your concerns, review the
-                information available and respond as reasonably
-                and promptly as possible.
-
-            </p>
-
-            <p>
-
-                We ask that complaints are raised directly with
-                us first so that we have a fair opportunity to
-                address them.
+                Thank you for taking the time to share your
+                thoughts. Your feedback is appreciated and helps
+                us continue to provide the best possible support
+                for people and their animals.
 
             </p>
 
@@ -2623,6 +2628,8 @@ if (hamburger && mobileNavigation) {
             open ? "Close menu" : "Open menu"
         );
 
+        updateMenuScroll();
+
     });
 
 
@@ -2645,6 +2652,8 @@ if (hamburger && mobileNavigation) {
                     "aria-label",
                     "Open menu"
                 );
+
+                updateMenuScroll();
 
             });
 
