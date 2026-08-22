@@ -1,17 +1,10 @@
-/* =========================================================
-   RESCUE 2 HOME ANIMAL SUPPORT
-   SERVICE WORKER
-   PWA / OFFLINE SUPPORT
-========================================================= */
+const CACHE_NAME = "rescue2home-v2";
 
-const CACHE_NAME = "rescue2home-v1";
-
-const APP_SHELL = [
+const FILES_TO_CACHE = [
     "./",
     "./index.html",
     "./style.css",
-    "./manifest.json",
-    "./service-worker.js"
+    "./manifest.json"
 ];
 
 
@@ -24,22 +17,18 @@ self.addEventListener("install", event => {
     event.waitUntil(
 
         caches.open(CACHE_NAME)
-
             .then(cache => {
 
-                return cache.addAll(APP_SHELL);
-
-            })
-
-            .then(() => {
-
-                return self.skipWaiting();
+                return cache.addAll(FILES_TO_CACHE);
 
             })
 
     );
 
+    self.skipWaiting();
+
 });
+
 
 
 /* =========================================================
@@ -51,7 +40,6 @@ self.addEventListener("activate", event => {
     event.waitUntil(
 
         caches.keys()
-
             .then(cacheNames => {
 
                 return Promise.all(
@@ -64,15 +52,12 @@ self.addEventListener("activate", event => {
 
             })
 
-            .then(() => {
-
-                return self.clients.claim();
-
-            })
-
     );
 
+    self.clients.claim();
+
 });
+
 
 
 /* =========================================================
@@ -81,76 +66,41 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
 
+    const request = event.request;
+
+
     /*
        Only handle normal GET requests.
     */
 
-    if (event.request.method !== "GET") {
+    if (request.method !== "GET") {
         return;
     }
 
-
-    /*
-       Ignore external websites such as:
-       Facebook
-       WhatsApp
-       Google hosted images
-       external booking/contact services
-    */
-
-    const requestURL =
-        new URL(event.request.url);
-
-
-    if (
-        requestURL.origin !== self.location.origin
-    ) {
-
-        return;
-
-    }
-
-
-    /*
-       Network first for the main website.
-
-       This means visitors get the latest version
-       whenever they have internet.
-
-       If they are offline, the cached version is used.
-    */
 
     event.respondWith(
 
-        fetch(event.request)
+        fetch(request)
 
             .then(response => {
 
                 /*
-                   Save successful responses.
+                   Save a fresh copy of the file.
                 */
 
-                if (
-                    response &&
-                    response.status === 200 &&
-                    response.type === "basic"
-                ) {
-
-                    const responseClone =
-                        response.clone();
+                const responseClone =
+                    response.clone();
 
 
-                    caches.open(CACHE_NAME)
-                        .then(cache => {
+                caches.open(CACHE_NAME)
+                    .then(cache => {
 
-                            cache.put(
-                                event.request,
-                                responseClone
-                            );
+                        cache.put(
+                            request,
+                            responseClone
+                        );
 
-                        });
-
-                }
+                    });
 
 
                 return response;
@@ -160,11 +110,13 @@ self.addEventListener("fetch", event => {
             .catch(() => {
 
                 /*
-                   Offline fallback.
+                   Internet unavailable.
+
+                   Return the cached version instead
+                   of showing an offline page.
                 */
 
-                return caches.match(event.request)
-
+                return caches.match(request)
                     .then(cachedResponse => {
 
                         if (cachedResponse) {
@@ -175,13 +127,20 @@ self.addEventListener("fetch", event => {
 
 
                         /*
-                           If a page isn't cached,
-                           return the cached home page.
+                           If the browser requested a page
+                           that isn't cached, fall back to
+                           the cached homepage.
                         */
 
-                        return caches.match(
-                            "./index.html"
-                        );
+                        if (
+                            request.mode === "navigate"
+                        ) {
+
+                            return caches.match(
+                                "./index.html"
+                            );
+
+                        }
 
                     });
 
