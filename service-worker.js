@@ -117,6 +117,15 @@ self.addEventListener(
         }
 
 
+        if (
+            !event.request.url.startsWith("http")
+        ) {
+
+            return;
+
+        }
+
+
         event.respondWith(
 
             fetch(event.request)
