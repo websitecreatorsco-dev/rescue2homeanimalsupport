@@ -1,0 +1,17 @@
+{
+  "name": "Rescue 2 Home Animal Support",
+  "short_name": "Rescue 2 Home",
+  "description": "Practical support for people and pets across Somerset.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7fafc",
+  "theme_color": "#2d6388",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlccmefMCWHyGsAki3P4Q_hIkncrb46kJFkAUvAv4wdpoR6Z8grAfCxJTBR4cFhpjrQdSFBxb_S3fehhw5jQQLG1xHBWFojdGU7mov5n-Hn3t9Bvh-JSakZUomV1sGR7ukekJSce7RtSNM=s1360-w1360-h1020-rw",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
