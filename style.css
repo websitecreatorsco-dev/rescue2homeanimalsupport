@@ -1,3275 +1,3109 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Hi, I’m Beverley, an animal lover and welfare advocate providing dedicated adoption, foster and companion support across Somerset. Rescue 2 Home Animal Support bridges the gap between overcrowded rescues and your forever home.">
+
+    <meta name="keywords"
+          content="Rescue 2 Home Animal Support, adoption support, foster support, pet sitting, companion support, animal welfare, Somerset, rescue dogs, pet support">
+
+    <meta name="author"
+          content="Rescue 2 Home Animal Support">
+
+    <meta name="theme-color"
+          content="#174f78">
+
+    <meta name="mobile-web-app-capable"
+          content="yes">
+
+    <meta name="apple-mobile-web-app-capable"
+          content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="default">
+
+    <meta name="apple-mobile-web-app-title"
+          content="Rescue 2 Home">
+
+    <link rel="icon"
+          type="image/png"
+          href="r2hasmainlogo.png">
+
+    <link rel="apple-touch-icon"
+          href="r2hasmainlogo.png">
+
+    <link rel="manifest"
+          href="manifest.json">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <title>
+        Rescue 2 Home Animal Support | Somerset
+    </title>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     APP / PWA NOTICE
+========================================================= -->
+
+<div class="app-notice"
+     id="appNotice">
+
+    <div class="container app-notice-inner">
+
+        <div class="app-notice-icon">
+            📱
+        </div>
+
+        <div class="app-notice-text">
+
+            <strong>
+                Take Rescue 2 Home with you
+            </strong>
+
+            <span>
+                You can add this website to your phone,
+                tablet or computer as an app for quick access.
+            </span>
+
+        </div>
+
+        <button
+            class="app-install-button"
+            id="installButton"
+            type="button">
+
+            Add to Home Screen
+
+        </button>
+
+        <button
+            class="app-notice-close"
+            id="closeAppNotice"
+            type="button"
+            aria-label="Close app notice">
+
+            ×
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="top-bar">
+
+    <div class="container top-bar-inner">
+
+        <div class="top-bar-message">
+
+            <span>
+                🐾 Independent animal support across Somerset
+            </span>
+
+        </div>
+
+        <div class="top-bar-contact">
+
+            <a href="mailto:rescue2homeanimalsupport@gmail.com">
+                rescue2homeanimalsupport@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header"
+        id="siteHeader">
+
+    <div class="container header-inner">
+
+
+        <a href="#home"
+           class="brand"
+           aria-label="Rescue 2 Home Animal Support home">
+
+            <img
+                src="r2hasmainlogo.png"
+                alt="Rescue 2 Home Animal Support"
+                class="brand-logo">
+
+        </a>
+
+
+
+        <nav class="desktop-navigation"
+             aria-label="Main navigation">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About Me
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#radius">
+                Service Area
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <div class="header-actions">
+
+            <a href="#contact"
+               class="nav-cta">
+
+                Get In Touch
+
+            </a>
+
+            <button
+                class="hamburger"
+                id="hamburger"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileNavigation">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <nav class="mobile-navigation"
+         id="mobileNavigation"
+         aria-label="Mobile navigation">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About Me
+        </a>
+
+        <a href="#services">
+            Services
+        </a>
+
+        <a href="#radius">
+            Service Area
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+        <a href="#contact"
+           class="mobile-nav-cta">
+
+            Get In Touch
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero"
+         id="home">
+
+    <div class="hero-background">
+
+        <img
+            src="rescue2homebanner.png"
+            alt=""
+            aria-hidden="true">
+
+    </div>
+
+    <div class="hero-blue-overlay"></div>
+
+
+    <div class="container hero-inner">
+
+        <div class="hero-content">
+
+
+            <span class="eyebrow hero-eyebrow">
+                RESCUE 2 HOME ANIMAL SUPPORT
+            </span>
+
+
+            <h1>
+
+                Helping people to take
+                the next step to give a pet
+                <span>
+                    a loving home.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-lead">
+
+                Friendly, practical support for people
+                considering adoption or fostering, together
+                with compassionate support for pets in their
+                own homes.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a href="#services"
+                   class="button button-white">
+
+                    See Our Services
+
+                    <span>→</span>
+
+                </a>
+
+                <a href="#contact"
+                   class="button button-glass">
+
+                    Get In Touch
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-points">
+
+                <span>
+                    ✓ Fully insured
+                </span>
+
+                <span>
+                    ✓ DBS checked
+                </span>
+
+                <span>
+                    ✓ Animal welfare focused
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     IMPORTANT NOTICE
+========================================================= -->
+
+<section class="important-notice">
+
+    <div class="container">
+
+        <div class="notice-box">
+
+            <div class="notice-icon">
+                ℹ
+            </div>
+
+            <div>
+
+                <strong>
+                    Please note: Rescue 2 Home Animal Support is not a rescue centre.
+                </strong>
+
+                <p>
+
+                    We are an independent support service working alongside
+                    rescue organisations and animal professionals. We provide
+                    additional advice, practical support and companion care,
+                    but adoption and fostering decisions remain with the
+                    relevant rescue organisation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="intro section">
+
+    <div class="container intro-grid">
+
+        <div>
+
+            <span class="eyebrow">
+                A LITTLE EXTRA SUPPORT
+            </span>
+
+            <h2>
+                Sometimes having someone
+                there makes all the difference.
+            </h2>
+
+        </div>
+
+        <div>
+
+            <p>
+
+                Bringing a rescue animal into your home can be
+                exciting, but it can also come with questions,
+                nerves and uncertainty.
+
+            </p>
+
+            <p>
+
+                Rescue 2 Home Animal Support is here to offer
+                practical, friendly support around adoption,
+                fostering, settling in and everyday companion
+                care.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about section"
+         id="about">
+
+    <div class="container about-grid">
+
+
+        <div class="about-image-wrap">
+
+            <img
+                src="roundr2haslogohome.png"
+                alt="Rescue 2 Home Animal Support"
+                class="about-image"
+                loading="lazy">
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="eyebrow">
+                ABOUT ME
+            </span>
+
+            <h2>
+                Hi, I'm Beverley.
+            </h2>
+
+            <p>
+
+                This is a new service that offers support for
+                people who would like to adopt and foster,
+                whatever their circumstances.
+
+            </p>
+
+            <p>
+
+                All rescue centres should of course offer home
+                checks, rescue back-up and advice, and most do
+                try to do this. However, deciding if adoption or
+                fostering is right for you is not always easy and
+                can be very time-consuming for any rescue to
+                discuss in depth.
+
+            </p>
+
+            <p>
+
+                Anyone new to adopting, inexperienced in pet
+                ownership or simply a little nervous about taking
+                the step to adopt or foster may feel that they
+                need more time, advice and reassurance.
+
+            </p>
+
+            <p>
+
+                As an experienced pet owner and adopter, I want
+                to help bridge that gap by offering my experience,
+                advice and time to help you feel more confident
+                about your decision to adopt.
+
+            </p>
+
+            <p>
+
+                I can also support you during those early days,
+                including dropping in if you need to leave your
+                newly adopted pet for an appointment, or simply
+                being there to talk through any concerns you may
+                have.
+
+            </p>
+
+            <p>
+
+                I can also try to help you find the type of dog
+                that may be more suitable for your circumstances
+                by working alongside rescue organisations and
+                researching options with you.
+
+            </p>
+
+
+            <div class="about-highlights">
+
+                <div>
+                    <strong>Fully insured</strong>
+                    <span>Professional peace of mind.</span>
+                </div>
+
+                <div>
+                    <strong>DBS checked</strong>
+                    <span>Supporting clients responsibly.</span>
+                </div>
+
+                <div>
+                    <strong>Animal welfare first</strong>
+                    <span>Every service is built around the animal.</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section class="experience section">
+
+    <div class="container experience-grid">
+
+
+        <div class="experience-content">
+
+            <span class="eyebrow">
+                EXPERIENCE & SUPPORT
+            </span>
+
+            <h2>
+                Practical experience,
+                with a personal approach.
+            </h2>
+
+            <p>
+
+                Animal welfare is my passion. We all need a
+                little help at times to make sure we care for
+                our pets' needs, and this is something I will
+                always try to help with.
+
+            </p>
+
+            <p>
+
+                I am not a trainer, but I do have knowledge of
+                basic training and dog communication. I also
+                have a network of reputable, force-free trainers
+                and behaviourists that I can direct you towards
+                should you need more specialist help.
+
+            </p>
+
+            <p>
+
+                I have many pets of my own, including four rescue
+                dogs, each with very different temperaments. One
+                of my dogs is also insulin-dependent diabetic.
+
+            </p>
+
+            <p>
+
+                I have experience integrating dogs, cats and
+                other animals within my home and understanding
+                that every animal is an individual.
+
+            </p>
+
+        </div>
+
+
+        <div class="experience-panel">
+
+            <div class="experience-card">
+
+                <span>🐶</span>
+
+                <strong>
+                    Rescue Dog Experience
+                </strong>
+
+                <p>
+                    Four rescue dogs with different
+                    personalities and needs.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <span>🐱</span>
+
+                <strong>
+                    Multi-Animal Home
+                </strong>
+
+                <p>
+                    Experience with dogs, cats and
+                    other animals living together.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <span>🤝</span>
+
+                <strong>
+                    Professional Network
+                </strong>
+
+                <p>
+                    Links with animal welfare and
+                    pet-care professionals.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <span>❤️</span>
+
+                <strong>
+                    Welfare First
+                </strong>
+
+                <p>
+                    The wellbeing of the animal always
+                    comes first.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     NETWORK
+========================================================= -->
+
+<section class="network section">
+
+    <div class="container network-grid">
+
+
+        <div class="network-image">
+
+            <img
+                src="rescue2homebanner.png"
+                alt="Rescue 2 Home Animal Support"
+                loading="lazy">
+
+        </div>
+
+
+        <div class="network-content">
+
+            <span class="eyebrow">
+                WORKING TOGETHER
+            </span>
+
+            <h2>
+                Working alongside rescues
+                and local animal services.
+            </h2>
+
+            <p>
+
+                We work alongside rescue organisations and
+                work closely with
+                <a href="https://www.somersetanimalinformationservices.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Somerset Animal Information Services
+
+                </a>.
+
+            </p>
+
+            <p>
+
+                This gives us access to a wider network of people
+                within the pet industry, including dog walkers,
+                pet sitters, groomers, trainers, behaviourists and
+                other animal professionals.
+
+            </p>
+
+            <p>
+
+                The aim is simple: to work together to support
+                animals and their people, helping make sure
+                welfare needs are understood and that owners
+                know where to turn when they need extra help.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section class="services section"
+         id="services">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                OUR SERVICES
+            </span>
+
+            <h2>
+                Support when you need it.
+            </h2>
+
+            <p>
+
+                From preparing for adoption to helping your
+                companion settle in, we offer practical,
+                personal support around your needs.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <article class="service-card service-featured">
+
+                <div class="service-top">
+
+                    <span class="service-icon">
+                        🏡
+                    </span>
+
+                    <span class="service-tag">
+                        BEST VALUE
+                    </span>
+
+                </div>
+
+                <h3>
+                    New Companion Support Package
+                </h3>
+
+                <div class="price">
+                    £50
+                </div>
+
+                <p>
+
+                    A complete package bringing together three
+                    one-hour sessions to support you before,
+                    during and immediately after welcoming a
+                    new companion.
+
+                </p>
+
+                <ul>
+
+                    <li>Adoption & Foster Readiness</li>
+                    <li>Post-Adoption Early Days Support</li>
+                    <li>New Adopter Companion Sitting</li>
+
+                </ul>
+
+                <a href="#contact"
+                   class="service-link">
+
+                    Ask About The Package →
+
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <span class="service-icon">
+                    📝
+                </span>
+
+                <h3>
+                    Adoption & Foster Readiness
+                </h3>
+
+                <div class="price">
+                    £20 <small>per hour</small>
+                </div>
+
+                <p>
+
+                    A one-hour consultation designed to help
+                    you prepare before bringing your new pet home.
+
+                </p>
+
+                <ul>
+
+                    <li>Home & lifestyle assessment</li>
+                    <li>Application support</li>
+                    <li>Adoption match research</li>
+
+                </ul>
+
+                <a href="#contact"
+                   class="service-link">
+
+                    Enquire Now →
+
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <span class="service-icon">
+                    🌱
+                </span>
+
+                <h3>
+                    Settling-In Support
+                </h3>
+
+                <div class="price">
+                    £25 <small>per hour</small>
+                </div>
+
+                <p>
+
+                    Practical support during those important
+                    early days as your new companion adjusts
+                    to their surroundings.
+
+                </p>
+
+                <ul>
+
+                    <li>Company & comfort</li>
+                    <li>Routine & practical care</li>
+                    <li>Play and attention</li>
+                    <li>Owner updates</li>
+
+                </ul>
+
+                <a href="#contact"
+                   class="service-link">
+
+                    Enquire Now →
+
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card">
+
+                <span class="service-icon">
+                    🐾
+                </span>
+
+                <h3>
+                    New Adopter Companion Sitting
+                </h3>
+
+                <div class="price">
+                    £15 <small>per hour</small>
+                </div>
+
+                <p>
+
+                    Short-term companion sitting designed to
+                    give you flexibility while your new pet
+                    builds confidence.
+
+                </p>
+
+                <ul>
+
+                    <li>Companionship & play</li>
+                    <li>Home-alone confidence</li>
+                    <li>Owner updates</li>
+
+                </ul>
+
+                <a href="#contact"
+                   class="service-link">
+
+                    Enquire Now →
+
+                </a>
+
+            </article>
+
+
+
+            <article class="service-card service-new">
+
+                <div class="service-top">
+
+                    <span class="service-icon">
+                        ❤️
+                    </span>
+
+                    <span class="service-tag">
+                        NEW
+                    </span>
+
+                </div>
+
+                <h3>
+                    Comfort & Care Drop-Ins
+                </h3>
+
+                <div class="price">
+                    £25 <small>per hour</small>
+                </div>
+
+                <p>
+
+                    Sometimes your pet simply needs some
+                    company, love and extra attention while
+                    you're out.
+
+                </p>
+
+                <ul>
+
+                    <li>Feeding & fresh water</li>
+                    <li>Playtime & enrichment</li>
+                    <li>Cuddles & company</li>
+                    <li>Home comforts</li>
+
+                </ul>
+
+                <p class="service-note">
+
+                    We don't provide dog walking, but we can
+                    recommend trusted local dog walkers.
+
+                </p>
+
+                <a href="#contact"
+                   class="service-link">
+
+                    Enquire About Drop-Ins →
+
+                </a>
+
+            </article>
+
+        </div>
+
+
+
+        <div class="services-note">
+
+            <strong>
+                Need extra time?
+            </strong>
+
+            <span>
+
+                Additional time can be discussed when arranging
+                your service. Please contact us before booking
+                so we can make sure we have enough time available.
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HOW TO BOOK
+========================================================= -->
+
+<section class="booking section">
+
+    <div class="container booking-inner">
+
+        <div class="booking-content">
+
+            <span class="eyebrow">
+                READY TO TALK?
+            </span>
+
+            <h2>
+                Bookings are simple.
+            </h2>
+
+            <p>
+
+                We're no longer taking bookings through Square.
+                To arrange a service, please contact us directly
+                by WhatsApp, Facebook Messenger, email or phone.
+
+            </p>
+
+            <div class="booking-buttons">
+
+                <a href="https://wa.me/447933325465"
+                   class="button button-whatsapp"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    WhatsApp Us
+
+                    <span>→</span>
+
+                </a>
+
+                <a href="https://www.facebook.com/Rescue2Home"
+                   class="button button-facebook"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Message on Facebook
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="booking-side">
+
+            <div class="booking-step">
+
+                <span>01</span>
+
+                <strong>
+                    Get in touch
+                </strong>
+
+                <p>
+                    Tell us what support you need.
+                </p>
+
+            </div>
+
+            <div class="booking-step">
+
+                <span>02</span>
+
+                <strong>
+                    Discuss your needs
+                </strong>
+
+                <p>
+                    We'll talk through your requirements.
+                </p>
+
+            </div>
+
+            <div class="booking-step">
+
+                <span>03</span>
+
+                <strong>
+                    Arrange your visit
+                </strong>
+
+                <p>
+                    We'll agree a suitable time and service.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICE RADIUS
+========================================================= -->
+
+<section class="radius section"
+         id="radius">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                IN-PERSON SERVICE AREA
+            </span>
+
+            <h2>
+                Where we can visit.
+            </h2>
+
+            <p>
+
+                In-person services are limited to the area
+                shown on the map below.
+
+            </p>
+
+        </div>
+
+
+        <div class="radius-card">
+
+            <div class="radius-map">
+
+                <img
+                    src="radiusmap.png"
+                    alt="Rescue 2 Home Animal Support in-person meeting radius"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="radius-information">
+
+                <span class="radius-icon">
+                    📍
+                </span>
+
+                <h3>
+                    In-Person Meeting Radius
+                </h3>
+
+                <p>
+
+                    Please note that my in-person services are
+                    limited to this specific radius.
+
+                </p>
+
+                <p>
+
+                    If you are located outside this area, I may
+                    not be able to visit in person but would be
+                    happy to connect via video call where
+                    appropriate. Alternatively, we could discuss
+                    additional costs.
+
+                </p>
+
+                <a href="#contact"
+                   class="button button-primary">
+
+                    Check Your Area
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROFESSIONAL STANDARDS
+========================================================= -->
+
+<section class="standards section">
+
+    <div class="container">
+
+        <div class="section-heading centered">
+
+            <span class="eyebrow">
+                PROFESSIONAL & RESPONSIBLE
+            </span>
+
+            <h2>
+                Your peace of mind matters.
+            </h2>
+
+        </div>
+
+
+        <div class="standards-grid">
+
+
+            <div class="standard">
+
+                <span>
+                    🛡️
+                </span>
+
+                <h3>
+                    Fully Insured
+                </h3>
+
+                <p>
+                    Appropriate insurance is in place
+                    for the services provided.
+                </p>
+
+            </div>
+
+
+            <div class="standard">
+
+                <span>
+                    ✓
+                </span>
+
+                <h3>
+                    DBS Checked
+                </h3>
+
+                <p>
+                    DBS checked for additional client
+                    confidence.
+                </p>
+
+            </div>
+
+
+            <div class="standard">
+
+                <span>
+                    📹
+                </span>
+
+                <h3>
+                    Body Camera
+                </h3>
+
+                <p>
+                    A body camera may be worn during
+                    visits for the protection of both
+                    the client and myself.
+                </p>
+
+            </div>
+
+
+            <div class="standard">
+
+                <span>
+                    🐾
+                </span>
+
+                <h3>
+                    Welfare Focused
+                </h3>
+
+                <p>
+                    The welfare and individual needs
+                    of every animal remain central.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact section"
+         id="contact">
+
+    <div class="container contact-grid">
+
+
+        <div class="contact-main">
+
+            <span class="eyebrow">
+                GET IN TOUCH
+            </span>
+
+            <h2>
+                Let's have a chat.
+            </h2>
+
+            <p>
+
+                Whether you're thinking about adopting,
+                fostering, need help settling a new pet,
+                or simply need someone to pop in and give
+                your companion some attention, we'd love
+                to hear from you.
+
+            </p>
+
+            <div class="contact-actions">
+
+                <a href="https://wa.me/447933325465"
+                   class="button button-whatsapp"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    WhatsApp Us
+
+                    <span>→</span>
+
+                </a>
+
+                <a href="https://www.facebook.com/Rescue2Home"
+                   class="button button-facebook"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Facebook Messenger
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-details">
+
+
+            <a href="mailto:rescue2homeanimalsupport@gmail.com"
+               class="contact-card">
+
+                <span>
+                    ✉️
+                </span>
+
+                <div>
+
+                    <small>
+                        Email
+                    </small>
+
+                    <strong>
+                        rescue2homeanimalsupport@gmail.com
+                    </strong>
+
+                </div>
+
+            </a>
+
+
+            <a href="tel:07933325465"
+               class="contact-card">
+
+                <span>
+                    📞
+                </span>
+
+                <div>
+
+                    <small>
+                        Phone / Text
+                    </small>
+
+                    <strong>
+                        07933 325465
+                    </strong>
+
+                </div>
+
+            </a>
+
+
+            <a href="https://www.facebook.com/Rescue2Home"
+               class="contact-card"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span>
+                    f
+                </span>
+
+                <div>
+
+                    <small>
+                        Facebook
+                    </small>
+
+                    <strong>
+                        Rescue 2 Home
+                    </strong>
+
+                </div>
+
+            </a>
+
+
+            <div class="contact-card">
+
+                <span>
+                    📍
+                </span>
+
+                <div>
+
+                    <small>
+                        Based in
+                    </small>
+
+                    <strong>
+                        Somerset, UK
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="final-cta">
+
+    <div class="container">
+
+        <span class="eyebrow">
+            RESCUE 2 HOME ANIMAL SUPPORT
+        </span>
+
+        <h2>
+            Supporting people.
+            Supporting animals.
+        </h2>
+
+        <p>
+            Practical support, friendly advice and
+            compassionate companion care across Somerset.
+        </p>
+
+        <div class="final-actions">
+
+            <a href="#contact"
+               class="button button-white">
+
+                Get In Touch
+
+                <span>→</span>
+
+            </a>
+
+            <a href="#services"
+               class="button button-glass">
+
+                View Services
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="r2hasmainlogo.png"
+                    alt="Rescue 2 Home Animal Support"
+                    class="footer-logo">
+
+                <p>
+
+                    Independent animal support helping
+                    people and pets across Somerset.
+
+                </p>
+
+                <p class="footer-disclaimer">
+
+                    Rescue 2 Home Animal Support is not a
+                    rescue centre, veterinary practice or
+                    dog-training business.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About Me
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#radius">
+                    Service Area
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="mailto:rescue2homeanimalsupport@gmail.com">
+                    Email
+                </a>
+
+                <a href="tel:07933325465">
+                    07933 325465
+                </a>
+
+                <a href="https://wa.me/447933325465"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    WhatsApp
+
+                </a>
+
+                <a href="https://www.facebook.com/Rescue2Home"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Facebook
+
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Legal
+                </h3>
+
+                <button data-modal="termsModal">
+                    Terms & Conditions
+                </button>
+
+                <button data-modal="privacyModal">
+                    Privacy Policy
+                </button>
+
+                <button data-modal="bookingModal">
+                    Booking & Cancellation
+                </button>
+
+                <button data-modal="feedbackModal">
+                    Feedback
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Rescue 2 Home Animal Support.
+                All rights reserved.
+            </p>
+
+            <p>
+                Independent animal support service • Somerset, UK
+            </p>
+
+        </div>
+
+
+        <div class="footer-credit">
+
+            Website design and development by
+
+            <a href="https://www.somersetfaunadigitalservices.co.uk"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Somerset Fauna Digital Services
+
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     AUTO-LOAD WELCOME MODAL
+========================================================= -->
+
+<div class="legal-modal"
+     id="welcomeModal"
+     aria-hidden="true">
+
+    <div class="legal-modal-backdrop"
+         data-close-modal></div>
+
+    <div class="legal-modal-window"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="welcomeTitle">
+
+        <button class="legal-close"
+                data-close-modal
+                aria-label="Close welcome popup">
+
+            ×
+
+        </button>
+
+        <div class="legal-content">
+
+            <span class="eyebrow">
+                WELCOME
+            </span>
+
+            <h2 id="welcomeTitle">
+                Welcome to Rescue 2 Home
+            </h2>
+
+            <p>
+
+                Thank you for visiting Rescue 2 Home Animal Support. We provide friendly,
+                practical assistance for pet adoption, fostering, and everyday companion care across Somerset.
+
+            </p>
+
+            <p>
+
+                Explore our services or get in touch directly if you need support or have any questions!
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     LEGAL MODALS
+========================================================= -->
+
+<div class="legal-modal"
+     id="termsModal"
+     aria-hidden="true">
+
+    <div class="legal-modal-backdrop"
+         data-close-modal></div>
+
+    <div class="legal-modal-window"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="termsTitle">
+
+        <button class="legal-close"
+                data-close-modal
+                aria-label="Close terms and conditions">
+
+            ×
+
+        </button>
+
+        <div class="legal-content">
+
+            <span class="eyebrow">
+                LEGAL INFORMATION
+            </span>
+
+            <h2 id="termsTitle">
+                Terms & Conditions
+            </h2>
+
+            <p class="legal-updated">
+                Last updated: June 2026
+            </p>
+
+
+            <h3>
+                1. About the Service
+            </h3>
+
+            <p>
+
+                Rescue 2 Home Animal Support is an independent
+                animal support service. We are not a rescue
+                centre, rehoming organisation, veterinary
+                practice or professional dog-training service.
+
+            </p>
+
+            <p>
+
+                We work alongside rescue organisations and
+                animal professionals to provide additional
+                practical support, advice and companion care.
+
+            </p>
+
+
+            <h3>
+                2. Services & Bookings
+            </h3>
+
+            <p>
+
+                Services are subject to availability and are
+                arranged directly with the client.
+
+            </p>
+
+            <p>
+
+                We generally require at least 24 hours' notice
+                for bookings. Short-notice requests may be
+                considered where availability allows, but cannot
+                be guaranteed.
+
+            </p>
+
+            <p>
+
+                A booking is confirmed once the service,
+                date, time and price have been agreed.
+
+            </p>
+
+
+            <h3>
+                3. Payments
+            </h3>
+
+            <p>
+
+                Prices are stated clearly when services are
+                arranged. Payment arrangements will be
+                confirmed with the client before the service
+                takes place.
+
+            </p>
+
+            <p>
+
+                Prices may be changed in the future, but any
+                agreed price for an existing booking will be
+                honoured unless otherwise agreed with the client.
+
+            </p>
+
+
+            <h3>
+                4. Adoption & Foster Support
+            </h3>
+
+            <p>
+
+                Our adoption and fostering support is intended
+                to provide additional guidance and reassurance.
+
+            </p>
+
+            <p>
+
+                We do not make adoption or fostering decisions,
+                approve applications or guarantee that a
+                particular animal will be suitable or available.
+
+            </p>
+
+            <p>
+
+                Final decisions regarding adoption and fostering
+                remain with the relevant rescue organisation.
+
+            </p>
+
+
+            <h3>
+                5. Pet & Companion Support
+            </h3>
+
+            <p>
+
+                Clients remain responsible for providing accurate
+                information about their animal, including relevant
+                behavioural, medical, dietary and safety information.
+
+            </p>
+
+            <p>
+
+                We will follow reasonable instructions provided
+                by the client, but we cannot guarantee the
+                behaviour or actions of an animal.
+
+            </p>
+
+
+            <h3>
+                6. Veterinary & Specialist Advice
+            </h3>
+
+            <p>
+
+                Rescue 2 Home Animal Support does not provide
+                veterinary diagnosis, treatment or emergency
+                veterinary care.
+
+            </p>
+
+            <p>
+
+                Where appropriate, clients may be advised to
+                contact a veterinary professional, qualified
+                trainer, behaviourist or other specialist.
+
+            </p>
+
+
+            <h3>
+                7. Cancellation & Rescheduling
+            </h3>
+
+            <p>
+
+                Our standard cancellation notice is 24 hours.
+                Cancellations made with less than 24 hours'
+                notice may incur a cancellation charge up to
+                the full value of the service.
+
+            </p>
+
+            <p>
+
+                Nothing in these terms removes or restricts
+                any consumer rights that cannot legally be
+                excluded or restricted.
+
+            </p>
+
+
+            <h3>
+                8. Liability
+            </h3>
+
+            <p>
+
+                We take reasonable care when providing our
+                services. However, animals can behave
+                unpredictably and clients must provide accurate
+                information about known risks.
+
+            </p>
+
+            <p>
+
+                Nothing in these terms excludes or limits
+                liability where doing so would be unlawful,
+                including liability for death or personal injury
+                caused by negligence or any other liability that
+                cannot legally be excluded.
+
+            </p>
+
+
+            <h3>
+                9. Governing Law
+            </h3>
+
+            <p>
+
+                These terms are governed by the laws of England
+                and Wales.
+
+            </p>
+
+
+            <h3>
+                10. Contact
+            </h3>
+
+            <p>
+
+                Email:
+                <a href="mailto:rescue2homeanimalsupport@gmail.com">
+                    rescue2homeanimalsupport@gmail.com
+                </a>
+
+            </p>
+
+            <p>
+
+                Phone/Text:
+                <a href="tel:07933325465">
+                    07933 325465
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     LEGAL MODAL - PRIVACY
+========================================================= -->
+
+<div class="legal-modal"
+     id="privacyModal"
+     aria-hidden="true">
+
+    <div class="legal-modal-backdrop"
+         data-close-modal></div>
+
+    <div class="legal-modal-window"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="privacyTitle">
+
+        <button class="legal-close"
+                data-close-modal
+                aria-label="Close privacy policy">
+
+            ×
+
+        </button>
+
+        <div class="legal-content">
+
+            <span class="eyebrow">
+                YOUR PRIVACY
+            </span>
+
+            <h2 id="privacyTitle">
+                Privacy Policy
+            </h2>
+
+            <p class="legal-updated">
+                Last updated: June 2026
+            </p>
+
+
+            <h3>
+                1. Who We Are
+            </h3>
+
+            <p>
+
+                Rescue 2 Home Animal Support is responsible
+                for the personal information collected and
+                used in connection with our services.
+
+            </p>
+
+            <p>
+
+                Contact:
+                rescue2homeanimalsupport@gmail.com
+
+            </p>
+
+            <p>
+
+                Phone:
+                07933 325465
+
+            </p>
+
+
+            <h3>
+                2. Information We May Collect
+            </h3>
+
+            <p>
+
+                Depending on the service you request, we may
+                collect your name, contact details, address,
+                booking information and relevant information
+                about your pet or animal.
+
+            </p>
+
+            <p>
+
+                Information about an animal may include details
+                needed to safely provide the service, such as
+                feeding instructions, behavioural information,
+                medication instructions or known risks.
+
+            </p>
+
+
+            <h3>
+                3. How We Receive Information
+            </h3>
+
+            <p>
+
+                Information may be provided directly by you
+                through email, telephone, WhatsApp, Facebook
+                Messenger or other direct communication.
+
+            </p>
+
+            <p>
+
+                We may also receive relevant information from
+                a rescue organisation where this is necessary
+                to provide an agreed support service.
+
+            </p>
+
+
+            <h3>
+                4. Why We Use Personal Data
+            </h3>
+
+            <p>
+
+                We use information where necessary to respond
+                to enquiries, arrange and provide services,
+                communicate with clients, maintain appropriate
+                records and meet legal or accounting obligations.
+
+            </p>
+
+
+            <h3>
+                5. Lawful Bases
+            </h3>
+
+            <p>
+
+                Depending on the circumstances, we may rely on
+                contractual necessity, legitimate interests,
+                legal obligations or consent.
+
+            </p>
+
+            <p>
+
+                Where consent is used, you may withdraw your
+                consent at any time.
+
+            </p>
+
+
+            <h3>
+                6. Sharing Information
+            </h3>
+
+            <p>
+
+                We do not sell, rent or trade personal information.
+
+            </p>
+
+            <p>
+
+                Information may be shared where necessary with
+                trusted service providers or professionals
+                involved in delivering the requested service,
+                where lawful and appropriate.
+
+            </p>
+
+            <p>
+
+                Communication platforms such as WhatsApp and
+                Facebook Messenger operate independently and
+                have their own privacy policies.
+
+            </p>
+
+
+            <h3>
+                7. Retention
+            </h3>
+
+            <p>
+
+                Personal information is kept only for as long
+                as reasonably necessary for the purpose for
+                which it was collected, including any period
+                required for legal, accounting, insurance or
+                business record-keeping purposes.
+
+            </p>
+
+            <p>
+
+                When information is no longer required, it will
+                be securely deleted or disposed of where
+                reasonably practicable.
+
+            </p>
+
+
+            <h3>
+                8. Keeping Information Secure
+            </h3>
+
+            <p>
+
+                Reasonable technical and organisational measures
+                are used to protect personal information from
+                unauthorised access, loss, misuse or disclosure.
+
+            </p>
+
+
+            <h3>
+                9. Your Rights
+            </h3>
+
+            <p>
+
+                Subject to applicable law, you may have rights
+                including the right to request access to your
+                personal data, correction of inaccurate data,
+                erasure, restriction of processing, objection
+                to certain processing and data portability.
+
+            </p>
+
+            <p>
+
+                To make a data protection request, contact:
+
+                <a href="mailto:rescue2homeanimalsupport@gmail.com">
+                    rescue2homeanimalsupport@gmail.com
+                </a>
+
+            </p>
+
+
+            <h3>
+                10. Complaining About Data Protection
+            </h3>
+
+            <p>
+
+                If you have concerns about how your personal
+                information is being handled, please contact us
+                first so that we can try to resolve the issue.
+
+            </p>
+
+            <p>
+
+                You also have the right to complain to the
+                Information Commissioner's Office (ICO).
+
+            </p>
+
+            <p>
+
+                ICO website:
+                <a href="https://ico.org.uk/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    ico.org.uk
+
+                </a>
+
+            </p>
+
+
+            <h3>
+                11. Changes to This Notice
+            </h3>
+
+            <p>
+
+                This privacy notice may be updated from time
+                to time to reflect changes to our services,
+                legal requirements or how personal information
+                is handled.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     LEGAL MODAL - BOOKING
+========================================================= -->
+
+<div class="legal-modal"
+     id="bookingModal"
+     aria-hidden="true">
+
+    <div class="legal-modal-backdrop"
+         data-close-modal></div>
+
+    <div class="legal-modal-window"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="bookingTitle">
+
+        <button class="legal-close"
+                data-close-modal
+                aria-label="Close booking policy">
+
+            ×
+
+        </button>
+
+        <div class="legal-content">
+
+            <span class="eyebrow">
+                BOOKING INFORMATION
+            </span>
+
+            <h2 id="bookingTitle">
+                Booking & Cancellation Policy
+            </h2>
+
+            <p class="legal-updated">
+                Last updated: June 2026
+            </p>
+
+
+            <h3>
+                1. Booking Notice
+            </h3>
+
+            <p>
+
+                We generally require at least 24 hours' notice
+                for service requests.
+
+            </p>
+
+            <p>
+
+                Same-day or short-notice requests may be
+                considered if availability allows, but cannot
+                be guaranteed.
+
+            </p>
+
+
+            <h3>
+                2. Arranging a Booking
+            </h3>
+
+            <p>
+
+                To arrange a booking, please contact us through
+                WhatsApp, Facebook Messenger, email or telephone.
+
+            </p>
+
+            <p>
+
+                We will confirm the service, date, time, location
+                and applicable price before the appointment is
+                considered confirmed.
+
+            </p>
+
+
+            <h3>
+                3. Cancellation
+            </h3>
+
+            <p>
+
+                If you need to cancel or reschedule, please give
+                at least 24 hours' notice wherever possible.
+
+            </p>
+
+            <p>
+
+                Cancellations made with less than 24 hours'
+                notice may be subject to a cancellation charge
+                up to the full value of the scheduled service.
+
+            </p>
+
+
+            <h3>
+                4. Missed Appointments
+            </h3>
+
+            <p>
+
+                If a client does not attend or provide access
+                for an agreed service without reasonable notice,
+                the full service charge may apply.
+
+            </p>
+
+            <p>
+
+                Repeated missed appointments or late cancellations
+                may result in future services being subject to
+                payment in advance or the service being declined.
+
+            </p>
+
+
+            <h3>
+                5. Consumer Rights
+            </h3>
+
+            <p>
+
+                Nothing in this policy is intended to remove or
+                restrict statutory consumer rights.
+
+            </p>
+
+            <p>
+
+                Where consumer law gives you a cancellation,
+                refund or other legal right, that right will
+                continue to apply.
+
+            </p>
+
+
+            <h3>
+                6. Contact
+            </h3>
+
+            <p>
+
+                Email:
+
+                <a href="mailto:rescue2homeanimalsupport@gmail.com">
+                    rescue2homeanimalsupport@gmail.com
+                </a>
+
+            </p>
+
+            <p>
+
+                Phone/Text:
+
+                <a href="tel:07933325465">
+                    07933 325465
+                </a>
+
+            </p>
+
+            <p>
+
+                WhatsApp:
+
+                <a href="https://wa.me/447933325465"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Message us on WhatsApp
+
+                </a>
+
+            </p>
+
+            <p>
+
+                Facebook:
+
+                <a href="https://www.facebook.com/Rescue2Home"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Rescue 2 Home
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     LEGAL MODAL - FEEDBACK
+========================================================= -->
+
+<div class="legal-modal"
+     id="feedbackModal"
+     aria-hidden="true">
+
+    <div class="legal-modal-backdrop"
+         data-close-modal></div>
+
+    <div class="legal-modal-window"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="feedbackTitle">
+
+        <button class="legal-close"
+                data-close-modal
+                aria-label="Close feedback information">
+
+            ×
+
+        </button>
+
+        <div class="legal-content">
+
+            <span class="eyebrow">
+                CUSTOMER FEEDBACK
+            </span>
+
+            <h2 id="feedbackTitle">
+                Feedback
+            </h2>
+
+            <p>
+
+                We really value feedback from our clients.
+                It helps us understand what we are doing well
+                and where we may be able to improve our service.
+
+            </p>
+
+            <p>
+
+                If you have any feedback about your experience
+                with Rescue 2 Home Animal Support, we would be
+                very happy to hear from you.
+
+            </p>
+
+
+            <h3>
+                How to Give Feedback
+            </h3>
+
+            <p>
+
+                You can contact us directly by email, phone,
+                text or WhatsApp.
+
+            </p>
+
+            <p>
+
+                Email:
+
+                <a href="mailto:rescue2homeanimalsupport@gmail.com">
+                    rescue2homeanimalsupport@gmail.com
+                </a>
+
+            </p>
+
+            <p>
+
+                Phone/Text:
+
+                <a href="tel:07933325465">
+                    07933 325465
+                </a>
+
+            </p>
+
+            <p>
+
+                WhatsApp:
+
+                <a href="https://wa.me/447933325465"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Message us on WhatsApp
+
+                </a>
+
+            </p>
+
+
+            <h3>
+                Thank You
+            </h3>
+
+            <p>
+
+                Thank you for taking the time to share your
+                thoughts. Your feedback is appreciated and helps
+                us continue to provide the best possible support
+                for people and their animals.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
 /* =========================================================
-   RESCUE 2 HOME ANIMAL SUPPORT
-   MODERN 2026/2027 STYLE
+   MOBILE MENU
 ========================================================= */
 
-:root {
+const hamburger =
+    document.getElementById("hamburger");
 
-    --blue: #174f78;
-    --blue-dark: #0d3857;
-    --blue-deep: #092d48;
-    --blue-light: #eaf4fa;
-    --blue-soft: #f4f9fc;
-
-    --accent: #2e789f;
-    --white: #ffffff;
-
-    --text: #24313b;
-    --muted: #64727d;
-    --border: #dce7ed;
-
-    --success: #23845a;
-
-    --shadow-sm:
-        0 5px 20px rgba(13, 56, 87, 0.08);
-
-    --shadow:
-        0 18px 50px rgba(13, 56, 87, 0.12);
-
-    --shadow-lg:
-        0 30px 80px rgba(13, 56, 87, 0.18);
-
-    --radius-sm: 10px;
-    --radius: 18px;
-    --radius-lg: 28px;
-
-    --container: 1180px;
-
-}
+const mobileNavigation =
+    document.getElementById("mobileNavigation");
 
 
-/* =========================================================
-   RESET
-========================================================= */
+if (hamburger && mobileNavigation) {
 
-*,
-*::before,
-*::after {
+    hamburger.addEventListener("click", () => {
 
-    box-sizing: border-box;
+        const open =
+            mobileNavigation.classList.toggle("open");
 
-}
+        hamburger.classList.toggle("active", open);
 
-
-html {
-
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
-
-}
-
-
-body {
-
-    margin: 0;
-
-    font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-    color: var(--text);
-
-    background:
-        var(--white);
-
-    line-height: 1.65;
-
-    overflow-x: hidden;
-
-}
-
-
-body.modal-open,
-body.menu-open {
-
-    overflow: hidden;
-
-}
-
-
-img {
-
-    max-width: 100%;
-
-    display: block;
-
-}
-
-
-a {
-
-    color: inherit;
-
-    text-decoration: none;
-
-}
-
-
-button {
-
-    font: inherit;
-
-}
-
-
-.container {
-
-    width:
-        min(
-            calc(100% - 40px),
-            var(--container)
+        hamburger.setAttribute(
+            "aria-expanded",
+            String(open)
         );
 
-    margin-inline: auto;
-
-}
-
-
-/* =========================================================
-   TYPOGRAPHY
-========================================================= */
-
-h1,
-h2,
-h3 {
-
-    margin-top: 0;
-
-    letter-spacing: -0.035em;
-
-    line-height: 1.12;
-
-}
-
-
-h1 {
-
-    font-size:
-        clamp(
-            2.6rem,
-            6vw,
-            5.4rem
+        hamburger.setAttribute(
+            "aria-label",
+            open ? "Close menu" : "Open menu"
         );
 
-}
+        updateMenuScroll();
+
+    });
 
 
-h2 {
+    mobileNavigation
+        .querySelectorAll("a")
+        .forEach(link => {
 
-    font-size:
-        clamp(
-            2rem,
-            4vw,
-            3.4rem
-        );
+            link.addEventListener("click", () => {
 
-}
+                mobileNavigation.classList.remove("open");
 
+                hamburger.classList.remove("active");
 
-h3 {
+                hamburger.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-    font-size: 1.25rem;
+                hamburger.setAttribute(
+                    "aria-label",
+                    "Open menu"
+                );
 
-}
+                updateMenuScroll();
 
+            });
 
-p {
-
-    margin-top: 0;
-
-}
-
-
-.eyebrow {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    margin-bottom: 16px;
-
-    color: var(--blue);
-
-    font-size: 0.75rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.16em;
-
-    text-transform: uppercase;
+        });
 
 }
 
-
-.hero-eyebrow {
-
-    color: rgba(255,255,255,.85);
-
-}
-
-
-.section {
-
-    padding:
-        clamp(70px, 9vw, 120px)
-        0;
-
-}
-
-
-.section-heading {
-
-    max-width: 720px;
-
-    margin-bottom: 50px;
-
-}
-
-
-.section-heading.centered {
-
-    margin-inline: auto;
-
-    text-align: center;
-
-}
-
-
-.section-heading p {
-
-    color: var(--muted);
-
-    font-size: 1.08rem;
-
-}
 
 
 /* =========================================================
-   TOP APP NOTICE
+   HEADER SCROLL
 ========================================================= */
 
-.app-notice {
-
-    display: none;
-
-    background:
-        var(--blue-dark);
-
-    color:
-        var(--white);
-
-}
+const siteHeader =
+    document.getElementById("siteHeader");
 
 
-.app-notice.show {
+window.addEventListener(
+    "scroll",
+    () => {
 
-    display: block;
+        if (!siteHeader) return;
 
-}
+        if (window.scrollY > 30) {
 
+            siteHeader.classList.add("scrolled");
 
-.app-notice-inner {
+        } else {
 
-    min-height: 50px;
+            siteHeader.classList.remove("scrolled");
 
-    display: flex;
+        }
 
-    align-items: center;
+    },
+    { passive: true }
+);
 
-    gap: 15px;
-
-}
-
-
-.app-notice-icon {
-
-    font-size: 1.2rem;
-
-}
-
-
-.app-notice-text {
-
-    flex: 1;
-
-    display: flex;
-
-    flex-direction: column;
-
-    line-height: 1.25;
-
-}
-
-
-.app-notice-text strong {
-
-    font-size: .85rem;
-
-}
-
-
-.app-notice-text span {
-
-    color:
-        rgba(255,255,255,.72);
-
-    font-size: .74rem;
-
-}
-
-
-.app-install-button {
-
-    border: 1px solid
-        rgba(255,255,255,.35);
-
-    background:
-        rgba(255,255,255,.1);
-
-    color: white;
-
-    padding: 7px 13px;
-
-    border-radius: 999px;
-
-    cursor: pointer;
-
-    font-weight: 700;
-
-    font-size: .75rem;
-
-}
-
-
-.app-install-button:hover {
-
-    background: white;
-
-    color: var(--blue);
-
-}
-
-
-.app-notice-close {
-
-    border: 0;
-
-    background: none;
-
-    color: white;
-
-    font-size: 1.3rem;
-
-    cursor: pointer;
-
-    opacity: .7;
-
-}
 
 
 /* =========================================================
-   TOP BAR
+   LEGAL & WELCOME MODALS
 ========================================================= */
 
-.top-bar {
+const modalTriggers =
+    document.querySelectorAll("[data-modal]");
 
-    background:
-        var(--blue-deep);
+const closeButtons =
+    document.querySelectorAll("[data-close-modal]");
 
-    color:
-        rgba(255,255,255,.85);
 
-    font-size: .78rem;
+function openModal(modal) {
 
-}
+    if (!modal) return;
 
+    modal.classList.add("open");
 
-.top-bar-inner {
-
-    min-height: 36px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 20px;
-
-}
-
-
-.top-bar a {
-
-    color: white;
-
-}
-
-
-.top-bar a:hover {
-
-    text-decoration: underline;
-
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.site-header {
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
-
-    background:
-        rgba(255,255,255,.96);
-
-    backdrop-filter:
-        blur(16px);
-
-    border-bottom:
-        1px solid
-        rgba(13,56,87,.08);
-
-    transition:
-        box-shadow .25s ease;
-
-}
-
-
-.site-header.scrolled {
-
-    box-shadow:
-        0 10px 30px
-        rgba(13,56,87,.1);
-
-}
-
-
-.header-inner {
-
-    min-height: 56px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-}
-
-
-.brand {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    min-width: 80px;
-
-}
-
-
-.brand-logo {
-
-    width: 80px;
-
-    height: auto;
-
-    max-height: 40px;
-
-    object-fit: contain;
-
-}
-
-
-.desktop-navigation {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-}
-
-
-.desktop-navigation a {
-
-    padding: 7px 12px;
-
-    border-radius: 8px;
-
-    font-size: .84rem;
-
-    font-weight: 700;
-
-    color: #3e4d57;
-
-    transition:
-        background .2s ease,
-        color .2s ease;
-
-}
-
-
-.desktop-navigation a:hover {
-
-    color: var(--blue);
-
-    background:
-        var(--blue-soft);
-
-}
-
-.desktop-navigation a.active {
-    color: var(--blue);
-    background: var(--blue-soft);
-    box-shadow: inset 0 -2px 0 var(--blue);
-}
-
-
-.desktop-navigation .nav-cta {
-
-    color: white;
-
-    background:
-        var(--blue);
-
-    padding-inline: 16px;
-
-}
-
-
-.desktop-navigation .nav-cta:hover {
-
-    color: white;
-
-    background:
-        var(--blue-dark);
-
-}
-
-
-.hamburger {
-
-    display: none;
-
-    width: 38px;
-
-    height: 38px;
-
-    padding: 8px;
-
-    border: 0;
-
-    background:
-        var(--blue-soft);
-
-    border-radius: 8px;
-
-    cursor: pointer;
-
-}
-
-
-.hamburger span {
-
-    display: block;
-
-    width: 20px;
-
-    height: 2px;
-
-    margin: 4px auto;
-
-    background:
-        var(--blue);
-
-    transition:
-        transform .25s ease,
-        opacity .25s ease;
-
-}
-
-
-.hamburger.active span:nth-child(1) {
-
-    transform:
-        translateY(6px)
-        rotate(45deg);
-
-}
-
-
-.hamburger.active span:nth-child(2) {
-
-    opacity: 0;
-
-}
-
-
-.hamburger.active span:nth-child(3) {
-
-    transform:
-        translateY(-6px)
-        rotate(-45deg);
-
-}
-
-
-.mobile-navigation {
-
-    display: none;
-
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero {
-
-    position: relative;
-
-    min-height:
-        min(
-            680px,
-            calc(100vh - 100px)
-        );
-
-    display: flex;
-
-    align-items: center;
-
-    overflow: hidden;
-
-    background:
-        var(--blue-dark);
-
-    color: white;
-
-}
-
-
-.hero-background {
-
-    position: absolute;
-
-    inset: 0;
-
-}
-
-
-.hero-background img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    object-position: center;
-
-}
-
-
-.hero-blue-overlay {
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(7,39,61,.94) 0%,
-            rgba(16,72,107,.84) 48%,
-            rgba(23,79,120,.42) 100%
-        );
-
-}
-
-
-.hero-inner {
-
-    position: relative;
-
-    z-index: 2;
-
-}
-
-
-.hero-content {
-
-    max-width: 760px;
-
-    padding:
-        80px 0;
-
-}
-
-
-.hero h1 {
-
-    max-width: 800px;
-
-    margin-bottom: 25px;
-
-}
-
-
-.hero h1 span {
-
-    display: block;
-
-    color:
-        #bfe5f7;
-
-}
-
-
-.hero-lead {
-
-    max-width: 680px;
-
-    color:
-        rgba(255,255,255,.88);
-
-    font-size:
-        clamp(
-            1rem,
-            2vw,
-            1.25rem
-        );
-
-}
-
-
-.hero-actions {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 32px;
-
-}
-
-
-.button {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    min-height: 44px;
-
-    padding:
-        10px 18px;
-
-    border-radius: 9px;
-
-    border: 1px solid transparent;
-
-    font-weight: 800;
-
-    font-size: .88rem;
-
-    cursor: pointer;
-
-    transition:
-        transform .2s ease,
-        background .2s ease,
-        box-shadow .2s ease;
-
-}
-
-
-.button:hover {
-
-    transform:
-        translateY(-2px);
-
-}
-
-
-.button span {
-
-    font-size: 1.05rem;
-
-}
-
-
-.button-white {
-
-    background: white;
-
-    color: var(--blue);
-
-    box-shadow:
-        0 8px 24px
-        rgba(0,0,0,.12);
-
-}
-
-
-.button-glass {
-
-    color: white;
-
-    border-color:
-        rgba(255,255,255,.35);
-
-    background:
-        rgba(255,255,255,.1);
-
-    backdrop-filter:
-        blur(10px);
-
-}
-
-
-.button-glass:hover {
-
-    background:
-        rgba(255,255,255,.18);
-
-}
-
-
-.button-primary {
-
-    background:
-        var(--blue);
-
-    color: white;
-
-}
-
-
-.button-primary:hover {
-
-    background:
-        var(--blue-dark);
-
-}
-
-
-.hero-points {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 18px;
-
-    margin-top: 34px;
-
-    color:
-        rgba(255,255,255,.8);
-
-    font-size: .8rem;
-
-    font-weight: 700;
-
-}
-
-
-/* =========================================================
-   IMPORTANT NOTICE
-========================================================= */
-
-.important-notice {
-
-    padding: 22px 0;
-
-    background:
-        var(--blue-soft);
-
-}
-
-
-.notice-box {
-
-    display: flex;
-
-    gap: 18px;
-
-    align-items: flex-start;
-
-    padding: 22px 25px;
-
-    background: white;
-
-    border: 1px solid
-        var(--border);
-
-    border-radius:
-        var(--radius);
-
-    box-shadow:
-        var(--shadow-sm);
-
-}
-
-
-.notice-icon {
-
-    width: 40px;
-
-    height: 40px;
-
-    display: grid;
-
-    place-items: center;
-
-    flex: 0 0 auto;
-
-    background:
-        var(--blue-light);
-
-    color:
-        var(--blue);
-
-    border-radius: 50%;
-
-    font-weight: 900;
-
-}
-
-
-.notice-box strong {
-
-    color:
-        var(--blue-dark);
-
-}
-
-
-.notice-box p {
-
-    margin:
-        5px 0 0;
-
-    color:
-        var(--muted);
-
-    font-size: .9rem;
-
-}
-
-
-/* =========================================================
-   INTRO
-========================================================= */
-
-.intro {
-
-    background:
-        white;
-
-}
-
-
-.intro-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:
-        clamp(40px, 8vw, 100px);
-
-    align-items: start;
-
-}
-
-
-.intro-grid p {
-
-    color:
-        var(--muted);
-
-    font-size:
-        1.02rem;
-
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about {
-
-    background:
-        var(--blue-soft);
-
-}
-
-
-.about-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        .82fr 1.18fr;
-
-    gap:
-        clamp(45px, 8vw, 100px);
-
-    align-items: center;
-
-}
-
-
-.about-image-wrap {
-
-    position: relative;
-
-}
-
-
-.about-image {
-
-    width: 100%;
-
-    max-width: 500px;
-
-    margin-inline: auto;
-
-    border-radius:
-        30px;
-
-    box-shadow:
-        var(--shadow-lg);
-
-}
-
-
-.about-content p {
-
-    color:
-        var(--muted);
-
-}
-
-
-.about-highlights {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 12px;
-
-    margin-top: 30px;
-
-}
-
-
-.about-highlights div {
-
-    padding: 16px;
-
-    border:
-        1px solid var(--border);
-
-    background: white;
-
-    border-radius:
-        var(--radius-sm);
-
-}
-
-
-.about-highlights strong {
-
-    display: block;
-
-    color:
-        var(--blue-dark);
-
-    font-size: .9rem;
-
-}
-
-
-.about-highlights span {
-
-    display: block;
-
-    margin-top: 4px;
-
-    color:
-        var(--muted);
-
-    font-size: .72rem;
-
-}
-
-
-/* =========================================================
-   EXPERIENCE
-========================================================= */
-
-.experience {
-
-    background: white;
-
-}
-
-
-.experience-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:
-        clamp(45px, 8vw, 100px);
-
-    align-items: center;
-
-}
-
-
-.experience-content p {
-
-    color:
-        var(--muted);
-
-}
-
-
-.experience-panel {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 15px;
-
-}
-
-
-.experience-card {
-
-    padding: 25px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius);
-
-    background:
-        var(--blue-soft);
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-
-}
-
-
-.experience-card:hover {
-
-    transform:
-        translateY(-4px);
-
-    box-shadow:
-        var(--shadow);
-
-}
-
-
-.experience-card > span {
-
-    display: block;
-
-    font-size: 1.8rem;
-
-    margin-bottom: 15px;
-
-}
-
-
-.experience-card strong {
-
-    display: block;
-
-    color:
-        var(--blue-dark);
-
-}
-
-
-.experience-card p {
-
-    margin: 7px 0 0;
-
-    color:
-        var(--muted);
-
-    font-size: .82rem;
-
-}
-
-
-/* =========================================================
-   NETWORK
-========================================================= */
-
-.network {
-
-    background:
-        var(--blue-soft);
-
-}
-
-
-.network-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:
-        clamp(45px, 8vw, 100px);
-
-    align-items: center;
-
-}
-
-
-.network-image img {
-
-    width: 100%;
-
-    aspect-ratio: 4 / 3;
-
-    object-fit: cover;
-
-    border-radius:
-        var(--radius-lg);
-
-    box-shadow:
-        var(--shadow);
-
-}
-
-
-.network-content p {
-
-    color:
-        var(--muted);
-
-}
-
-
-.network-content a {
-
-    color:
-        var(--blue);
-
-    font-weight: 800;
-
-}
-
-
-.network-content a:hover {
-
-    text-decoration: underline;
-
-}
-
-
-/* =========================================================
-   SERVICES — MODERN 2026 DESIGN
-========================================================= */
-
-.services {
-    position: relative;
-    background:
-        radial-gradient(circle at 8% 10%, rgba(46,120,159,.08), transparent 30%),
-        linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
-    overflow: hidden;
-}
-
-.services::before {
-    content: "";
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    right: -180px;
-    top: 120px;
-    border-radius: 50%;
-    background: rgba(23,79,120,.045);
-    pointer-events: none;
-}
-
-.services .container {
-    position: relative;
-    z-index: 1;
-}
-
-.services .section-heading {
-    max-width: 760px;
-    margin-bottom: 58px;
-}
-
-.services .section-heading h2 {
-    margin-bottom: 16px;
-}
-
-.services .section-heading p {
-    max-width: 680px;
-    line-height: 1.75;
-}
-
-/* Modern service grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-}
-
-/* Base service card */
-.service-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    padding: 32px;
-    border: 1px solid rgba(23,79,120,.10);
-    border-radius: 26px;
-    background: rgba(255,255,255,.94);
-    box-shadow:
-        0 8px 30px rgba(13,56,87,.055),
-        0 2px 8px rgba(13,56,87,.025);
-    overflow: hidden;
-    isolation: isolate;
-    transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        border-color .3s ease;
-}
-
-.service-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(46,120,159,.055),
-            transparent 42%
-        );
-    pointer-events: none;
-    z-index: -1;
-}
-
-.service-card::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 4px;
-    background: linear-gradient(
-        90deg,
-        var(--blue),
-        var(--accent)
+    modal.setAttribute(
+        "aria-hidden",
+        "false"
     );
-    opacity: .85;
-}
 
-.service-card:hover {
-    transform: translateY(-7px);
-    border-color: rgba(46,120,159,.25);
-    box-shadow:
-        0 22px 55px rgba(13,56,87,.12),
-        0 5px 16px rgba(13,56,87,.05);
-}
-
-/* Featured package */
-.service-featured {
-    grid-column: span 2;
-    padding: 38px;
-    color: white;
-    border: 0;
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(255,255,255,.16),
-            transparent 32%
-        ),
-        linear-gradient(
-            135deg,
-            #123f60 0%,
-            var(--blue) 48%,
-            #2e789f 100%
-        );
-    box-shadow:
-        0 22px 60px rgba(13,56,87,.20);
-}
-
-.service-featured::before {
-    background:
-        radial-gradient(
-            circle at 15% 90%,
-            rgba(255,255,255,.08),
-            transparent 30%
-        );
-}
-
-.service-featured::after {
-    height: 5px;
-    background: rgba(255,255,255,.65);
-}
-
-.service-featured:hover {
-    border-color: transparent;
-    box-shadow:
-        0 28px 70px rgba(13,56,87,.25);
-}
-
-.service-featured h3,
-.service-featured .price {
-    color: white;
-}
-
-.service-featured p,
-.service-featured li {
-    color: #ffffff !important;
-}
-
-/* Card header */
-.service-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 18px;
-    margin-bottom: 4px;
-}
-
-.service-icon {
-    width: 58px;
-    height: 58px;
-    display: grid;
-    place-items: center;
-    flex: 0 0 auto;
-    border: 1px solid rgba(23,79,120,.08);
-    border-radius: 18px;
-    background:
-        linear-gradient(
-            145deg,
-            #eaf4fa,
-            #f7fbfd
-        );
-    font-size: 1.55rem;
-    box-shadow:
-        0 7px 18px rgba(13,56,87,.06);
-}
-
-.service-featured .service-icon {
-    border-color: rgba(255,255,255,.15);
-    background: rgba(255,255,255,.13);
-    box-shadow: none;
-}
-
-/* Badges */
-.service-tag {
-    display: inline-flex;
-    align-items: center;
-    min-height: 30px;
-    padding: 6px 12px;
-    border: 1px solid rgba(255,255,255,.18);
-    border-radius: 999px;
-    background: rgba(255,255,255,.20);
-    color: #ffffff;
-    font-size: .64rem;
-    font-weight: 900;
-    letter-spacing: .1em;
-}
-
-.service-card:not(.service-featured) .service-tag {
-    border-color: rgba(23,79,120,.12);
-    background: var(--blue-light);
-    color: var(--blue);
-}
-
-.service-new {
-    border-color: rgba(46,120,159,.20);
-}
-
-.service-new::after {
-    background: linear-gradient(
-        90deg,
-        #2e789f,
-        #72b6d3
+    document.body.classList.add(
+        "modal-open"
     );
+
 }
 
-/* Headings */
-.service-card h3 {
-    margin: 22px 0 10px;
-    max-width: 560px;
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    line-height: 1.2;
+
+function closeModal(modal) {
+
+    if (!modal) return;
+
+    modal.classList.remove("open");
+
+    modal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.classList.remove(
+        "modal-open"
+    );
+
 }
 
-.service-featured h3 {
-    max-width: 700px;
-    margin-top: 25px;
-    font-size: clamp(1.45rem, 3vw, 2rem);
-}
 
-/* Prices */
-.price {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 5px;
-    width: fit-content;
-    margin: 0 0 18px;
-    padding: 7px 13px;
-    border-radius: 10px;
-    background: var(--blue-light);
-    color: var(--blue);
-    font-size: 1.25rem;
-    font-weight: 900;
-}
-
-.service-featured .price {
-    padding: 0;
-    background: transparent;
-    font-size: 2rem;
-}
-
-.price small {
-    font-size: .72rem;
-    font-weight: 700;
-    color: var(--muted);
-}
-
-.service-featured .price small {
-    color: rgba(255,255,255,.78);
-}
-
-/* Description */
-.service-card p {
-    margin-bottom: 0;
-    color: var(--muted);
-    font-size: .92rem;
-    line-height: 1.7;
-}
-
-.service-featured p {
-    max-width: 850px;
-}
-
-/* Feature list */
-.service-card ul {
-    display: grid;
-    gap: 9px;
-    margin: 20px 0 22px;
-    padding: 0;
-    list-style: none;
-}
-
-.service-card li {
-    position: relative;
-    margin: 0;
-    padding-left: 28px;
-    color: var(--muted);
-    font-size: .85rem;
-    line-height: 1.5;
-}
-
-.service-card li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 19px;
-    height: 19px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: var(--blue-light);
-    color: var(--blue);
-    font-size: .68rem;
-    font-weight: 900;
-}
-
-.service-featured li::before {
-    background: #ffffff;
-    color: #123f60;
-    font-weight: 900;
-}
-
-/* Links */
-.service-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    width: fit-content;
-    margin-top: auto;
-    padding-top: 8px;
-    color: var(--blue);
-    font-weight: 900;
-    font-size: .86rem;
-    transition:
-        gap .2s ease,
-        color .2s ease;
-}
-
-button.service-link {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.service-link:hover {
-    gap: 11px;
-    color: var(--blue-dark);
-}
-
-.service-featured .service-link {
-    color: white;
-}
-
-.service-featured .service-link:hover {
-    color: #dff3fc;
-}
-
-.service-note {
-    margin-top: 15px !important;
-    padding: 12px 14px;
-    border-left: 3px solid #8bbbd0;
-    border-radius: 0 10px 10px 0;
-    background: var(--blue-soft);
-    color: var(--muted) !important;
-    font-size: .75rem !important;
-    font-style: italic;
-    line-height: 1.55 !important;
-}
-
-.service-new .service-note {
-    background: #f3f8fb;
-}
-
-/* Bottom note */
-.services-note {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-top: 25px;
-    padding: 19px 22px;
-    border: 1px solid rgba(23,79,120,.08);
-    border-radius: 16px;
-    background: white;
-    box-shadow: 0 5px 20px rgba(13,56,87,.04);
-    color: var(--muted);
-    font-size: .82rem;
-}
-
-.services-note::before {
-    content: "i";
-    width: 25px;
-    height: 25px;
-    display: grid;
-    place-items: center;
-    flex: 0 0 auto;
-    border-radius: 50%;
-    background: var(--blue-light);
-    color: var(--blue);
-    font-weight: 900;
-    font-size: .75rem;
-}
-
-.services-note strong {
-    color: var(--blue-dark);
-    white-space: nowrap;
-}
-
-/* Modal Custom Styles */
-.modal-price {
-    margin-bottom: 20px;
-}
-
-.modal-list {
-    margin: 15px 0 25px 0;
-    padding: 0;
-    list-style: none;
-}
-
-.modal-list li {
-    margin-bottom: 12px;
-    color: var(--muted);
-    font-size: 0.9rem;
-}
-
-.modal-actions {
-    margin-top: 30px;
-}
-
-/* Responsive Services */
-@media (max-width: 800px) {
-
-    .services-grid {
-        grid-template-columns: 1fr;
+// Open welcome popup automatically on page load
+window.addEventListener("DOMContentLoaded", () => {
+    const welcomeModal = document.getElementById("welcomeModal");
+    if (welcomeModal) {
+        openModal(welcomeModal);
     }
+});
 
-    .service-featured {
-        grid-column: span 1;
+
+modalTriggers.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const modalId =
+                button.getAttribute(
+                    "data-modal"
+                );
+
+            const modal =
+                document.getElementById(
+                    modalId
+                );
+
+            openModal(modal);
+
+        }
+    );
+
+});
+
+
+closeButtons.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const modal =
+                button.closest(
+                    ".legal-modal"
+                );
+
+            closeModal(modal);
+
+        }
+    );
+
+});
+
+
+document.querySelectorAll(
+    ".legal-modal"
+).forEach(modal => {
+
+    modal.addEventListener(
+        "click",
+        event => {
+
+            if (
+                event.target === modal
+            ) {
+
+                closeModal(modal);
+
+            }
+
+        }
+    );
+
+});
+
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (event.key !== "Escape") {
+            return;
+        }
+
+        document
+            .querySelectorAll(
+                ".legal-modal.open"
+            )
+            .forEach(modal => {
+
+                closeModal(modal);
+
+            });
+
     }
+);
 
-    .service-card,
-    .service-featured {
-        padding: 28px;
-    }
-
-}
-
-@media (max-width: 560px) {
-
-    .services .section-heading {
-        margin-bottom: 38px;
-    }
-
-    .service-card,
-    .service-featured {
-        padding: 24px;
-        border-radius: 22px;
-    }
-
-    .service-icon {
-        width: 52px;
-        height: 52px;
-        border-radius: 16px;
-    }
-
-    .service-top {
-        gap: 10px;
-    }
-
-    .service-tag {
-        min-height: 27px;
-        padding: 5px 9px;
-        font-size: .58rem;
-    }
-
-    .service-featured h3 {
-        font-size: 1.45rem;
-    }
-
-    .service-featured .price {
-        font-size: 1.75rem;
-    }
-
-    .services-note {
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .services-note strong {
-        white-space: normal;
-    }
-
-}
 
 
 /* =========================================================
-   BOOKING
+   PWA INSTALL PROMPT
 ========================================================= */
 
-.booking {
+let deferredInstallPrompt = null;
 
-    background:
-        var(--blue-dark);
+const installButton =
+    document.getElementById(
+        "installButton"
+    );
 
-    color: white;
+const appNotice =
+    document.getElementById(
+        "appNotice"
+    );
 
-}
+const closeAppNotice =
+    document.getElementById(
+        "closeAppNotice"
+    );
 
 
-.booking-inner {
+window.addEventListener(
+    "beforeinstallprompt",
+    event => {
 
-    display: grid;
+        event.preventDefault();
 
-    grid-template-columns:
-        1.2fr .8fr;
+        deferredInstallPrompt =
+            event;
 
-    gap:
-        clamp(40px, 8vw, 100px);
+        if (appNotice) {
 
-    align-items: center;
-
-}
-
-
-.booking-content p {
-
-    max-width: 650px;
-
-    color:
-        rgba(255,255,255,.76);
-
-}
-
-
-.booking-buttons {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 28px;
-
-}
-
-
-.button-whatsapp {
-
-    background:
-        #1f9d61;
-
-    color: white;
-
-}
-
-
-.button-whatsapp:hover {
-
-    background:
-        #167b4b;
-
-}
-
-
-.button-facebook {
-
-    background:
-        #2468b5;
-
-    color: white;
-
-}
-
-
-.button-facebook:hover {
-
-    background:
-        #18528f;
-
-}
-
-
-.booking-side {
-
-    display: grid;
-
-    gap: 10px;
-
-}
-
-
-.booking-step {
-
-    padding: 18px 20px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.12);
-
-    border-radius:
-        var(--radius-sm);
-
-    background:
-        rgba(255,255,255,.05);
-
-}
-
-
-.booking-step span {
-
-    display: inline-block;
-
-    margin-right: 10px;
-
-    color:
-        #a9d6ed;
-
-    font-size: .75rem;
-
-    font-weight: 900;
-
-}
-
-
-.booking-step strong {
-
-    font-size: .9rem;
-
-}
-
-
-.booking-step p {
-
-    margin:
-        5px 0 0 32px;
-
-    color:
-        rgba(255,255,255,.65);
-
-    font-size: .76rem;
-
-}
-
-
-/* =========================================================
-   RADIUS
-========================================================= */
-
-.radius {
-
-    background:
-        var(--blue-soft);
-
-}
-
-
-.radius-card {
-
-    display: grid;
-
-    grid-template-columns:
-        1.25fr .75fr;
-
-    overflow: hidden;
-
-    background: white;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-lg);
-
-    box-shadow:
-        var(--shadow);
-
-}
-
-
-.radius-map {
-
-    min-height: 460px;
-
-}
-
-
-.radius-map img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-}
-
-
-.radius-information {
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    padding:
-        clamp(30px, 5vw, 60px);
-
-}
-
-
-.radius-icon {
-
-    font-size: 2rem;
-
-}
-
-
-.radius-information h3 {
-
-    margin-top: 15px;
-
-}
-
-
-.radius-information p {
-
-    color:
-        var(--muted);
-
-    font-size: .92rem;
-
-}
-
-
-/* =========================================================
-   STANDARDS
-========================================================= */
-
-.standards {
-
-    background:
-        white;
-
-}
-
-
-.standards-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 16px;
-
-}
-
-
-.standard {
-
-    padding: 28px 22px;
-
-    text-align: center;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius);
-
-    background:
-        white;
-
-}
-
-
-.standard > span {
-
-    display: grid;
-
-    place-items: center;
-
-    width: 56px;
-
-    height: 56px;
-
-    margin:
-        0 auto 18px;
-
-    border-radius: 50%;
-
-    background:
-        var(--blue-light);
-
-    font-size: 1.4rem;
-
-}
-
-
-.standard h3 {
-
-    font-size: 1.05rem;
-
-}
-
-
-.standard p {
-
-    margin: 0;
-
-    color:
-        var(--muted);
-
-    font-size: .78rem;
-
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact {
-
-    background:
-        var(--blue-soft);
-
-}
-
-
-.contact-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr .8fr;
-
-    gap:
-        clamp(40px, 8vw, 100px);
-
-    align-items: center;
-
-}
-
-
-.contact-main p {
-
-    max-width: 650px;
-
-    color:
-        var(--muted);
-
-}
-
-
-.contact-actions {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 28px;
-
-}
-
-
-.contact-details {
-
-    display: grid;
-
-    gap: 12px;
-
-}
-
-
-.contact-card {
-
-    display: flex;
-
-    gap: 15px;
-
-    align-items: center;
-
-    padding: 18px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius:
-        var(--radius-sm);
-
-    background: white;
-
-}
-
-
-.contact-card > span {
-
-    width: 43px;
-
-    height: 43px;
-
-    display: grid;
-
-    place-items: center;
-
-    flex: 0 0 auto;
-
-    background:
-        var(--blue-light);
-
-    color:
-        var(--blue);
-
-    border-radius: 12px;
-
-    font-weight: 900;
-
-}
-
-
-.contact-card small {
-
-    display: block;
-
-    color:
-        var(--muted);
-
-    font-size: .7rem;
-
-}
-
-
-.contact-card strong {
-
-    display: block;
-
-    color:
-        var(--blue-dark);
-
-    font-size: .82rem;
-
-    word-break: break-word;
-
-}
-
-
-/* =========================================================
-   FINAL CTA
-========================================================= */
-
-.final-cta {
-
-    padding:
-        clamp(70px, 9vw, 110px)
-        0;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--blue),
-            var(--blue-dark)
-        );
-
-    color: white;
-
-}
-
-
-.final-cta .eyebrow {
-
-    color:
-        #bfe5f7;
-
-}
-
-
-.final-cta h2 {
-
-    max-width: 700px;
-
-    margin-inline: auto;
-
-}
-
-
-.final-cta p {
-
-    max-width: 600px;
-
-    margin-inline: auto;
-
-    color:
-        rgba(255,255,255,.72);
-
-}
-
-
-.final-actions {
-
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 30px;
-
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.site-footer {
-
-    background:
-        #071f31;
-
-    color:
-        rgba(255,255,255,.72);
-
-    padding-top:
-        65px;
-
-}
-
-
-.footer-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1.5fr repeat(3, 1fr);
-
-    gap:
-        45px;
-
-    padding-bottom:
-        50px;
-
-}
-
-
-.footer-logo {
-
-    width: 120px;
-
-    max-height: 55px;
-
-    object-fit: contain;
-
-    object-position: left center;
-
-    margin-bottom: 18px;
-
-}
-
-
-.footer-brand p {
-
-    max-width: 360px;
-
-    font-size: .82rem;
-
-}
-
-
-.footer-disclaimer {
-
-    color:
-        rgba(255,255,255,.45) !important;
-
-    font-size: .72rem !important;
-
-}
-
-
-.footer-column {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 9px;
-
-}
-
-
-.footer-column h3 {
-
-    color: white;
-
-    font-size: .9rem;
-
-    margin-bottom: 8px;
-
-}
-
-
-.footer-column a,
-.footer-column button {
-
-    padding: 0;
-
-    border: 0;
-
-    background: none;
-
-    color:
-        rgba(255,255,255,.62);
-
-    font-size: .78rem;
-
-    cursor: pointer;
-
-    text-align: left;
-
-}
-
-
-.footer-column a:hover,
-.footer-column button:hover {
-
-    color: white;
-
-}
-
-
-.footer-bottom {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    padding:
-        22px 0;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.1);
-
-    color:
-        rgba(255,255,255,.45);
-
-    font-size: .7rem;
-
-}
-
-
-.footer-bottom p {
-
-    margin: 0;
-
-}
-
-
-.footer-credit {
-
-    padding:
-        18px 0 25px;
-
-    text-align: center;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.06);
-
-    color:
-        rgba(255,255,255,.4);
-
-    font-size: .68rem;
-
-}
-
-
-.footer-credit a {
-
-    color:
-        #a9d6ed;
-
-    font-weight: 700;
-
-}
-
-
-/* =========================================================
-   LEGAL & SERVICE MODALS
-========================================================= */
-
-.legal-modal {
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 3000;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 20px;
-
-    visibility: hidden;
-
-    opacity: 0;
-
-    pointer-events: none;
-
-    transition:
-        opacity .2s ease,
-        visibility .2s ease;
-
-}
-
-
-.legal-modal.open {
-
-    visibility: visible;
-
-    opacity: 1;
-
-    pointer-events: auto;
-
-}
-
-
-.legal-modal-backdrop {
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        rgba(3,22,35,.75);
-
-    backdrop-filter:
-        blur(7px);
-
-}
-
-
-.legal-modal-window {
-
-    position: relative;
-
-    z-index: 2;
-
-    width:
-        min(
-            900px,
-            100%
-        );
-
-    max-height:
-        min(
-            850px,
-            calc(100vh - 40px)
-        );
-
-    overflow-y: auto;
-
-    background:
-        white;
-
-    border-radius:
-        var(--radius-lg);
-
-    box-shadow:
-        0 40px 100px
-        rgba(0,0,0,.3);
-
-}
-
-
-.legal-close {
-
-    position: sticky;
-
-    top: 18px;
-
-    float: right;
-
-    z-index: 5;
-
-    width: 42px;
-
-    height: 42px;
-
-    margin:
-        18px 18px -60px 0;
-
-    border: 0;
-
-    border-radius: 50%;
-
-    background:
-        var(--blue-soft);
-
-    color:
-        var(--blue-dark);
-
-    font-size: 1.5rem;
-
-    cursor: pointer;
-
-}
-
-
-.legal-content {
-
-    padding:
-        55px clamp(25px, 6vw, 65px) 65px;
-
-}
-
-
-.legal-content h2 {
-
-    margin-bottom: 8px;
-
-    color:
-        var(--blue-dark);
-
-}
-
-
-.legal-updated {
-
-    color:
-        var(--muted);
-
-    font-size: .75rem;
-
-    margin-bottom: 40px;
-
-}
-
-
-.legal-content h3 {
-
-    margin-top: 30px;
-
-    margin-bottom: 10px;
-
-    color:
-        var(--blue);
-
-    font-size: 1rem;
-
-    letter-spacing: 0;
-
-}
-
-
-.legal-content p {
-
-    color:
-        var(--muted);
-
-    font-size: .88rem;
-
-}
-
-
-.legal-content a {
-
-    color:
-        var(--blue);
-
-    font-weight: 700;
-
-    text-decoration: underline;
-
-}
-
-
-/* =========================================================
-   FOCUS
-========================================================= */
-
-a:focus-visible,
-button:focus-visible {
-
-    outline:
-        3px solid
-        #71b9df;
-
-    outline-offset:
-        3px;
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1000px) {
-
-    .desktop-navigation {
-
-        display: none;
-
-    }
-
-
-    .hamburger {
-
-        display: block;
-
-    }
-
-
-    .mobile-navigation {
-
-        display: flex;
-
-        flex-direction: column;
-
-        max-height: 0;
-
-        overflow: hidden;
-
-        background: white;
-
-        transition:
-            max-height .3s ease;
-
-    }
-
-
-    .mobile-navigation.open {
-
-        max-height: 500px;
-
-        border-top:
-            1px solid var(--border);
-
-    }
-
-
-    .mobile-navigation a {
-
-        padding:
-            12px 18px;
-
-        border-bottom:
-            1px solid var(--border);
-
-        font-weight: 700;
-
-        color:
-            var(--blue-dark);
-
-    }
-
-
-    .mobile-navigation .mobile-nav-cta {
-
-        margin:
-            12px 18px;
-
-        border: 0;
-
-        border-radius: 8px;
-
-        background:
-            var(--blue);
-
-        color: white;
-
-        text-align: center;
-
-    }
-
-
-    .hero {
-
-        min-height: 600px;
-
-    }
-
-
-    .about-grid,
-    .experience-grid,
-    .network-grid,
-    .booking-inner,
-    .contact-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .about-image-wrap {
-
-        order: 2;
-
-    }
-
-
-    .experience-panel {
-
-        max-width: 700px;
-
-    }
-
-
-    .radius-card {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .radius-map {
-
-        min-height: 400px;
-
-    }
-
-
-    .standards-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-
-    .footer-grid {
-
-        grid-template-columns:
-            1.5fr 1fr 1fr;
-
-    }
-
-
-    .footer-brand {
-
-        grid-column:
-            1 / -1;
-
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .container {
-
-        width:
-            min(
-                calc(100% - 28px),
-                var(--container)
+            appNotice.classList.add(
+                "show"
             );
 
-    }
-
-
-    .top-bar-left {
-
-        display: none;
+        }
 
     }
+);
 
 
-    .top-bar-inner {
+if (installButton) {
 
-        justify-content: center;
+    installButton.addEventListener(
+        "click",
+        async () => {
 
-        min-height: 32px;
+            if (!deferredInstallPrompt) {
 
-    }
+                alert(
+                    "To add Rescue 2 Home to your device, use your browser's 'Add to Home Screen' or 'Install App' option."
+                );
 
+                return;
 
-    .top-bar-contact {
+            }
 
-        font-size: .68rem;
+            deferredInstallPrompt.prompt();
 
-    }
+            const result =
+                await deferredInstallPrompt.userChoice;
 
+            if (
+                result &&
+                result.outcome === "accepted"
+            ) {
 
-    .header-inner {
+                if (appNotice) {
 
-        min-height: 50px;
+                    appNotice.classList.remove(
+                        "show"
+                    );
 
-    }
+                }
 
+            }
 
-    .brand {
+            deferredInstallPrompt = null;
 
-        min-width: 65px;
-
-    }
-
-
-    .brand-logo {
-
-        width: 65px;
-
-        max-height: 34px;
-
-    }
-
-
-    .app-notice-inner {
-
-        padding:
-            8px 0;
-
-        align-items: flex-start;
-
-    }
-
-
-    .app-notice-icon {
-
-        display: none;
-
-    }
-
-
-    .app-notice-text span {
-
-        display: none;
-
-    }
-
-
-    .app-install-button {
-
-        padding:
-            6px 9px;
-
-        white-space: nowrap;
-
-    }
-
-
-    .hero {
-
-        min-height:
-            580px;
-
-    }
-
-
-    .hero-background img {
-
-        object-position:
-            58% center;
-
-    }
-
-
-    .hero-blue-overlay {
-
-        background:
-            linear-gradient(
-                90deg,
-                rgba(7,39,61,.93),
-                rgba(16,72,107,.72)
-            );
-
-    }
-
-
-    .hero-content {
-
-        padding:
-            60px 0;
-
-    }
-
-
-    .hero h1 {
-
-        font-size:
-            clamp(
-                2.35rem,
-                12vw,
-                3.5rem
-            );
-
-    }
-
-
-    .hero-actions {
-
-        flex-direction: column;
-
-    }
-
-
-    .hero-actions .button {
-
-        width: 100%;
-
-    }
-
-
-    .hero-points {
-
-        flex-direction: column;
-
-        gap: 7px;
-
-    }
-
-
-    .notice-box {
-
-        padding: 18px;
-
-    }
-
-
-    .intro-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-
-    }
-
-
-    .about-highlights {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .experience-panel {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .services-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .service-card {
-
-        padding: 24px;
-
-    }
-
-
-    .services-note {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-    }
-
-
-    .booking-buttons,
-    .contact-actions,
-    .final-actions {
-
-        flex-direction: column;
-
-    }
-
-
-    .booking-buttons .button,
-    .contact-actions .button,
-    .final-actions .button {
-
-        width: 100%;
-
-    }
-
-
-    .radius-map {
-
-        min-height: 280px;
-
-    }
-
-
-    .radius-information {
-
-        padding: 30px 24px;
-
-    }
-
-
-    .standards-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .footer-grid {
-
-        grid-template-columns:
-            1fr 1fr;
-
-        gap: 30px;
-
-    }
-
-
-    .footer-brand {
-
-        grid-column:
-            1 / -1;
-
-    }
-
-
-    .footer-bottom {
-
-        flex-direction: column;
-
-    }
-
-
-    .legal-modal {
-
-        padding: 10px;
-
-    }
-
-
-    .legal-modal-window {
-
-        max-height:
-            calc(100vh - 20px);
-
-        border-radius:
-            20px;
-
-    }
-
-
-    .legal-content {
-
-        padding:
-            45px 22px 40px;
-
-    }
-
-
-    .legal-close {
-
-        margin:
-            12px 12px -54px 0;
-
-    }
+        }
+    );
 
 }
+
+
+if (closeAppNotice) {
+
+    closeAppNotice.addEventListener(
+        "click",
+        () => {
+
+            if (appNotice) {
+
+                appNotice.classList.remove(
+                    "show"
+                );
+
+            }
+
+        }
+    );
+
+}
+
 
 
 /* =========================================================
-   SMALL PHONES
+   SERVICE WORKER
 ========================================================= */
 
-@media (max-width: 420px) {
+if (
+    "serviceWorker" in navigator
+) {
 
-    .app-notice-text strong {
+    window.addEventListener(
+        "load",
+        () => {
 
-        font-size: .72rem;
+            navigator.serviceWorker
+                .register("./service-worker.js")
+                .catch(error => {
 
-    }
+                    console.log(
+                        "PWA service worker registration failed:",
+                        error
+                    );
 
+                });
 
-    .app-install-button {
-
-        font-size: .68rem;
-
-    }
-
-
-    .hero h1 {
-
-        font-size:
-            2.2rem;
-
-    }
-
-
-    .hero-lead {
-
-        font-size: .94rem;
-
-    }
-
-
-    .footer-grid {
-
-        grid-template-columns: 1fr;
-
-    }
+        }
+    );
 
 }
+
 
 
 /* =========================================================
-   REDUCED MOTION
+   PREVENT BODY SCROLL WHEN MOBILE MENU OPEN
 ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+function updateMenuScroll() {
 
-    html {
+    if (
+        mobileNavigation &&
+        mobileNavigation.classList.contains("open")
+    ) {
 
-        scroll-behavior: auto;
+        document.body.classList.add(
+            "menu-open"
+        );
 
-    }
+    } else {
 
-
-    *,
-    *::before,
-    *::after {
-
-        animation-duration:
-            .01ms !important;
-
-        animation-iteration-count:
-            1 !important;
-
-        transition-duration:
-            .01ms !important;
+        document.body.classList.remove(
+            "menu-open"
+        );
 
     }
 
 }
+
+
+if (hamburger) {
+
+    hamburger.addEventListener(
+        "click",
+        updateMenuScroll
+    );
+
+}
+
+/* =========================================================
+   SCROLL SPY FOR DESKTOP NAVIGATION
+========================================================= */
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".desktop-navigation a");
+
+const observerOptions = {
+    root: null,
+    rootMargin: "-100px 0px -40% 0px",
+    threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const currentId = entry.target.getAttribute("id");
+            
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${currentId}`) {
+                    link.classList.add("active");
+                }
+            });
+        }
+    });
+}, observerOptions);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+</script>
+
+
+</body>
+
+</html>
+       
