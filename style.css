@@ -1466,7 +1466,7 @@ p {
 
 .service-featured p,
 .service-featured li {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 /* Card header */
