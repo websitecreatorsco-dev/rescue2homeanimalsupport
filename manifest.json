@@ -1,25 +1,26 @@
 {
-  "name": "Rescue 2 Home Animal Support",
-  "short_name": "Rescue 2 Home",
-  "description": "Dedicated adoption, foster and pet support across Somerset.",
-  "lang": "en-GB",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "orientation": "portrait-primary",
-  "background_color": "#ffffff",
-  "theme_color": "#176b8c",
-  "categories": [
-    "lifestyle",
-    "pets",
-    "social"
-  ],
-  "icons": [
-    {
-      "src": "r2hasmainlogo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ]
+    "name": "Rescue 2 Home Animal Support",
+    "short_name": "Rescue 2 Home",
+    "description": "Dedicated Adoption & Foster Support, Settling-In Support and Comfort & Care Drop-Ins across Somerset.",
+    "lang": "en-GB",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#ffffff",
+    "theme_color": "#176b9c",
+    "icons": [
+        {
+            "src": "r2hasmainlogo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "roundr2haslogohome.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
 }
