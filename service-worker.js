@@ -1,196 +1,192 @@
 /* =========================================================
    RESCUE 2 HOME ANIMAL SUPPORT
    PWA SERVICE WORKER
-   FINAL VERSION
+
+   IMPORTANT:
+   This service worker contains NO visible online/offline
+   functionality.
+
+   It simply caches the website so the PWA can continue
+   loading when an internet connection is unavailable.
 ========================================================= */
 
-const CACHE_NAME = "rescue2home-v2.0.0";
+const CACHE_NAME = "rescue2home-pwa-v2";
 
-const CORE_FILES = [
+
+const FILES_TO_CACHE = [
+
     "./",
+
     "./index.html",
+
     "./style.css",
+
     "./manifest.json",
+
     "./r2hasmainlogo.png",
+
     "./roundr2haslogohome.png",
+
     "./rescue2homebanner.png",
+
     "./radiusmap.png"
+
 ];
+
 
 
 /* =========================================================
    INSTALL
 ========================================================= */
 
-self.addEventListener("install", event => {
+self.addEventListener(
+    "install",
+    event => {
 
-    event.waitUntil(
+        event.waitUntil(
 
-        caches.open(CACHE_NAME)
-            .then(cache => {
+            caches
+                .open(CACHE_NAME)
+                .then(cache => {
 
-                return cache.addAll(CORE_FILES);
+                    return cache.addAll(
+                        FILES_TO_CACHE
+                    );
 
-            })
-            .then(() => {
+                })
 
-                return self.skipWaiting();
+        );
 
-            })
+        self.skipWaiting();
 
-    );
+    }
+);
 
-});
 
 
 /* =========================================================
    ACTIVATE
 ========================================================= */
 
-self.addEventListener("activate", event => {
+self.addEventListener(
+    "activate",
+    event => {
 
-    event.waitUntil(
+        event.waitUntil(
 
-        caches.keys()
-            .then(cacheNames => {
+            caches
+                .keys()
+                .then(cacheNames => {
 
-                return Promise.all(
+                    return Promise.all(
 
-                    cacheNames
-                        .filter(
-                            cacheName =>
-                                cacheName !== CACHE_NAME
-                        )
-                        .map(
-                            cacheName =>
-                                caches.delete(cacheName)
-                        )
+                        cacheNames
+                            .filter(
+                                cacheName =>
+                                    cacheName !== CACHE_NAME
+                            )
+                            .map(
+                                cacheName =>
+                                    caches.delete(cacheName)
+                            )
 
-                );
+                    );
 
-            })
-            .then(() => {
+                })
 
-                return self.clients.claim();
+        );
 
-            })
+        self.clients.claim();
 
-    );
+    }
+);
 
-});
 
 
 /* =========================================================
    FETCH
-=========================================================
 
-   NETWORK FIRST
+   Network first.
+   If the network is unavailable, use the cached version.
 
-   When online:
-   → Always use the latest website from GitHub.
-
-   When genuinely offline:
-   → Use the cached version.
-
-   This means updating the website does not leave users
-   permanently stuck with an old cached version.
+   There is NO offline message.
+   There is NO online/offline detection.
+   There is NO visual status indicator.
 ========================================================= */
 
-self.addEventListener("fetch", event => {
+self.addEventListener(
+    "fetch",
+    event => {
 
-    if (event.request.method !== "GET") {
-        return;
-    }
+        if (
+            event.request.method !== "GET"
+        ) {
+
+            return;
+
+        }
 
 
-    event.respondWith(
+        event.respondWith(
 
-        fetch(event.request)
+            fetch(event.request)
 
-            .then(response => {
+                .then(response => {
 
-                /*
-                 * Only cache successful responses.
-                 */
+                    if (
+                        response &&
+                        response.status === 200 &&
+                        response.type !== "opaque"
+                    ) {
 
-                if (
-                    response &&
-                    response.status === 200 &&
-                    response.type !== "opaque"
-                ) {
+                        const responseClone =
+                            response.clone();
 
-                    const responseToCache =
-                        response.clone();
+                        caches
+                            .open(CACHE_NAME)
+                            .then(cache => {
 
-                    caches.open(CACHE_NAME)
-                        .then(cache => {
+                                cache.put(
+                                    event.request,
+                                    responseClone
+                                );
 
-                            cache.put(
-                                event.request,
-                                responseToCache
-                            );
+                            });
+
+                    }
+
+                    return response;
+
+                })
+
+                .catch(() => {
+
+                    return caches
+                        .match(event.request)
+                        .then(cachedResponse => {
+
+                            if (cachedResponse) {
+
+                                return cachedResponse;
+
+                            }
+
+
+                            if (
+                                event.request.mode === "navigate"
+                            ) {
+
+                                return caches.match(
+                                    "./index.html"
+                                );
+
+                            }
 
                         });
 
-                }
+                })
 
+        );
 
-                return response;
-
-            })
-
-            .catch(() => {
-
-                /*
-                 * Internet genuinely unavailable.
-                 *
-                 * Try the cached version instead.
-                 */
-
-                return caches.match(event.request)
-
-                    .then(cachedResponse => {
-
-                        if (cachedResponse) {
-
-                            return cachedResponse;
-
-                        }
-
-
-                        /*
-                         * If the user is navigating to a page
-                         * that isn't cached, give them the
-                         * cached homepage instead.
-                         */
-
-                        if (
-                            event.request.mode === "navigate"
-                        ) {
-
-                            return caches.match(
-                                "./index.html"
-                            );
-
-                        }
-
-
-                        /*
-                         * Nothing cached.
-                         */
-
-                        return new Response(
-                            "",
-                            {
-                                status: 503,
-                                statusText: "Offline"
-                            }
-                        );
-
-                    });
-
-            })
-
-    );
-
-});
+    }
+);
