@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 
 <head>
 
@@ -9,10 +9,10 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="theme-color"
-          content="#176b8c">
+          content="#2d718c">
 
     <meta name="description"
-          content="Hi, I’m Beverley, an animal lover and welfare advocate providing dedicated adoption, foster and pet support. Rescue 2 Home Animal Support helps bridge the gap between overcrowded rescues and your forever home, while also offering settling-in and Comfort & Care drop-in support across Somerset.">
+          content="Hi, I am Beverley, an animal lover and welfare advocate providing dedicated Adoption & Foster Support. Bridging the gap between overcrowded rescues and your forever home. Rescue 2 Home Animal Support also provides settling-in support, companion sitting and Comfort & Care Drop-Ins across Somerset.">
 
     <meta name="author"
           content="Rescue 2 Home Animal Support">
@@ -21,45 +21,12 @@
           content="index, follow">
 
     <meta name="keywords"
-          content="Rescue 2 Home Animal Support, adoption support, foster support, pet support, settling in support, pet sitting, animal welfare, Somerset, rescue dogs, rescue cats">
+          content="adoption support, foster support, rescue dogs, animal welfare, pet support, pet sitting, settling in support, Somerset">
 
-    <!-- Open Graph -->
+    <!-- PWA -->
 
-    <meta property="og:type"
-          content="website">
-
-    <meta property="og:title"
-          content="Rescue 2 Home Animal Support | Somerset">
-
-    <meta property="og:description"
-          content="Dedicated adoption, foster and pet support from Beverley. Helping bridge the gap between overcrowded rescues and your forever home.">
-
-    <meta property="og:image"
-          content="r2hasmainlogo.png">
-
-    <meta property="og:image:alt"
-          content="Rescue 2 Home Animal Support">
-
-    <meta property="og:site_name"
-          content="Rescue 2 Home Animal Support">
-
-
-    <!-- Twitter / social sharing -->
-
-    <meta name="twitter:card"
-          content="summary_large_image">
-
-    <meta name="twitter:title"
-          content="Rescue 2 Home Animal Support">
-
-    <meta name="twitter:description"
-          content="Adoption, foster and pet support across Somerset.">
-
-    <meta name="twitter:image"
-          content="r2hasmainlogo.png">
-
-
-    <!-- FAVICON -->
+    <link rel="manifest"
+          href="manifest.json">
 
     <link rel="icon"
           type="image/png"
@@ -68,18 +35,8 @@
     <link rel="apple-touch-icon"
           href="r2hasmainlogo.png">
 
-
-    <!-- PWA -->
-
-    <link rel="manifest"
-          href="manifest.json">
-
-
-    <!-- STYLESHEET -->
-
     <link rel="stylesheet"
           href="style.css">
-
 
     <title>
         Rescue 2 Home Animal Support | Somerset
@@ -92,72 +49,29 @@
 
 
 <!-- =========================================================
-     OFFLINE INDICATOR
-========================================================= -->
-
-<div id="offlineIndicator"
-     class="offline-indicator"
-     role="status"
-     aria-live="polite">
-
-    <span class="offline-dot"></span>
-
-    <span>
-        Offline
-    </span>
-
-</div>
-
-
-
-<!-- =========================================================
-     TOP NOTICE
-========================================================= -->
-
-<div class="top-notice">
-
-    <div class="container top-notice-inner">
-
-        <span>
-            🐾 Supporting people and their pets across Somerset
-        </span>
-
-        <a href="#contact">
-            Get in touch →
-        </a>
-
-    </div>
-
-</div>
-
-
-
-<!-- =========================================================
      HEADER
 ========================================================= -->
 
-<header class="site-header"
-        id="siteHeader">
+<header class="site-header">
 
-    <div class="container header-inner">
+    <div class="header-inner">
 
 
         <!-- LOGO -->
 
         <a href="#home"
            class="site-logo"
-           aria-label="Rescue 2 Home Animal Support home">
+           aria-label="Rescue 2 Home Animal Support">
 
-            <img src="r2hasmainlogo.png"
-                 alt="Rescue 2 Home Animal Support"
-                 width="220"
-                 height="110">
+            <img
+                src="r2hasmainlogo.png"
+                alt="Rescue 2 Home Animal Support"
+            >
 
         </a>
 
 
-
-        <!-- DESKTOP NAV -->
+        <!-- DESKTOP NAVIGATION -->
 
         <nav class="desktop-nav"
              aria-label="Main navigation">
@@ -175,7 +89,7 @@
             </a>
 
             <a href="#radius">
-                Areas We Cover
+                Service Area
             </a>
 
             <a href="#contact">
@@ -185,22 +99,22 @@
             <a href="#contact"
                class="nav-button">
 
-                Message Me
+                Get In Touch
 
             </a>
 
         </nav>
 
 
-
         <!-- MOBILE MENU -->
 
-        <button class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Open menu"
-                aria-expanded="false"
-                aria-controls="mobileNav">
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileNav">
 
             <span></span>
             <span></span>
@@ -211,12 +125,12 @@
     </div>
 
 
+    <!-- MOBILE NAVIGATION -->
 
-    <!-- MOBILE NAV -->
-
-    <nav class="mobile-nav"
-         id="mobileNav"
-         aria-label="Mobile navigation">
+    <nav
+        class="mobile-nav"
+        id="mobileNav"
+        aria-label="Mobile navigation">
 
         <a href="#home">
             Home
@@ -231,7 +145,7 @@
         </a>
 
         <a href="#radius">
-            Areas We Cover
+            Service Area
         </a>
 
         <a href="#contact">
@@ -241,7 +155,7 @@
         <a href="#contact"
            class="mobile-nav-button">
 
-            Message Me
+            Get In Touch
 
         </a>
 
@@ -250,10 +164,6 @@
 </header>
 
 
-
-<!-- =========================================================
-     MAIN
-========================================================= -->
 
 <main>
 
@@ -267,105 +177,72 @@
 
     <div class="hero-background"></div>
 
-    <div class="container hero-grid">
+    <div class="hero-overlay"></div>
 
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <span class="eyebrow">
-                RESCUE 2 HOME ANIMAL SUPPORT
+
+        <span class="eyebrow">
+
+            RESCUE 2 HOME ANIMAL SUPPORT
+
+        </span>
+
+
+        <h1>
+
+            Helping people to take the next step
+            <span>
+                to give a pet a loving home.
             </span>
 
-
-            <h1>
-
-                Helping people take the next step
-
-                <span>
-                    to give a pet a loving home.
-                </span>
-
-            </h1>
+        </h1>
 
 
-            <p class="hero-intro">
+        <p>
 
-                Hi, I’m Beverley. I’m an animal lover and welfare
-                advocate providing dedicated adoption, foster and
-                pet support.
+            Hi, I’m Beverley — an animal lover and welfare
+            advocate providing practical, friendly support
+            for people considering adoption, fostering and
+            pet ownership.
 
-            </p>
-
-
-            <p class="hero-subtext">
-
-                Helping bridge the gap between overcrowded rescues
-                and your forever home, while providing practical
-                support for pets and their owners along the way.
-
-            </p>
+        </p>
 
 
-            <div class="hero-actions">
+        <div class="hero-buttons">
 
-                <a href="#services"
-                   class="button button-primary">
+            <a href="#services"
+               class="button button-primary">
 
-                    See How I Can Help
-                    <span>→</span>
+                How We Can Help
 
-                </a>
-
-
-                <a href="#contact"
-                   class="button button-secondary">
-
-                    Get In Touch
-
-                </a>
-
-            </div>
+            </a>
 
 
-            <div class="hero-points">
+            <a href="#contact"
+               class="button button-light">
 
-                <span>
-                    ✓ Fully insured
-                </span>
+                Get In Touch
 
-                <span>
-                    ✓ DBS checked
-                </span>
-
-                <span>
-                    ✓ Animal welfare focused
-                </span>
-
-            </div>
+            </a>
 
         </div>
 
 
+        <div class="hero-points">
 
-        <div class="hero-image-wrap">
+            <span>
+                ✓ Fully Insured
+            </span>
 
-            <img src="rescue2homebanner.png"
-                 alt="Rescue 2 Home Animal Support"
-                 class="hero-image"
-                 fetchpriority="high">
+            <span>
+                ✓ DBS Checked
+            </span>
 
-            <div class="hero-image-card">
-
-                <strong>
-                    Here for you and your pet
-                </strong>
-
-                <span>
-                    Practical help, reassurance and
-                    genuine animal welfare support.
-                </span>
-
-            </div>
+            <span>
+                ✓ Animal Welfare Focused
+            </span>
 
         </div>
 
@@ -379,39 +256,37 @@
      INTRO
 ========================================================= -->
 
-<section class="intro-section">
+<section class="intro section">
 
-    <div class="container intro-grid">
+    <div class="container narrow">
 
-        <div>
+        <span class="eyebrow">
+            WELCOME
+        </span>
 
-            <span class="eyebrow">
-                A LITTLE EXTRA SUPPORT
-            </span>
+        <h2>
+            Support for people.
+            Support for animals.
+        </h2>
 
-            <h2>
-                You don't have to figure it all out alone.
-            </h2>
+        <p>
 
-        </div>
+            Taking on a new pet is exciting, but it can also
+            feel like a big step. Rescue 2 Home Animal Support
+            is here to provide that extra bit of time,
+            reassurance and practical help when you need it.
 
+        </p>
 
-        <div class="intro-text">
+        <p>
 
-            <p>
-                Bringing a rescue pet into your home can be
-                incredibly rewarding, but it can also feel
-                daunting.
-            </p>
+            We work alongside rescues and animal welfare
+            organisations rather than being a rescue ourselves.
+            Our aim is simply to help people feel more confident
+            and prepared while keeping the welfare of the animal
+            at the heart of everything we do.
 
-            <p>
-                Whether you're thinking about adopting or
-                fostering, have just brought a pet home, or
-                simply need someone to pop in and give them
-                some company, I'm here to help.
-            </p>
-
-        </div>
+        </p>
 
     </div>
 
@@ -423,7 +298,7 @@
      ABOUT
 ========================================================= -->
 
-<section class="about-section"
+<section class="about section"
          id="about">
 
     <div class="container about-grid">
@@ -431,10 +306,12 @@
 
         <div class="about-image-wrap">
 
-            <img src="roundr2haslogohome.png"
-                 alt="Rescue 2 Home Animal Support"
-                 class="about-image"
-                 loading="lazy">
+            <img
+                src="rescue2homebanner.png"
+                alt="Rescue 2 Home Animal Support"
+                class="about-image"
+                loading="lazy"
+            >
 
         </div>
 
@@ -446,113 +323,115 @@
             </span>
 
             <h2>
-                A helping hand when you need one.
+                A little extra support can make a big difference.
             </h2>
 
 
             <p>
+
                 This is a new service that offers support for
                 people who would like to adopt and foster,
                 whatever their circumstances.
+
             </p>
 
 
             <p>
+
                 All rescue centres should of course offer home
-                checks, rescue back-up and advice, and most do
-                try to do this. However, deciding if adoption or
-                fostering is right for you isn't always easy and
-                can be very time-consuming for already
-                extremely hard-working rescue staff.
+                checks, rescue back up and advice and most do
+                try to do this. However, deciding if adoption
+                or fostering is right for you is not always easy
+                and can be very time consuming for any rescue
+                to discuss in depth.
+
             </p>
 
 
             <p>
-                If you're new to adopting, inexperienced in pet
-                ownership or simply a little nervous about taking
-                the step, you may feel you need some extra time
-                and reassurance.
+
+                Anyone new to adopting, inexperienced in pet
+                ownership or a little nervous about taking the
+                step may feel that they need more time, advice
+                or reassurance than a busy rescue centre can
+                always provide.
+
             </p>
 
 
             <p>
-                That's where I come in. As an experienced pet
-                owner and adopter, I want to help bridge that
-                gap by offering my time, experience and practical
-                support to help you feel more confident about
-                your decision.
+
+                As an experienced pet owner and adopter of
+                animals, I would like to help bridge that gap
+                by offering my experience, advice and time.
+
             </p>
 
 
             <p>
-                I can support you in the early days by dropping
-                in to help if you have an appointment and need
-                to leave your newly adopted pet, or simply by
-                spending some time with you to talk through any
-                concerns you may have.
+
+                I can help you build confidence with your
+                decision to adopt, support you during the early
+                days and provide practical help if you have an
+                appointment and need to leave your newly adopted
+                pet.
+
             </p>
 
 
             <p>
-                I can also help you look at what type of dog
-                might be more suitable for your circumstances,
-                working alongside rescue organisations and
-                researching options with you.
+
+                I can also help you research what type of dog
+                or companion may be more suitable for your
+                circumstances, working alongside rescue and
+                helping you consider the needs of both you and
+                the animal.
+
+            </p>
+
+
+            <p>
+
+                Animal welfare is my passion. We all need a
+                little help sometimes to make sure we are
+                meeting our pets’ needs, and that is something
+                I will always try to help with.
+
             </p>
 
 
             <div class="about-highlights">
 
-                <div class="highlight">
+                <div>
+                    <strong>
+                        Fully Insured
+                    </strong>
 
-                    <span>♥</span>
-
-                    <div>
-                        <strong>
-                            Animal welfare comes first
-                        </strong>
-
-                        <p>
-                            Helping you understand and meet
-                            your pet's needs.
-                        </p>
-                    </div>
-
+                    <span>
+                        Peace of mind when using our services.
+                    </span>
                 </div>
 
 
-                <div class="highlight">
+                <div>
+                    <strong>
+                        DBS Checked
+                    </strong>
 
-                    <span>✓</span>
-
-                    <div>
-                        <strong>
-                            Fully insured & DBS checked
-                        </strong>
-
-                        <p>
-                            Giving you additional peace of mind.
-                        </p>
-                    </div>
-
+                    <span>
+                        Professional and responsible support.
+                    </span>
                 </div>
 
 
-                <div class="highlight">
+                <div>
+                    <strong>
+                        Welfare First
+                    </strong>
 
-                    <span>🐾</span>
-
-                    <div>
-                        <strong>
-                            Support that is personal
-                        </strong>
-
-                        <p>
-                            Friendly, practical help without
-                            judgement.
-                        </p>
-                    </div>
-
+                    <span>
+                        The animal remains at the centre of our work.
+                    </span>
                 </div>
 
             </div>
@@ -566,97 +445,73 @@
 
 
 <!-- =========================================================
-     EXPERIENCE
+     ABOUT CONTINUED
 ========================================================= -->
 
-<section class="experience-section">
+<section class="about-secondary section">
 
-    <div class="container">
+    <div class="container two-column">
 
-        <div class="experience-layout">
+        <div>
 
-            <div>
+            <span class="eyebrow">
+                EXPERIENCE
+            </span>
 
-                <span class="eyebrow">
-                    EXPERIENCE
-                </span>
+            <h2>
+                Real-life experience with rescue animals.
+            </h2>
 
-                <h2>
-                    Real-life experience with rescue pets.
-                </h2>
+            <p>
 
-                <p>
-                    Animal welfare is my passion. We all need
-                    a little help at times to make sure we care
-                    for our pets' needs, and this is something
-                    I will always try to help with.
-                </p>
+                I am not a trainer, but I do have some knowledge
+                of basic training and dog communication. I also
+                have a network of reputable force-free trainers
+                who I can direct you towards should you feel
+                specialist help is needed.
 
-                <p>
-                    I have many pets of my own, including four
-                    rescue dogs with very different
-                    temperaments. One of them is also
-                    insulin-dependent diabetic.
-                </p>
+            </p>
 
-                <p>
-                    I have integrated them with each other and
-                    with my cats and other animals in my home,
-                    giving me experience of managing different
-                    animals and personalities together.
-                </p>
+            <p>
 
-                <p>
-                    I am not a trainer, but I do have some
-                    knowledge of basic training and dog
-                    communication. Where specialist help is
-                    needed, I have a network of reputable,
-                    force-free trainers and behaviourists that
-                    I can point you towards.
-                </p>
+                I have many pets of my own, including four
+                rescue dogs, each with very different
+                temperaments. One of my dogs is also
+                insulin-dependent diabetic.
 
-            </div>
+            </p>
+
+            <p>
+
+                I have integrated them with each other and with
+                my cats and other animals in my home, giving me
+                plenty of experience of managing different
+                animals and personalities together.
+
+            </p>
+
+        </div>
 
 
-            <div class="experience-cards">
+        <div class="support-card">
 
-                <div class="experience-card">
-                    <span>🐶</span>
-                    <strong>Rescue Dogs</strong>
-                    <p>
-                        Experience with dogs with different
-                        personalities, backgrounds and needs.
-                    </p>
-                </div>
+            <span class="support-icon">
+                🐾
+            </span>
 
-                <div class="experience-card">
-                    <span>🏡</span>
-                    <strong>Multi-Pet Home</strong>
-                    <p>
-                        Experience bringing dogs, cats and
-                        other animals together.
-                    </p>
-                </div>
+            <h3>
+                We are here to support the journey.
+            </h3>
 
-                <div class="experience-card">
-                    <span>🤝</span>
-                    <strong>Rescue Connections</strong>
-                    <p>
-                        Working alongside rescues and people
-                        involved in animal welfare.
-                    </p>
-                </div>
+            <p>
 
-                <div class="experience-card">
-                    <span>🐾</span>
-                    <strong>Local Pet Network</strong>
-                    <p>
-                        Connections with walkers, sitters,
-                        groomers and other pet professionals.
-                    </p>
-                </div>
+                We don't replace rescues, trainers,
+                behaviourists or veterinary professionals.
+                Instead, we provide additional practical
+                support and help connect you with the right
+                people when needed.
 
-            </div>
+            </p>
 
         </div>
 
@@ -670,63 +525,61 @@
      NETWORK
 ========================================================= -->
 
-<section class="network-section">
+<section class="network section">
 
     <div class="container network-grid">
 
-        <div class="network-content">
+
+        <div>
 
             <span class="eyebrow">
                 WORKING TOGETHER
             </span>
 
             <h2>
-                Working alongside rescues and local animal
-                professionals.
+                Working alongside rescues and local animal services.
             </h2>
-
-            <p>
-                Rescue 2 Home Animal Support works alongside
-                rescue organisations and works closely with
-                <a href="https://www.somersetanimalinformationservices.com/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Somerset Animal Information Services
-                </a>.
-            </p>
-
-            <p>
-                Through these connections, I have access to a
-                wider network of people within the pet industry,
-                including dog walkers, pet sitters, groomers,
-                trainers and other animal professionals.
-            </p>
-
-            <p>
-                The aim is simple: to work together wherever
-                possible to support animals, their welfare and
-                the people who care for them.
-            </p>
 
         </div>
 
 
-        <div class="network-box">
-
-            <span class="network-icon">
-                🐾
-            </span>
-
-            <strong>
-                Not a rescue centre
-            </strong>
+        <div>
 
             <p>
-                Rescue 2 Home Animal Support does not rehome
-                animals or operate as a rescue centre. We
-                provide additional support to people and their
-                pets and work alongside rescue organisations.
+
+                We work alongside rescues and work closely
+                with Somerset Animal Information Services,
+                giving us access to a wider network of people
+                working within the pet industry.
+
             </p>
+
+            <p>
+
+                This includes dog walkers, pet sitters,
+                groomers and other animal-related services.
+
+            </p>
+
+            <p>
+
+                By working together, we can help people make
+                informed decisions and give dogs, cats and
+                other animals the best possible chance of
+                finding the right home.
+
+            </p>
+
+
+            <a
+                href="https://www.somersetanimalinformationservices.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-link">
+
+                Somerset Animal Information Services →
+
+            </a>
 
         </div>
 
@@ -740,249 +593,259 @@
      SERVICES
 ========================================================= -->
 
-<section class="services-section"
+<section class="services section"
          id="services">
 
     <div class="container">
 
+
         <div class="section-heading">
 
             <span class="eyebrow">
-                HOW I CAN HELP
+                OUR SERVICES
             </span>
 
             <h2>
-                Support for you and your pet.
+                Practical support, from the first step onwards.
             </h2>
 
             <p>
-                From preparing for adoption to helping your
-                new companion settle in, or simply popping in
-                while you're out, support can be tailored to
-                what you actually need.
+
+                Whether you are preparing to adopt or foster,
+                settling in with a new companion or simply need
+                someone to pop in while you are out, we can
+                tailor support around you and your pet.
+
             </p>
 
         </div>
 
 
-
-        <!-- NEW COMPANION PACKAGE -->
-
-        <article class="package-card">
-
-            <div class="package-badge">
-                BEST VALUE
-            </div>
+        <div class="service-grid">
 
 
-            <div class="package-main">
+            <!-- PACKAGE -->
 
-                <div>
+            <article class="service-card featured">
 
-                    <span class="service-number">
-                        01
+                <div class="service-card-top">
+
+                    <span class="service-icon">
+                        ⭐
                     </span>
 
-                    <h3>
-                        The New Companion Support Package
-                    </h3>
-
-                    <p class="package-price">
-                        £50
-                        <span>
-                            Includes all three 1-hour sessions
-                        </span>
-                    </p>
-
-                    <p>
-                        A complete support package designed to
-                        give you practical help and reassurance
-                        before, during and immediately after
-                        bringing your new pet home.
-                    </p>
+                    <span class="service-tag">
+                        BEST VALUE
+                    </span>
 
                 </div>
 
 
-                <div class="package-includes">
-
-                    <div>
-                        <strong>
-                            1. Adoption & Foster Readiness
-                        </strong>
-
-                        <span>
-                            £20 · 1 hour
-                        </span>
-
-                        <p>
-                            Home and lifestyle assessment,
-                            application support and help
-                            researching a suitable companion.
-                        </p>
-                    </div>
+                <h3>
+                    The New Companion Support Package
+                </h3>
 
 
-                    <div>
-                        <strong>
-                            2. Settling-In Support
-                        </strong>
-
-                        <span>
-                            £15 · 1 hour
-                        </span>
-
-                        <p>
-                            Practical help with routines,
-                            integration, settling and
-                            reassurance.
-                        </p>
-                    </div>
-
-
-                    <div>
-                        <strong>
-                            3. New Adopter Companion Sitting
-                        </strong>
-
-                        <span>
-                            £15 · 1 hour
-                        </span>
-
-                        <p>
-                            Short-term companionship and
-                            support while you attend appointments
-                            or need to pop out.
-                        </p>
-                    </div>
-
+                <div class="price">
+                    £50
                 </div>
 
-            </div>
+
+                <p>
+
+                    A complete package bringing together
+                    three one-hour sessions to support you
+                    before, during and immediately after
+                    welcoming your new companion home.
+
+                </p>
 
 
-            <div class="package-footer">
+                <ul>
 
-                <span>
-                    Need more time? Additional hours can be
+                    <li>
+                        Adoption & Foster Readiness
+                    </li>
+
+                    <li>
+                        Settling-In Support
+                    </li>
+
+                    <li>
+                        New Adopter Companion Sitting
+                    </li>
+
+                </ul>
+
+
+                <p class="service-note">
+
+                    Need additional time? Extra hours can be
                     added to individual sessions.
-                </span>
+
+                </p>
+
 
                 <a href="#contact"
-                   class="button button-primary">
-                    Ask About The Package →
+                   class="service-button">
+
+                    Message To Enquire
+
                 </a>
 
-            </div>
+            </article>
 
-        </article>
-
-
-
-        <!-- SERVICE GRID -->
-
-        <div class="services-grid">
 
 
             <!-- READINESS -->
 
             <article class="service-card">
 
-                <div class="service-icon">
-                    🏠
-                </div>
-
-                <span class="service-price">
-                    £20 · 1 hour
+                <span class="service-icon">
+                    🏡
                 </span>
 
                 <h3>
                     Adoption & Foster Readiness
                 </h3>
 
+                <div class="price">
+                    £20 <small>/ hour</small>
+                </div>
+
                 <p>
-                    Thinking about adopting or fostering?
-                    We'll look at your home, lifestyle and
-                    circumstances and help you work out what
-                    might be a good fit.
+
+                    Support before you bring your new pet home.
+
                 </p>
 
                 <ul>
-                    <li>Home & lifestyle assessment</li>
-                    <li>Application support</li>
-                    <li>Adoption match research</li>
+
+                    <li>
+                        Home and lifestyle assessment
+                    </li>
+
+                    <li>
+                        Application support
+                    </li>
+
+                    <li>
+                        Adoption match research
+                    </li>
+
                 </ul>
+
+                <a href="#contact"
+                   class="service-button">
+
+                    Enquire →
+
+                </a>
 
             </article>
 
 
 
-            <!-- SETTLING IN -->
+            <!-- SETTLING -->
 
-            <article class="service-card featured">
+            <article class="service-card">
 
-                <div class="service-tag">
-                    POPULAR
-                </div>
-
-                <div class="service-icon">
+                <span class="service-icon">
                     🌱
-                </div>
-
-                <span class="service-price">
-                    £25 · 1 hour
                 </span>
 
                 <h3>
                     Settling-In Support
                 </h3>
 
+                <div class="price">
+                    £25 <small>/ session</small>
+                </div>
+
                 <p>
-                    Bringing a new pet home can be exciting
-                    and overwhelming. This session provides
-                    practical help while your new companion
-                    gets used to their surroundings.
+
+                    Practical support during those important
+                    first days at home.
+
                 </p>
 
                 <ul>
-                    <li>Company & comfort</li>
-                    <li>Routine & practical care</li>
-                    <li>Play & attention</li>
-                    <li>Owner updates</li>
+
+                    <li>
+                        Routine and settling support
+                    </li>
+
+                    <li>
+                        Integration guidance
+                    </li>
+
+                    <li>
+                        Comfort and reassurance
+                    </li>
+
+                    <li>
+                        Owner updates
+                    </li>
+
                 </ul>
+
+                <a href="#contact"
+                   class="service-button">
+
+                    Enquire →
+
+                </a>
 
             </article>
 
 
 
-            <!-- COMPANION SITTING -->
+            <!-- COMPANION -->
 
             <article class="service-card">
 
-                <div class="service-icon">
-                    🐕
-                </div>
-
-                <span class="service-price">
-                    £15 · 1 hour
+                <span class="service-icon">
+                    🐾
                 </span>
 
                 <h3>
                     New Adopter Companion Sitting
                 </h3>
 
+                <div class="price">
+                    £15 <small>/ hour</small>
+                </div>
+
                 <p>
-                    A short-term drop-in designed to give
-                    you flexibility while helping your new
-                    pet become more comfortable being left
-                    for short periods.
+
+                    Short-term companionship to help your
+                    new pet build confidence when you need
+                    to pop out.
+
                 </p>
 
                 <ul>
-                    <li>Companionship & play</li>
-                    <li>Home-alone confidence</li>
-                    <li>Owner updates</li>
+
+                    <li>
+                        Company and gentle play
+                    </li>
+
+                    <li>
+                        Home-alone confidence
+                    </li>
+
+                    <li>
+                        Owner updates
+                    </li>
+
                 </ul>
+
+                <a href="#contact"
+                   class="service-button">
+
+                    Enquire →
+
+                </a>
 
             </article>
 
@@ -990,131 +853,88 @@
 
             <!-- COMFORT -->
 
-            <article class="service-card featured comfort-card">
+            <article class="service-card featured-soft">
 
-                <div class="service-tag">
-                    NEW SERVICE
-                </div>
-
-                <div class="service-icon">
+                <span class="service-icon">
                     ❤️
-                </div>
-
-                <span class="service-price">
-                    £25 · 1 hour
                 </span>
+
+
+                <span class="service-tag new">
+                    NEW SERVICE
+                </span>
+
 
                 <h3>
                     Comfort & Care Drop-Ins
                 </h3>
 
+
+                <div class="price">
+                    £25 <small>/ hour</small>
+                </div>
+
+
                 <p>
-                    Sometimes pets simply need someone to
-                    pop in, keep them company and give them
-                    a little extra attention while you're out.
+
+                    Sometimes your pet simply needs some
+                    company, love and extra attention while
+                    you are out.
+
                 </p>
+
 
                 <ul>
-                    <li>Feeding & fresh water</li>
-                    <li>Playtime & enrichment</li>
-                    <li>Cuddles & company</li>
-                    <li>Home comforts</li>
+
+                    <li>
+                        Feeding and fresh water
+                    </li>
+
+                    <li>
+                        Playtime and enrichment
+                    </li>
+
+                    <li>
+                        Cuddles and company
+                    </li>
+
+                    <li>
+                        Home comforts
+                    </li>
+
                 </ul>
 
+
                 <p class="service-note">
-                    Sessions are tailored to your pet and
-                    your instructions. Longer visits can be
-                    arranged where required.
+
+                    We tailor the visit around your instructions
+                    and your pet's normal routine.
+
                 </p>
+
+
+                <a href="#contact"
+                   class="service-button">
+
+                    Message To Book →
+
+                </a>
 
             </article>
 
         </div>
 
 
-
-        <div class="service-note-box">
+        <div class="service-disclaimer">
 
             <strong>
-                A quick note about dog walking
+                Please note:
             </strong>
 
-            <p>
-                We don't offer outdoor dog walking ourselves,
-                but we work closely with some fantastic local
-                dog walkers and are happy to recommend trusted
-                contacts where appropriate.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PROFESSIONAL STANDARDS
-========================================================= -->
-
-<section class="standards-section">
-
-    <div class="container">
-
-        <div class="section-heading centered">
-
-            <span class="eyebrow">
-                YOUR PEACE OF MIND
-            </span>
-
-            <h2>
-                Professional, responsible and personal.
-            </h2>
-
-        </div>
-
-
-        <div class="standards-grid">
-
-            <div class="standard">
-                <span>🛡️</span>
-                <strong>Fully Insured</strong>
-                <p>
-                    Appropriate insurance is in place for
-                    the services provided.
-                </p>
-            </div>
-
-
-            <div class="standard">
-                <span>✓</span>
-                <strong>DBS Checked</strong>
-                <p>
-                    DBS checked for additional reassurance
-                    when visiting clients.
-                </p>
-            </div>
-
-
-            <div class="standard">
-                <span>📹</span>
-                <strong>Body Camera</strong>
-                <p>
-                    A body camera is worn when visiting to
-                    protect both myself and the client.
-                </p>
-            </div>
-
-
-            <div class="standard">
-                <span>🐾</span>
-                <strong>Animal Welfare First</strong>
-                <p>
-                    Every service is provided with your
-                    pet's welfare at the heart of it.
-                </p>
-            </div>
+            We do not provide outdoor dog walking ourselves.
+            However, we work closely with local dog walkers
+            and are happy to recommend trusted contacts where
+            appropriate.
 
         </div>
 
@@ -1128,15 +948,16 @@
      RADIUS
 ========================================================= -->
 
-<section class="radius-section"
+<section class="radius section"
          id="radius">
 
     <div class="container">
 
+
         <div class="section-heading">
 
             <span class="eyebrow">
-                WHERE I CAN VISIT
+                SERVICE AREA
             </span>
 
             <h2>
@@ -1144,8 +965,10 @@
             </h2>
 
             <p>
-                Please note that my in-person services are
+
+                Please note that our in-person services are
                 limited to this specific radius.
+
             </p>
 
         </div>
@@ -1153,42 +976,148 @@
 
         <div class="radius-card">
 
-            <div class="radius-image-wrap">
 
-                <img src="radiusmap.png"
-                     alt="Map showing the Rescue 2 Home Animal Support in-person service radius"
-                     class="radius-image"
-                     loading="lazy">
+            <div class="radius-image">
+
+                <img
+                    src="radiusmap.png"
+                    alt="Rescue 2 Home Animal Support in-person service radius"
+                    loading="lazy"
+                >
 
             </div>
 
 
             <div class="radius-text">
 
-                <span class="radius-icon">
-                    📍
-                </span>
-
                 <h3>
-                    Is your home within the area?
+                    Based in Somerset
                 </h3>
 
                 <p>
-                    If you are located within the highlighted
-                    area, please get in touch and we can discuss
-                    the support you need.
+
+                    If you are located outside this area, we
+                    cannot visit in person but would be happy
+                    to connect via video call where suitable.
+
                 </p>
 
                 <p>
-                    If you are outside this area, I cannot visit
-                    in person but would be happy to connect via
-                    video call where appropriate.
+
+                    Please get in touch before booking so we
+                    can confirm whether your location is within
+                    our current in-person service area.
+
                 </p>
 
                 <a href="#contact"
                    class="button button-primary">
-                    Check With Me →
+
+                    Check Your Area
+
                 </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STANDARDS
+========================================================= -->
+
+<section class="standards section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                OUR APPROACH
+            </span>
+
+            <h2>
+                Professional, responsible and animal focused.
+            </h2>
+
+        </div>
+
+
+        <div class="standards-grid">
+
+
+            <div class="standard">
+
+                <span>
+                    🛡️
+                </span>
+
+                <h3>
+                    Fully Insured
+                </h3>
+
+                <p>
+                    Professional cover for peace of mind.
+                </p>
+
+            </div>
+
+
+            <div class="standard">
+
+                <span>
+                    ✓
+                </span>
+
+                <h3>
+                    DBS Checked
+                </h3>
+
+                <p>
+                    Responsible and trustworthy support.
+                </p>
+
+            </div>
+
+
+            <div class="standard">
+
+                <span>
+                    📹
+                </span>
+
+                <h3>
+                    Body Camera
+                </h3>
+
+                <p>
+                    Worn during visits to protect both
+                    the client and myself.
+                </p>
+
+            </div>
+
+
+            <div class="standard">
+
+                <span>
+                    ❤️
+                </span>
+
+                <h3>
+                    Welfare First
+                </h3>
+
+                <p>
+                    Every decision starts with the needs
+                    of the animal.
+                </p>
 
             </div>
 
@@ -1204,7 +1133,7 @@
      CONTACT
 ========================================================= -->
 
-<section class="contact-section"
+<section class="contact section"
          id="contact">
 
     <div class="container contact-grid">
@@ -1217,99 +1146,102 @@
             </span>
 
             <h2>
-                Have a question or want to book?
+                Ready to talk?
             </h2>
 
             <p>
-                I'd love to hear from you. Whether you're
-                considering adoption, fostering, need help
-                settling in with a new pet or would like to
-                arrange a Comfort & Care visit, just send me
-                a message.
+
+                We are no longer taking bookings through
+                Square. To enquire or arrange a service,
+                please message us directly.
+
             </p>
 
             <p>
-                Please note that bookings are now arranged
-                directly by message rather than through
-                Square.
+
+                You can contact us through Facebook,
+                WhatsApp or email and we will get back
+                to you as soon as possible.
+
             </p>
-
-
-            <div class="contact-buttons">
-
-                <a href="https://wa.me/447933325465"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="button button-whatsapp">
-
-                    WhatsApp Me
-
-                    <span>→</span>
-
-                </a>
-
-
-                <a href="https://www.facebook.com/Rescue2Home"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="button button-messenger">
-
-                    Facebook Messenger
-
-                    <span>→</span>
-
-                </a>
-
-            </div>
 
         </div>
 
 
-
-        <div class="contact-card">
-
-            <div class="contact-card-logo">
-
-                <img src="roundr2haslogohome.png"
-                     alt="Rescue 2 Home Animal Support"
-                     loading="lazy">
-
-            </div>
+        <div class="contact-options">
 
 
-            <h3>
-                Rescue 2 Home Animal Support
-            </h3>
+            <a
+                href="https://www.facebook.com/Rescue2Home"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-option">
 
+                <span>
+                    f
+                </span>
 
-            <p>
-                Somerset, UK
-            </p>
+                <div>
 
+                    <strong>
+                        Message us on Facebook
+                    </strong>
 
-            <a href="tel:+447933325465"
-               class="contact-phone">
+                    <small>
+                        Rescue 2 Home Animal Support
+                    </small>
 
-                07933 325465
+                </div>
 
             </a>
 
 
-            <a href="mailto:rescue2homeanimalsupport@gmail.com"
-               class="contact-email">
+            <a
+                href="https://wa.me/447933325465"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-option">
 
-                rescue2homeanimalsupport@gmail.com
+                <span>
+                    W
+                </span>
+
+                <div>
+
+                    <strong>
+                        WhatsApp Us
+                    </strong>
+
+                    <small>
+                        07933 325465
+                    </small>
+
+                </div>
 
             </a>
 
 
-            <div class="contact-card-divider"></div>
+            <a
+                href="mailto:rescue2homeanimalsupport@gmail.com"
+                class="contact-option">
 
+                <span>
+                    ✉
+                </span>
 
-            <span class="contact-small">
-                Message to enquire about availability,
-                services or your individual circumstances.
-            </span>
+                <div>
+
+                    <strong>
+                        Email Us
+                    </strong>
+
+                    <small>
+                        rescue2homeanimalsupport@gmail.com
+                    </small>
+
+                </div>
+
+            </a>
 
         </div>
 
@@ -1325,51 +1257,30 @@
 
 <section class="final-cta">
 
-    <div class="container final-cta-inner">
+    <div class="container">
 
-        <div>
+        <span class="eyebrow">
+            RESCUE 2 HOME ANIMAL SUPPORT
+        </span>
 
-            <span class="eyebrow">
-                RESCUE 2 HOME
-            </span>
+        <h2>
+            Helping people and pets take the next step together.
+        </h2>
 
-            <h2>
-                Sometimes all you need is a little help.
-            </h2>
+        <p>
+            Practical support, honest advice and a welfare-first approach.
+        </p>
 
-            <p>
-                Let's make the journey home a little easier
-                for you and your pet.
-            </p>
+        <a href="#contact"
+           class="button button-white">
 
-        </div>
+            Get In Touch
 
-
-        <div class="final-cta-buttons">
-
-            <a href="https://wa.me/447933325465"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="button button-white">
-
-                WhatsApp Me →
-
-            </a>
-
-
-            <a href="#services"
-               class="button button-outline-light">
-
-                View Services
-
-            </a>
-
-        </div>
+        </a>
 
     </div>
 
 </section>
-
 
 
 </main>
@@ -1382,28 +1293,28 @@
 
 <footer class="site-footer">
 
-    <div class="container footer-main">
+    <div class="container footer-grid">
 
 
         <div class="footer-brand">
 
-            <a href="#home">
-
-                <img src="r2hasmainlogo.png"
-                     alt="Rescue 2 Home Animal Support"
-                     loading="lazy">
-
-            </a>
+            <img
+                src="r2hasmainlogo.png"
+                alt="Rescue 2 Home Animal Support"
+            >
 
             <p>
-                Dedicated adoption, foster and pet support
+
+                Dedicated Adoption & Foster Support,
+                settling-in help and pet care support
                 across Somerset.
+
             </p>
 
         </div>
 
 
-        <div class="footer-column">
+        <div class="footer-links">
 
             <h3>
                 Website
@@ -1422,7 +1333,7 @@
             </a>
 
             <a href="#radius">
-                Areas We Cover
+                Service Area
             </a>
 
             <a href="#contact">
@@ -1432,19 +1343,11 @@
         </div>
 
 
-        <div class="footer-column">
+        <div class="footer-links">
 
             <h3>
                 Contact
             </h3>
-
-            <a href="https://wa.me/447933325465"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                WhatsApp
-
-            </a>
 
             <a href="https://www.facebook.com/Rescue2Home"
                target="_blank"
@@ -1454,56 +1357,52 @@
 
             </a>
 
+            <a href="https://wa.me/447933325465"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                WhatsApp
+
+            </a>
+
             <a href="mailto:rescue2homeanimalsupport@gmail.com">
 
                 Email
 
             </a>
 
-            <a href="tel:+447933325465">
-
-                07933 325465
-
-            </a>
+            <span>
+                Somerset, UK
+            </span>
 
         </div>
 
-
-        <div class="footer-column">
-
-            <h3>
-                Please Note
-            </h3>
-
-            <p>
-                Rescue 2 Home Animal Support is not a rescue
-                centre and does not directly rehome animals.
-            </p>
-
-            <p>
-                We provide support to people and their pets
-                and work alongside rescue organisations.
-            </p>
-
-        </div>
 
     </div>
 
 
-    <div class="container footer-bottom">
+    <div class="footer-bottom">
 
-        <span>
-            © 2026 Rescue 2 Home Animal Support. All rights reserved.
-        </span>
+        <div class="container">
 
-        <span>
-            Website design & development by
-            <a href="https://www.somersetfaunadigitalservices.co.uk"
-               target="_blank"
-               rel="noopener noreferrer">
-                Somerset Fauna Digital Services
-            </a>
-        </span>
+            <p>
+                © 2026 Rescue 2 Home Animal Support.
+                All rights reserved.
+            </p>
+
+            <p>
+                Website design & development by
+                <a
+                    href="https://www.somersetfaunadigitalservices.co.uk"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Somerset Fauna Digital Services
+
+                </a>
+            </p>
+
+        </div>
 
     </div>
 
@@ -1512,15 +1411,10 @@
 
 
 <!-- =========================================================
-     JAVASCRIPT
+     MOBILE NAVIGATION SCRIPT
 ========================================================= -->
 
 <script>
-
-
-/* ---------------------------------------------------------
-   MOBILE NAVIGATION
---------------------------------------------------------- */
 
 const menuToggle =
     document.getElementById("menuToggle");
@@ -1533,19 +1427,22 @@ if (menuToggle && mobileNav) {
 
     menuToggle.addEventListener("click", () => {
 
-        const open =
+        const isOpen =
             mobileNav.classList.toggle("open");
 
-        menuToggle.classList.toggle("active", open);
+        menuToggle.classList.toggle(
+            "active",
+            isOpen
+        );
 
         menuToggle.setAttribute(
             "aria-expanded",
-            String(open)
+            isOpen ? "true" : "false"
         );
 
         menuToggle.setAttribute(
             "aria-label",
-            open
+            isOpen
                 ? "Close menu"
                 : "Open menu"
         );
@@ -1581,114 +1478,9 @@ if (menuToggle && mobileNav) {
 
 
 
-/* ---------------------------------------------------------
-   HEADER SCROLL
---------------------------------------------------------- */
-
-const siteHeader =
-    document.getElementById("siteHeader");
-
-
-function updateHeader() {
-
-    if (!siteHeader) {
-        return;
-    }
-
-    if (window.scrollY > 30) {
-
-        siteHeader.classList.add("scrolled");
-
-    } else {
-
-        siteHeader.classList.remove("scrolled");
-
-    }
-
-}
-
-
-window.addEventListener(
-    "scroll",
-    updateHeader,
-    { passive: true }
-);
-
-updateHeader();
-
-
-
-/* ---------------------------------------------------------
-   ONLINE / OFFLINE STATUS
---------------------------------------------------------- */
-
-const offlineIndicator =
-    document.getElementById("offlineIndicator");
-
-
-function updateConnectionStatus() {
-
-    if (!offlineIndicator) {
-        return;
-    }
-
-    if (navigator.onLine) {
-
-        offlineIndicator.classList.remove("show");
-
-    } else {
-
-        offlineIndicator.classList.add("show");
-
-    }
-
-}
-
-
-window.addEventListener(
-    "online",
-    updateConnectionStatus
-);
-
-
-window.addEventListener(
-    "offline",
-    updateConnectionStatus
-);
-
-
-updateConnectionStatus();
-
-
-
-/* ---------------------------------------------------------
-   SERVICE WORKER
---------------------------------------------------------- */
-
-if ("serviceWorker" in navigator) {
-
-    window.addEventListener("load", () => {
-
-        navigator.serviceWorker
-            .register("./service-worker.js")
-            .catch(error => {
-
-                console.log(
-                    "Service worker registration failed:",
-                    error
-                );
-
-            });
-
-    });
-
-}
-
-
-
-/* ---------------------------------------------------------
+/* =========================================================
    SMOOTH SCROLL
---------------------------------------------------------- */
+========================================================= */
 
 document
     .querySelectorAll('a[href^="#"]')
@@ -1700,30 +1492,55 @@ document
                 this.getAttribute("href");
 
             if (
-                !targetId ||
-                targetId === "#"
+                targetId &&
+                targetId !== "#"
             ) {
-                return;
+
+                const target =
+                    document.querySelector(targetId);
+
+                if (target) {
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
             }
-
-            const target =
-                document.querySelector(targetId);
-
-            if (!target) {
-                return;
-            }
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
 
         });
 
     });
 
+
+
+/* =========================================================
+   PWA SERVICE WORKER
+   No online/offline UI is used.
+========================================================= */
+
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", () => {
+
+        navigator.serviceWorker
+            .register("./service-worker.js")
+            .catch(error => {
+
+                console.error(
+                    "Service worker registration failed:",
+                    error
+                );
+
+            });
+
+    });
+
+}
 
 </script>
 
