@@ -1466,7 +1466,7 @@ p {
 
 .service-featured p,
 .service-featured li {
-    color: rgba(255,255,255,.84);
+    color: #ffffff;
 }
 
 /* Card header */
@@ -1511,8 +1511,8 @@ p {
     padding: 6px 12px;
     border: 1px solid rgba(255,255,255,.18);
     border-radius: 999px;
-    background: rgba(255,255,255,.13);
-    color: white;
+    background: rgba(255,255,255,.20);
+    color: #ffffff;
     font-size: .64rem;
     font-weight: 900;
     letter-spacing: .1em;
@@ -1628,8 +1628,9 @@ p {
 }
 
 .service-featured li::before {
-    background: rgba(255,255,255,.15);
-    color: white;
+    background: #ffffff;
+    color: #123f60;
+    font-weight: 900;
 }
 
 /* Links */
