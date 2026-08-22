@@ -4,7 +4,7 @@
 ========================================================= */
 
 const CACHE_NAME =
-    "rescue2home-animal-support-v2";
+    "rescue2home-animal-support-v3";
 
 
 const FILES_TO_CACHE = [
