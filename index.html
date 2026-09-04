@@ -926,7 +926,7 @@
 
                 </ul>
 
-                <a href="#contact"
+                <a href="#booking"
                    class="service-link">
 
                     Ask About The Package →
@@ -966,7 +966,7 @@
 
                 </ul>
 
-                <a href="#contact"
+                <a href="#booking"
                    class="service-link">
 
                     Enquire Now →
@@ -1008,7 +1008,7 @@
 
                 </ul>
 
-                <a href="#contact"
+                <a href="#booking"
                    class="service-link">
 
                     Enquire Now →
@@ -1049,7 +1049,7 @@
 
                 </ul>
 
-                <a href="#contact"
+                <a href="#booking"
                    class="service-link">
 
                     Enquire Now →
@@ -1106,7 +1106,7 @@
 
                 </p>
 
-                <a href="#contact"
+                <a href="#booking"
                    class="service-link">
 
                     Enquire About Drop-Ins →
@@ -1145,26 +1145,24 @@
      HOW TO BOOK
 ========================================================= -->
 
-<section class="booking section">
+<section class="booking section" id="booking">
 
     <div class="container booking-inner">
 
-        <div class="booking-content">
+        <div class="booking-content" style="width:100%;">
 
             <span class="eyebrow">
-                READY TO TALK?
+                READY TO BOOK?
             </span>
 
             <h2>
-                Bookings are simple.
+                Book a Service.
             </h2>
 
             <p>
-
-                We're no longer taking bookings through Square.
-                To arrange a service, please contact us directly
-                by WhatsApp, Facebook Messenger, email or phone.
-
+                Complete the booking request below and we'll get back to you
+                to confirm availability. Submitting the form does not
+                automatically confirm your booking.
             </p>
 
             <div class="booking-buttons">
@@ -1196,18 +1194,36 @@
         </div>
 
 
-        <div class="booking-side">
+        <!-- TALLY BOOKING FORM -->
+        <div class="booking-form-embed"
+             style="width:100%; grid-column:1 / -1; margin-top:2rem;">
+
+            <iframe
+                data-tally-src="https://tally.so/embed/dWMqKq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy"
+                width="100%"
+                height="800"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                title="Rescue 2 Home Animal Services Booking">
+            </iframe>
+
+        </div>
+
+
+        <div class="booking-side" style="width:100%; grid-column:1 / -1;">
 
             <div class="booking-step">
 
                 <span>01</span>
 
                 <strong>
-                    Get in touch
+                    Send your request
                 </strong>
 
                 <p>
-                    Tell us what support you need.
+                    Tell us which service you need and your preferred date and time.
                 </p>
 
             </div>
@@ -1217,11 +1233,11 @@
                 <span>02</span>
 
                 <strong>
-                    Discuss your needs
+                    We check availability
                 </strong>
 
                 <p>
-                    We'll talk through your requirements.
+                    We'll review your request and contact you to discuss your needs.
                 </p>
 
             </div>
@@ -1231,11 +1247,11 @@
                 <span>03</span>
 
                 <strong>
-                    Arrange your visit
+                    Booking confirmed
                 </strong>
 
                 <p>
-                    We'll agree a suitable time and service.
+                    Your booking is confirmed once the service, date, time and price have been agreed.
                 </p>
 
             </div>
@@ -1245,6 +1261,34 @@
     </div>
 
 </section>
+
+
+<!-- TALLY EMBED SCRIPT -->
+<script>
+(function() {
+    var d = document;
+    var w = "https://tally.so/widgets/embed.js";
+    var v = function() {
+        if (typeof Tally !== "undefined") {
+            Tally.loadEmbeds();
+        } else {
+            d.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(e) {
+                e.src = e.dataset.tallySrc;
+            });
+        }
+    };
+
+    if (typeof Tally !== "undefined") {
+        v();
+    } else if (d.querySelector('script[src="' + w + '"]') === null) {
+        var s = d.createElement("script");
+        s.src = w;
+        s.onload = v;
+        s.onerror = v;
+        d.body.appendChild(s);
+    }
+})();
+</script>
 
 
 
