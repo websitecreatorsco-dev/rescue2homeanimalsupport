@@ -1160,9 +1160,8 @@
             </h2>
 
             <p>
-                Complete the booking request below and we'll get back to you
-                to confirm availability. Submitting the form does not
-                automatically confirm your booking.
+                Choose your service, date and available time below.
+                Your booking will be added to our calendar.
             </p>
 
             <div class="booking-buttons">
@@ -1193,67 +1192,42 @@
 
         </div>
 
-
-        <!-- TALLY BOOKING FORM -->
+        <!-- GOOGLE CALENDAR BOOKING -->
         <div class="booking-form-embed"
              style="width:100%; grid-column:1 / -1; margin-top:2rem;">
 
+            <!-- Google Calendar Appointment Scheduling begin -->
             <iframe
-                data-tally-src="https://tally.so/embed/dWMqKq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                loading="lazy"
+                src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3_vLC-xUE7QByZbPQz-YXa8iZlN2VG2hfHUUOL8wmBKf9ONiN7WzhKB9ovFv54mBgalh16tWxh?gv=true"
+                style="border: 0"
                 width="100%"
                 height="800"
                 frameborder="0"
-                marginheight="0"
-                marginwidth="0"
                 title="Rescue 2 Home Animal Services Booking">
             </iframe>
+            <!-- end Google Calendar Appointment Scheduling -->
 
         </div>
 
-
-        <div class="booking-side" style="width:100%; grid-column:1 / -1;">
+        <div class="booking-side"
+             style="width:100%; grid-column:1 / -1;">
 
             <div class="booking-step">
-
                 <span>01</span>
-
-                <strong>
-                    Send your request
-                </strong>
-
-                <p>
-                    Tell us which service you need and your preferred date and time.
-                </p>
-
+                <strong>Choose your service</strong>
+                <p>Select the service you need and your preferred date and time.</p>
             </div>
 
             <div class="booking-step">
-
                 <span>02</span>
-
-                <strong>
-                    We check availability
-                </strong>
-
-                <p>
-                    We'll review your request and contact you to discuss your needs.
-                </p>
-
+                <strong>Choose an available time</strong>
+                <p>Select a time that is available in our booking calendar.</p>
             </div>
 
             <div class="booking-step">
-
                 <span>03</span>
-
-                <strong>
-                    Booking confirmed
-                </strong>
-
-                <p>
-                    Your booking is confirmed once the service, date, time and price have been agreed.
-                </p>
-
+                <strong>Booking confirmed</strong>
+                <p>You'll receive confirmation of your booking once completed.</p>
             </div>
 
         </div>
@@ -1261,34 +1235,6 @@
     </div>
 
 </section>
-
-
-<!-- TALLY EMBED SCRIPT -->
-<script>
-(function() {
-    var d = document;
-    var w = "https://tally.so/widgets/embed.js";
-    var v = function() {
-        if (typeof Tally !== "undefined") {
-            Tally.loadEmbeds();
-        } else {
-            d.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(e) {
-                e.src = e.dataset.tallySrc;
-            });
-        }
-    };
-
-    if (typeof Tally !== "undefined") {
-        v();
-    } else if (d.querySelector('script[src="' + w + '"]') === null) {
-        var s = d.createElement("script");
-        s.src = w;
-        s.onload = v;
-        s.onerror = v;
-        d.body.appendChild(s);
-    }
-})();
-</script>
 
 
 
