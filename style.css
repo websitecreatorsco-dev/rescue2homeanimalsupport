@@ -3317,3 +3317,25 @@ button:focus-visible {
     }
 
 }
+
+
+/* BOOKING-FIRST WEBSITE - ENQUIRIES ONLY BY MESSAGE */
+.booking-notice {
+  margin-top: 24px;
+  padding: 20px 22px;
+  border-left: 4px solid #174f78;
+  border-radius: 10px;
+  background: #eef6fb;
+  color: #123b55;
+}
+
+.booking-notice strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #123b55;
+}
+
+.booking-notice p {
+  margin: 0;
+  color: #31566d;
+}
