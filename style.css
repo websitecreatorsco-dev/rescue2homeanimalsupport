@@ -1814,140 +1814,154 @@ button.service-link {
 ========================================================= */
 
 .booking {
-    position: relative;
-    background: #f5f9fc;
-    color: var(--text);
-    overflow: visible;
+
+    background:
+        var(--blue-dark);
+
+    color: white;
+
 }
+
 
 .booking-inner {
+
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
-    align-items: start;
+
+    grid-template-columns:
+        minmax(0, 1.2fr) minmax(0, .8fr);
+
+    gap:
+        clamp(40px, 8vw, 100px);
+
+    align-items: center;
+
 }
 
-.booking-content {
-    width: 100%;
-}
-
-.booking-content h2 {
-    color: var(--blue-dark);
-}
 
 .booking-content p {
-    max-width: 760px;
-    color: var(--muted);
+
+    max-width: 650px;
+
+    color:
+        rgba(255,255,255,.76);
+
 }
+
 
 .booking-buttons {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 12px;
+
     margin-top: 28px;
+
 }
+
 
 .button-whatsapp {
-    background: #1f9d61;
+
+    background:
+        #1f9d61;
+
     color: white;
+
 }
+
 
 .button-whatsapp:hover {
-    background: #167b4b;
+
+    background:
+        #167b4b;
+
 }
+
 
 .button-facebook {
-    background: #2468b5;
+
+    background:
+        #2468b5;
+
     color: white;
+
 }
+
 
 .button-facebook:hover {
-    background: #18528f;
+
+    background:
+        #18528f;
+
 }
 
-.booking-form-embed {
-    position: relative;
-    z-index: 5;
-    width: 100%;
-    grid-column: 1 / -1;
-    margin-top: 0;
-    padding: 0;
-    background: #ffffff;
-    border: 1px solid #dce7ed;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 12px 35px rgba(13,56,87,.10);
-}
-
-.booking-form-embed iframe {
-    display: block;
-    width: 100%;
-    min-height: 760px;
-    height: 760px;
-    border: 0;
-    background: #ffffff;
-}
 
 .booking-side {
+
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-    width: 100%;
-    grid-column: 1 / -1;
+
+    gap: 10px;
+
 }
+
 
 .booking-step {
-    padding: 20px;
-    border: 1px solid #dce7ed;
-    border-radius: var(--radius-sm);
-    background: #ffffff;
-    color: var(--text);
-    box-shadow: var(--shadow-sm);
+
+    padding: 18px 20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    border-radius:
+        var(--radius-sm);
+
+    background:
+        rgba(255,255,255,.05);
+
 }
+
 
 .booking-step span {
+
     display: inline-block;
+
     margin-right: 10px;
-    color: var(--blue);
+
+    color:
+        #a9d6ed;
+
     font-size: .75rem;
+
     font-weight: 900;
+
 }
+
 
 .booking-step strong {
-    color: var(--blue-dark);
+
     font-size: .9rem;
+
 }
+
 
 .booking-step p {
-    margin: 5px 0 0 32px;
-    color: var(--muted);
+
+    margin:
+        5px 0 0 32px;
+
+    color:
+        rgba(255,255,255,.65);
+
     font-size: .76rem;
+
 }
 
-/* Keep the calendar readable and above decorative layers */
-.booking::before,
-.booking::after,
-.booking-form-embed::before,
-.booking-form-embed::after {
-    display: none !important;
-    content: none !important;
-}
-
-@media (max-width: 768px) {
-    .booking-side {
-        grid-template-columns: 1fr;
-    }
-
-    .booking-form-embed iframe {
-        min-height: 900px;
-        height: 900px;
-    }
-}
 
 /* =========================================================
    RADIUS
 ========================================================= */
-
 
 .radius {
 
@@ -3319,23 +3333,29 @@ button:focus-visible {
 }
 
 
-/* BOOKING-FIRST WEBSITE - ENQUIRIES ONLY BY MESSAGE */
-.booking-notice {
-  margin-top: 24px;
-  padding: 20px 22px;
-  border-left: 4px solid #174f78;
-  border-radius: 10px;
-  background: #eef6fb;
-  color: #123b55;
+/* DROP-IN SERVICE EMPHASIS */
+.service-reassurance {
+    margin-top: 24px;
+    padding: 20px 24px;
+    background: var(--blue-light);
+    border-left: 4px solid var(--blue);
+    border-radius: var(--radius-sm);
+    color: var(--text);
 }
 
-.booking-notice strong {
-  display: block;
-  margin-bottom: 8px;
-  color: #123b55;
+.service-reassurance strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--blue-dark);
 }
 
-.booking-notice p {
-  margin: 0;
-  color: #31566d;
+.service-card.service-featured:first-child {
+    border: 2px solid var(--blue);
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+    .service-card.service-featured:first-child {
+        transform: none;
+    }
 }
