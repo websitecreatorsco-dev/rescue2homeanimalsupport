@@ -3359,3 +3359,59 @@ button:focus-visible {
         transform: none;
     }
 }
+
+
+/* =========================================================
+   FINAL GOOGLE CALENDAR FIX - DO NOT REMOVE
+========================================================= */
+#booking.booking, section#booking {
+    background: #f4f9fc !important;
+    color: #123b55 !important;
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: visible !important;
+}
+#booking.booking::before, #booking.booking::after,
+section#booking::before, section#booking::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+    background: transparent !important;
+}
+#booking .booking-content, #booking .booking-form-embed,
+#booking .booking-side, #booking .booking-form-embed iframe {
+    position: relative !important;
+    z-index: 50 !important;
+}
+#booking .booking-content h2, #booking .booking-content p,
+#booking .booking-content span, #booking .booking-step,
+#booking .booking-step strong, #booking .booking-step p {
+    color: #123b55 !important;
+}
+#booking .booking-form-embed {
+    background: #fff !important;
+    border: 1px solid #d7e3eb !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 12px 35px rgba(13,56,87,.12) !important;
+}
+#booking .booking-form-embed iframe {
+    display: block !important;
+    width: 100% !important;
+    height: 800px !important;
+    min-height: 800px !important;
+    border: 0 !important;
+    background: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+#booking .booking-step {
+    background: #fff !important;
+    border: 1px solid #d7e3eb !important;
+}
+@media (max-width: 768px) {
+    #booking .booking-form-embed iframe {
+        height: 900px !important;
+        min-height: 900px !important;
+    }
+}
