@@ -3343,21 +3343,6 @@ button:focus-visible {
     color: var(--text);
 }
 
-
-.initial-consultation-notice {
-    margin-top: 1rem;
-    padding: 0.9rem 1rem;
-    border-radius: 10px;
-    background: #f4f7f9;
-    border: 1px solid #d9e2e8;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.initial-consultation-notice strong {
-    font-weight: 700;
-}
-
 .service-reassurance strong {
     display: block;
     margin-bottom: 5px;
