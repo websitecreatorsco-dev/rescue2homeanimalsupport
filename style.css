@@ -3415,3 +3415,420 @@ section#booking::before, section#booking::after {
         min-height: 900px !important;
     }
 }
+
+/* =========================================================
+   RESCUE 2 HOME — SERVICES
+   2027 SERVICE-FIRST DESIGN
+========================================================= */
+
+.r2h-services {
+    position: relative;
+    padding: 112px 0;
+    background:
+        radial-gradient(circle at 8% 12%, rgba(46,120,159,.09), transparent 28%),
+        radial-gradient(circle at 92% 88%, rgba(23,79,120,.07), transparent 30%),
+        #f7fafc;
+    overflow: hidden;
+}
+
+.r2h-services .services-intro {
+    max-width: 760px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.r2h-services .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 17px;
+    padding: 7px 13px;
+    border: 1px solid #d7e7ef;
+    border-radius: 999px;
+    background: rgba(255,255,255,.75);
+    color: #174f78;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.r2h-services .eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #2e789f;
+}
+
+.r2h-services .services-intro h2 {
+    margin: 0 0 18px;
+    color: #0d3857;
+    font-size: clamp(36px, 4.5vw, 58px);
+    line-height: 1.02;
+    letter-spacing: -.045em;
+}
+
+.r2h-services .services-intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #5c7180;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+/* SERVICE GRID */
+
+.r2h-service-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.r2h-service {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 30px;
+    border: 1px solid #dce7ee;
+    border-radius: 24px;
+    background: rgba(255,255,255,.94);
+    box-shadow: 0 8px 28px rgba(13,56,87,.045);
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.r2h-service:hover {
+    transform: translateY(-4px);
+    border-color: #bfd5e2;
+    box-shadow: 0 18px 42px rgba(13,56,87,.09);
+}
+
+.r2h-service-featured {
+    background: #ffffff;
+}
+
+/* ICON / LABEL */
+
+.r2h-service-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.r2h-service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    background: #eaf4fa;
+    font-size: 21px;
+    line-height: 1;
+}
+
+.r2h-service-label {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #f2f6f8;
+    color: #617785;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+/* CONTENT */
+
+.r2h-service h3 {
+    margin: 0 0 12px;
+    color: #0d3857;
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -.025em;
+}
+
+.r2h-service-description {
+    margin: 0 0 23px;
+    color: #607583;
+    font-size: 14px;
+    line-height: 1.72;
+}
+
+/* PRICES */
+
+.r2h-price-box {
+    display: flex;
+    align-items: center;
+    min-height: 76px;
+    margin-bottom: 23px;
+    padding: 14px 17px;
+    border: 1px solid #e4edf2;
+    border-radius: 16px;
+    background: #f7fafc;
+}
+
+.r2h-price-main {
+    color: #174f78;
+    font-size: 29px;
+    font-weight: 850;
+    line-height: 1;
+    letter-spacing: -.04em;
+}
+
+.r2h-price-main small {
+    display: block;
+    margin-top: 6px;
+    color: #718693;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+.r2h-price-dual {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.r2h-price-option {
+    flex: 1;
+    text-align: center;
+}
+
+.r2h-price-option strong {
+    display: block;
+    color: #174f78;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -.025em;
+}
+
+.r2h-price-option span {
+    display: block;
+    margin-top: 6px;
+    color: #718693;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.r2h-price-divider {
+    width: 1px;
+    height: 35px;
+    background: #d7e3e9;
+}
+
+/* CHECKLIST */
+
+.r2h-service ul {
+    display: grid;
+    gap: 9px;
+    margin: 0 0 25px;
+    padding: 0;
+    list-style: none;
+}
+
+.r2h-service li {
+    position: relative;
+    padding-left: 24px;
+    color: #425b6b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.r2h-service li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2e789f;
+    font-weight: 900;
+}
+
+/* NOTE */
+
+.r2h-service-note {
+    margin: -4px 0 23px;
+    padding: 12px 14px;
+    border-left: 3px solid #2e789f;
+    border-radius: 0 10px 10px 0;
+    background: #f4f8fa;
+    color: #637783;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* CTA */
+
+.r2h-service-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    margin-top: auto;
+    padding: 15px 0 0;
+    border-top: 1px solid #e5edf1;
+    color: #174f78;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.r2h-service-link span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background: #eaf4fa;
+    transition: transform .2s ease, background .2s ease;
+}
+
+.r2h-service-link:hover span {
+    transform: translateX(3px);
+    background: #dceef6;
+}
+
+/* SIMPLE 3-STEP ACTION BAR
+   These are actions, not service stages. */
+
+.r2h-service-journey {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    max-width: 1080px;
+    margin: 30px auto 0;
+    padding: 20px 24px;
+    border: 1px solid #dce7ee;
+    border-radius: 20px;
+    background: rgba(255,255,255,.82);
+}
+
+.r2h-journey-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.r2h-journey-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    flex: 0 0 35px;
+    border-radius: 10px;
+    background: #eaf4fa;
+    color: #174f78;
+    font-size: 10px;
+    font-weight: 850;
+}
+
+.r2h-journey-item strong {
+    display: block;
+    margin-bottom: 2px;
+    color: #174f78;
+    font-size: 12px;
+}
+
+.r2h-journey-item span:last-child {
+    display: block;
+    color: #71838e;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.r2h-journey-arrow {
+    padding: 0 18px;
+    color: #a3b5bf;
+    font-size: 18px;
+}
+
+/* EXTRA TIME */
+
+.r2h-extra-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: 15px auto 0;
+    padding: 18px 22px;
+    border-radius: 16px;
+    background: #edf5f9;
+}
+
+.r2h-extra-time strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #174f78;
+    font-size: 13px;
+}
+
+.r2h-extra-time span {
+    color: #617683;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .r2h-services {
+        padding: 80px 0;
+    }
+
+    .r2h-service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .r2h-service-journey {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .r2h-journey-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .r2h-services {
+        padding: 65px 0;
+    }
+
+    .r2h-services .services-intro {
+        margin-bottom: 38px;
+    }
+
+    .r2h-services .services-intro h2 {
+        font-size: 35px;
+    }
+
+    .r2h-service {
+        padding: 23px;
+        border-radius: 20px;
+    }
+
+    .r2h-service h3 {
+        font-size: 22px;
+    }
+
+    .r2h-price-box {
+        min-height: 70px;
+    }
+
+    .r2h-price-option strong {
+        font-size: 21px;
+    }
+
+    .r2h-extra-time {
+        padding: 18px;
+    }
+}
