@@ -725,11 +725,21 @@ p {
 
 
 .hero h1 {
-
     max-width: 800px;
+    margin-bottom: 14px;
+    font-size: clamp(3rem, 6.2vw, 5.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
 
-    margin-bottom: 25px;
-
+.hero-tagline {
+    max-width: 680px;
+    margin: 0 0 14px;
+    color: #bfe5f7;
+    font-size: clamp(1.1rem, 2.1vw, 1.5rem);
+    font-weight: 750;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
 }
 
 
@@ -768,7 +778,7 @@ p {
 
     gap: 12px;
 
-    margin-top: 32px;
+    margin-top: 26px;
 
 }
 
@@ -3013,14 +3023,17 @@ button:focus-visible {
 
 
     .hero h1 {
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
+        line-height: 1.04;
+    }
 
-        font-size:
-            clamp(
-                2.35rem,
-                12vw,
-                3.5rem
-            );
+    .hero-tagline {
+        font-size: 1.12rem;
+        line-height: 1.4;
+    }
 
+    .hero-lead {
+        font-size: 1rem;
     }
 
 
