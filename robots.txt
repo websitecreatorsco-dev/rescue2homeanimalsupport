@@ -1,4 +1,5 @@
+
 User-agent: *
 Allow: /
 
-Sitemap: https://rescue2home.animalplacesinsomerset.com/sitemap.xml
+Sitemap: https://www.rescue2home.co.uk/sitemap.xml
