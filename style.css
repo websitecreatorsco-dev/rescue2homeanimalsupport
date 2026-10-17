@@ -4020,3 +4020,146 @@ section#booking::before, section#booking::after {
         padding: 15px;
     }
 }
+
+
+/* CONTACT SECTION: map left, contact details right */
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(28px, 4vw, 56px);
+}
+
+.contact-area-map {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    padding: 14px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d7e6ef;
+    border-radius: 22px;
+    box-shadow: 0 16px 40px rgba(13, 56, 87, 0.08);
+}
+
+.contact-area-map img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 430px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.contact-map-caption {
+    margin: 10px 4px 2px;
+    color: #174f78;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contact-information {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+}
+
+.contact-information .contact-main {
+    min-width: 0;
+    margin-bottom: 22px;
+}
+
+.contact-information .contact-main h2 {
+    margin-bottom: 12px;
+}
+
+.contact-information .contact-main p {
+    margin-bottom: 0;
+}
+
+.contact-information .contact-methods {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin-top: 0;
+}
+
+.contact-information .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 13px 16px;
+    background: #ffffff;
+    border: 1px solid #d7e6ef;
+    border-radius: 15px;
+    color: #173f5d;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.contact-information .contact-card:hover,
+.contact-information .contact-card:focus-visible {
+    transform: translateY(-2px);
+    border-color: #8ebbd6;
+    box-shadow: 0 10px 24px rgba(13, 56, 87, 0.09);
+}
+
+.contact-information .contact-card > span {
+    display: inline-flex;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #eaf4fa;
+    color: #174f78;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.contact-information .contact-card > div {
+    min-width: 0;
+}
+
+.contact-information .contact-card small {
+    display: block;
+    margin-bottom: 3px;
+    color: #597589;
+    font-size: 0.78rem;
+}
+
+.contact-information .contact-card strong {
+    display: block;
+    color: #173f5d;
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 760px) {
+    .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .contact-area-map,
+    .contact-information {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .contact-area-map {
+        padding: 10px;
+    }
+
+    .contact-area-map img {
+        max-height: 300px;
+    }
+
+    .contact-information .contact-card {
+        padding: 13px;
+    }
+}
